@@ -1,0 +1,10 @@
+.main_container{
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    /*max-height: 100%;*/
+    max-width: 1900px;
+    min-width: 1600px;
+    /*background: url("https://p4.wallpaperbetter.com/wallpaper/713/895/623/landscape-sun-sky-mountains-wallpaper-preview.jpg") no-repeat;*/
+    background: url("https://cortina360.it/wp-content/uploads/2022/03/rock-climber-at-sunset-kalymnos-greece-2021-08-26-22-40-07-utc-scaled.jpg") no-repeat;
+}

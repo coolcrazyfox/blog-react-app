@@ -5,13 +5,15 @@ import UsersPage from "../pages/UsersPage";
 import RegistrationPage from "../pages/RegistrationPage";
 import Blogs from "../pages/Blogs";
 import Posts from "../pages/Posts";
+import Settings from "../pages/Settings";
 
 export const PATH ={
     USERS:'/users',
     HERO: '/',
     REGISTRATION:'/registration',
     BLOGS: '/blogs',
-    POSTS: '/posts'
+    POSTS: '/posts',
+    SETTINGS: '/settings'
 }
 const RouterRoot = () => {
     return (
@@ -22,7 +24,7 @@ const RouterRoot = () => {
                 <Route path={'/registration'} element={<RegistrationPage/>}/>
                 <Route path={'/blogs'} element={<Blogs/>}/>
                 <Route path={'/posts'} element={<Posts/>}/>
-
+                <Route path={'/settings'} element={<Settings/>}/>
             </Routes>
 
         </div>

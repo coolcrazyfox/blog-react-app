@@ -1,0 +1,16 @@
+.blogs{
+    grid-area: b;
+    /*background: #576cc0;*/
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    min-width: 1100px;
+    background: rgba(12, 107, 107, 0.63);
+    border: 1px solid #ebedf1;
+    border-radius: 5px;
+    margin: 5px;
+
+}

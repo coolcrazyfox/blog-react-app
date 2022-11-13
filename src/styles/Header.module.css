@@ -5,10 +5,14 @@
 }
 .title{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    margin-left: 27px;
     align-items: center;
-    text-align: center;
+    text-align: left;
     color: #ebedf1;
     font-size: 1.5rem;
+    font-family: 'Inter';
+    font-style: normal;
+    line-height: 36px;
     /*width: 100px;*/
 }

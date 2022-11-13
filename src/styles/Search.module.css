@@ -1,4 +1,21 @@
 .search{
     grid-area: s;
-    background: rgba(8, 245, 245, 0.33);
+    background: rgba(91, 122, 148, 0.6);
+    min-height: 60px;
+    border-radius: 5px;
+    border: 1px solid white;
+    margin: 0 5px 6px 4px;
+}
+.title{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 27px;
+    align-items: center;
+    text-align: left;
+    color: #eed567;
+    font-size: 1.5rem;
+    font-family: 'Inter';
+    font-style: normal;
+    line-height: 24px;
+    /*width: 100px;*/
 }

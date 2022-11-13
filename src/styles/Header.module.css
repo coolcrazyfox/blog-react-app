@@ -1,4 +1,14 @@
 .header{
     grid-area: h;
-    background: rgba(255, 153, 0, 0.46);
+    background: rgba(93, 93, 90, 0.4);
+    height: 35px;
+}
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ebedf1;
+    font-size: 1.5rem;
+    /*width: 100px;*/
 }

@@ -5,7 +5,7 @@ import {GiPostStamp} from "react-icons/gi";
 import {SlLogin} from "react-icons/sl";
 import {HiUserGroup} from "react-icons/hi";
 import {MdSettingsSuggest} from "react-icons/md";
-import {Link} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 
 
 const initialState = [
@@ -44,7 +44,10 @@ const NavBar = () => {
                                             {/*    // onClick={handleClick}*/}
                                             {/*>*/}
 
-                                            <Link  className={s.a} to={t.link} style={{color: `${t.color}`}}>
+                                            <Link
+                                                // activeClassName={s.active}
+                                                  className={s.a}
+                                                  to={t.link} style={{color: `${t.color}`}}>
 
                                                 {t.id === 1 && (
                                                     <span className={s.icon} style={{background: `${t.color}`}}   >
@@ -76,8 +79,6 @@ const NavBar = () => {
                                                     <MdSettingsSuggest/>
                                                 </span>
                                                 )}
-
-
                                                 <span className={s.text}>{t.title}</span>
                                             </Link>
                                         </li>

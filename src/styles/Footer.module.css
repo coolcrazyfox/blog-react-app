@@ -1,4 +1,13 @@
 .footer{
     grid-area: f;
     background: rgba(178, 107, 246, 0.51);
+    border: 1px solid white;
+    border-radius: 5px;
+}
+.footer_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    min-width: 600px;
 }

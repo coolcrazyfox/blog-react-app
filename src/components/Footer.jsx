@@ -4,7 +4,14 @@ const Footer = () => {
     return (
         <div className={s.footer}>
             <div className={s.footer_container}>
-                <button>Show more</button>
+                <a href="btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Show more
+                </a>
+                {/*<button>Show more</button>*/}
             </div>
 
         </div>

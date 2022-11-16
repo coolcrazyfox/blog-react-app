@@ -1,7 +1,7 @@
 .header{
     grid-area: h;
     background: rgba(93, 93, 90, 0.4);
-    height: 35px;
+    height: 33px;
 }
 .title{
     display: flex;
@@ -13,7 +13,7 @@
     font-size: 1.5rem;
     font-family: 'Inter';
     font-style: normal;
-    line-height: 36px;
+    line-height: 30px;
     /*width: 100px;*/
 }
 

@@ -4,7 +4,7 @@
     min-height: 60px;
     border-radius: 5px;
     border: 1px solid white;
-    margin: 0 5px 6px 4px;
+    margin: 0 23px 1px 4px;
 }
 .title{
     display: flex;
@@ -14,7 +14,7 @@
     align-items: center;
     text-align: left;
     color: #eed567;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-family: 'Inter';
     font-style: normal;
     line-height: 24px;

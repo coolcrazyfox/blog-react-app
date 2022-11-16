@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <div className={s.footer}>
             <div className={s.footer_container}>
-                <a href="btn">
+                <a href="btn" className={s.link}>
                     <span></span>
                     <span></span>
                     <span></span>

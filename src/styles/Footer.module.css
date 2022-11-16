@@ -37,7 +37,8 @@
     /*border: 1px solid #ff9900;*/
 }
 .link:hover{
-    color: #ebedf1;
+    color: #864e4c;
+    color: #8bb92c;
     /*color: #0e436e;*/
     background: #2196f3;
     box-shadow: 0 0  10px  #2196f3, 0 0  20px  #2196f3, 0 0  30px  #2196f3;

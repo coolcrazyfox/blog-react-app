@@ -1,20 +1,20 @@
 import React, {useState} from 'react';
 import s from '../styles/NavBar.module.css'
-import {SiHomeassistant, SiMicrodotblog} from "react-icons/si";
-import {GiPostStamp} from "react-icons/gi";
-import {SlLogin} from "react-icons/sl";
+import {SiHomeassistant, SiMicrodotblog, SiApostrophe} from "react-icons/si";
+import {RiLoginCircleFill} from "react-icons/ri";
+// import {SlLogin} from "react-icons/sl";
 import {HiUserGroup} from "react-icons/hi";
 import {MdSettingsSuggest} from "react-icons/md";
 import {Link, NavLink} from "react-router-dom";
 
 
 const initialState = [
-    {id: 1, link: '/', title: "Home", color: "red", act: false, icon: SiHomeassistant},
-    {id: 2, link: '/blogs', title: "Blogs", color: "green", act: false, icon: SiMicrodotblog},
-    {id: 3, link: '/posts', title: "Posts", color: "blue", act: false, icon: GiPostStamp},
-    {id: 4, link: '/registration', title: "Log In", color: "orange", act: false, icon: SlLogin},
-    {id: 5, link: '/users', title: "Users", color: "yellowgreen", act: false, icon: HiUserGroup},
-    {id: 6, link: '/settings', title: "Settings", color: "gray", act: false, icon: MdSettingsSuggest}
+    {id: 1, link: '/', title: "Home", color: "#D73486FF", act: false, icon: SiHomeassistant},
+    {id: 2, link: '/blogs', title: "Blogs", color: "#cea602", act: false, icon: SiMicrodotblog},
+    {id: 3, link: '/posts', title: "Posts", color: "#864E4CFF", act: false, icon: SiApostrophe},
+    {id: 4, link: '/registration', title: "Log In", color: "#2196f3", act: false, icon: RiLoginCircleFill},
+    {id: 5, link: '/users', title: "Users", color: "#8BB92CFF", act: false, icon: HiUserGroup},
+    {id: 6, link: '/settings', title: "Settings", color: "#A61111FF", act: false, icon: MdSettingsSuggest}
 ]
 console.log('style',s)
 const NavBar = () => {
@@ -61,12 +61,12 @@ const NavBar = () => {
                                                 )}
                                                 {t.id === 3 && (
                                                     <span className={s.icon} style={{background: `${t.color}`}} >
-                                                    <GiPostStamp/>
+                                                    <SiApostrophe/>
                                                 </span>
                                                 )}
                                                 {t.id === 4 && (
                                                     <span className={s.icon} style={{background: `${t.color}`}} >
-                                                    <SlLogin/>
+                                                    <RiLoginCircleFill/>
                                                 </span>
                                                 )}
                                                 {t.id === 5 && (
@@ -114,12 +114,12 @@ const NavBar = () => {
                                                 )}
                                                 {t.id === 3 && (
                                                     <span className={s.icon}>
-                                                    <GiPostStamp/>
+                                                    <SiApostrophe/>
                                                 </span>
                                                 )}
                                                 {t.id === 4 && (
                                                     <span className={s.icon}>
-                                                    <SlLogin/>
+                                                    <RiLoginCircleFill/>
                                                 </span>
                                                 )}
                                                 {t.id === 5 && (

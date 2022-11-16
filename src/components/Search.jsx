@@ -9,9 +9,9 @@ const Search = () => {
                 placeholder={"Search"}/>
                 <select>
                     <option selected value="New blogs first">New blogs first</option>
-                    <option value="New blogs last">New blogs last</option>
-                    <option value="Last blogs first">Last blogs first</option>
-                    <option value="Last blogs last">Last blogs last</option>
+                    <option value="Old blogs first">Old blogs first</option>
+                    <option value="From A to Z">From A to Z</option>
+                    <option value="From Z to A">From Z to A</option>
                 </select>
 
             </div>

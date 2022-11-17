@@ -1,0 +1,22 @@
+.main_container {
+    display: grid;
+    grid-template-areas:
+            "h h"
+            "n s"
+            "n b"
+            "n f";
+    /*'n b' 'n f' */
+
+    grid-template-rows: 60px 1fr;
+    grid-template-columns:2fr 10fr ;
+    /*grid-gap: 5px;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    height: 100vh;
+    max-width: 1900px;
+    min-width: 1600px;
+    background: url("https://million-wallpapers.ru/wallpapers/1/13/403941726888229/tolko-besstrashnym-pokaryayutsya-vershiny.jpg") center center  no-repeat fixed;
+    background-size: cover;
+    /*    background-position: center center;*/
+    /*    background-attachment: fixed;*/
+}

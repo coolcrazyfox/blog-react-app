@@ -15,15 +15,16 @@
 .navigation  {
     position: fixed;
     inset: 40px 0 40px 20px;
-    background: rgb(165, 236, 210);
+    background: rgb(207, 204, 239);
     width: 70px;
     display: flex;
     /*flex-direction: column;*/
     justify-content: center;
     align-items: center;
-    transition: 0.5s;
     border-radius: 5px;
-    /*border: 1px solid white;*/
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    border-left: 1px solid white;
+    transition: 0.5s;
 }
 
 .menuToggle {
@@ -59,15 +60,17 @@
     align-items: center;
     /*box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;*/
     box-shadow: rgba(0, 0, 0, 0.38) 0px 54px 55px, rgba(0, 0, 0, 0.32) 0px -12px 30px, rgba(0, 0, 0, 0.38) 0px 4px 6px, rgba(0, 0, 0, 0.29) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-left: 1px solid rgba(255, 255, 255, 0.82);
+    border-right: 1px solid rgba(255, 255, 255, 0.82);
     transition: 0.5s;
-    /*border: 1px solid white;*/
 
 }
 .navigation_active{
     /*color: red;*/
     position: fixed;
     inset: 40px 10px 40px 40px;
-    background: rgba(165, 236, 210, 0.7);
+    background: rgba(213, 239, 231, 0.7);
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     border-radius: 5px;
     width: 150px;
     display: flex;

@@ -1,12 +1,12 @@
 .search{
     grid-area: s;
     background: rgba(91, 122, 148, 0.6);
-    min-height: 60px;
+    height: 65px;
     border-radius: 5px;
     border-left: 1px solid white;
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     /*box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;*/
-    margin: 0 23px 1px 4px;
+    margin: -14px 23px 3px 4px;
 }
 .title{
     display: flex;
@@ -15,12 +15,48 @@
     margin-bottom: 3px;
     align-items: center;
     text-align: left;
-    color: #eed567;
+    /*color: #eed567;*/
     font-size: 1.4rem;
-    font-family: 'Inter';
+    /*font-family: 'Inter';*/
     font-style: normal;
+    /*line-height: 24px;*/
+    background: 50% 100% / 50% 50% no-repeat
+    radial-gradient(ellipse at bottom, #3cb687, transparent, transparent);
+    -webkit-background-clip: text;
+    /*background-clip: text;*/
+    color: transparent;
+    /*font-size: 14px;*/
     line-height: 24px;
-    /*width: 100px;*/
+    font-weight: 700;
+    padding-bottom: 1px;
+    animation: reveal 3000ms ease-in-out forwards 200ms,
+    glow 2500ms linear infinite 2000ms;
+}
+/*.frText{*/
+/*    background: 50% 100% / 50% 50% no-repeat*/
+/*    radial-gradient(ellipse at bottom, blanchedalmond, transparent, transparent);*/
+/*    -webkit-background-clip: text;*/
+/*    !*background-clip: text;*!*/
+/*    color: transparent;*/
+/*    font-size: 14px;*/
+/*    line-height: 110px;*/
+/*    font-weight: 700;*/
+/*    padding-left: 13px;*/
+/*    animation: reveal 3000ms ease-in-out forwards 200ms,*/
+/*    glow 2500ms linear infinite 2000ms;*/
+/*}*/
+@keyframes reveal {
+    80%{
+        letter-spacing: 8px;
+    }
+    100% {
+        background-size: 300% 300%;
+    }
+}
+@keyframes glow {
+    40% {
+        text-shadow: 0 0 8px #fff;
+    }
 }
 .search_box{
     position: relative;

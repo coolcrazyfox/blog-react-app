@@ -24,34 +24,32 @@
 }
 .btnBox{
     margin: 7px;
-    /*height: 35px;*/
-    /*width: 218px;*/
     /*border: 1px solid #0033ff;*/
 }
-.btn {
-    height: 35px;
-    width: 218px;
-    background: rgba(190, 47, 65, 0.92);
-    box-shadow: 0 3px 10px rgba(12, 5, 9, 0.84), inset 0 1px 0 rgba(255, 255, 255, 0.42);
-    border-radius: 30px;
-    color: white;
-    margin: 18px 50px 22px;
+/*.btn {*/
+/*    height: 35px;*/
+/*    width: 218px;*/
+/*    background: rgba(190, 47, 65, 0.92);*/
+/*    box-shadow: 0 3px 10px rgba(12, 5, 9, 0.84), inset 0 1px 0 rgba(255, 255, 255, 0.42);*/
+/*    border-radius: 30px;*/
+/*    color: white;*/
+/*    margin: 18px 50px 22px;*/
 
 
-}
+/*}*/
 
-.btn:hover {
-    height: 29px;
-    width: 205px;
-    transform: scale(1);
-    transition: all 1s ease;
-    /*margin:23px 143px 16px;*/
-}
-.btn:active{
-    height: 29px;
-    width: 195px;
-    margin: 39px 15px 24px;
-}
+/*.btn:hover {*/
+/*    height: 29px;*/
+/*    width: 205px;*/
+/*    transform: scale(1);*/
+/*    transition: all 1s ease;*/
+/*    !*margin:23px 143px 16px;*!*/
+/*}*/
+/*.btn:active{*/
+/*    height: 29px;*/
+/*    width: 195px;*/
+/*    margin: 39px 15px 24px;*/
+/*}*/
 .nameText{
     font-size: 1em;
     font-weight: 600;

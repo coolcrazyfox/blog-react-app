@@ -6,6 +6,7 @@ import RegistrationPage from "../pages/RegistrationPage";
 import Blogger from "../pages/Blogger";
 import Posts from "../pages/Posts";
 import Settings from "../pages/Settings";
+import Error404 from "../pages/Error404";
 
 export const PATH ={
     USERS:'/users',
@@ -25,6 +26,7 @@ const RouterRoot = () => {
                 <Route path={'/blogger'} element={<Blogger/>}/>
                 <Route path={'/posts'} element={<Posts/>}/>
                 <Route path={'/settings'} element={<Settings/>}/>
+                <Route path={'*'} element={<Error404/>}/>
             </Routes>
 
         </div>

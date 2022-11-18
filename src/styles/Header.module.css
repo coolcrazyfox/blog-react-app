@@ -10,10 +10,32 @@
     align-items: center;
     text-align: left;
     color: #ebedf1;
-    font-size: 1.5rem;
-    font-family: 'Inter';
-    font-style: normal;
+    /*font-size: 1.5rem;*/
+    /*font-family: 'Inter';*/
+    /*font-style: normal;*/
     line-height: 30px;
     /*width: 100px;*/
 }
-
+h4{
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Inter';
+    margin: 1px 0 1px;
+    padding-bottom: 12px;
+    background: linear-gradient(90deg, #af8b9a, white, #8bafae) no-repeat;
+    letter-spacing: 5px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 80%;
+    animation: shine 6s linear infinite;
+    position: relative;
+}
+@keyframes shine {
+    0% {
+        background-position-x: -500%;
+    }
+    100% {
+        background-position-x: 500%;
+    }
+}

@@ -5,8 +5,10 @@
 }
 .title{
     display: flex;
-    justify-content: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
     margin-left: 27px;
+    margin-right: 60px;
     align-items: center;
     text-align: left;
     color: #ebedf1;
@@ -15,6 +17,39 @@
     /*font-style: normal;*/
     line-height: 30px;
     /*width: 100px;*/
+}
+.music_box{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    width: 50px;
+    /*border: 1px solid mediumvioletred;*/
+}
+.music{
+    color: white;
+    font-size: 1rem;
+}
+.music_active{
+    color: #ff9900;
+    font-size: 1rem;
+    animation: music 2s linear infinite;
+}
+@keyframes music {
+    0% {
+        color: #ff9900;
+        font-size: 1rem;
+        /*background-position-x: -500%;*/
+    }
+    50%{
+        color: white;
+        font-size: 1.2rem;
+    }
+    100% {
+        color: #ff9900;
+        font-size: 1rem;
+        /*background-position-x: 500%;*/
+    }
 }
 h4{
     font-weight: 700;

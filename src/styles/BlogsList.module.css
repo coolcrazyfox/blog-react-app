@@ -50,5 +50,19 @@
 
 }
 .text_container h2{
-    padding-bottom: 15px;
+    padding-bottom: 10px;
+}
+.text_container h5{
+    color: #c4dbff;
+    font-size: 0.9rem;
+    padding-bottom: 5px;
+}
+.text_container p{
+    color: #c4dbff;
+    font-size: 0.9rem;
+    padding-bottom: 5px;
+}
+.text_container a{
+    color: #ff9900;
+    padding-left: 10px;
 }

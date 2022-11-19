@@ -1,0 +1,13 @@
+.select_box .select{
+    font-size: 0.7rem;
+    color: #025e5e;
+    width: 150px;
+    height: 25px;
+    margin-left: 24px;
+    /*margin-right: 60px;*/
+    border-radius: 5px;
+    background: #bbefd9;
+    border-color: #ebedf1;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+
+}

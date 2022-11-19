@@ -67,19 +67,16 @@
     margin-right: 40px;
     justify-content: flex-start;
     align-items: center;
+    border-color: #ebedf1;
     /*border: 1px solid darkred;*/
 
 }
-.search_box input{
+.search_box .input{
     width: 600px;
     height: 29px;
     margin-left: 4px;
     border-radius: 5px;
+    background: #bbefd9;
 }
-.search_box select{
-    width: 150px;
-    height: 29px;
-    margin-left: 24px;
-    /*margin-right: 60px;*/
-    border-radius: 5px;
-}
+
+

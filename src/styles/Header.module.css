@@ -55,7 +55,14 @@
     align-items: center;
     /*border: 1px solid mediumvioletred;*/
     /*background: #111010;*/
+    color: #ff6798;
+    transition: 3s;
+
 }
+.stop_icon:active{
+    color: #ebedf1;
+}
+
 .stop_icon:hover .span_second{
     color: white;
 }

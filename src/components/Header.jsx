@@ -28,12 +28,12 @@ const Header = () => {
                 <div className={s.music_box }>
                     <div className={s.play_icon}>
                         <SiApplemusic onClick={handlePlayMusic}  className={!isActive ? s.music: s.music_active}/>
-                        <span className={s.span}>Play music</span>
+                        <span className={s.span}>Play </span>
 
                     </div>
                     <div className={s.stop_icon}>
                         <TbMusicOff onClick={handleStopMusic } />
-                        <span className={s.span_second}>Stop music</span>
+                        <span className={s.span_second}>Stop </span>
                     </div>
 
                 </div>

@@ -59,7 +59,7 @@
     transition: 3s;
 
 }
-.stop_icon:active{
+.stop_icon.active{
     color: #ebedf1;
 }
 

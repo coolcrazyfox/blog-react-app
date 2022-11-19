@@ -31,7 +31,7 @@ const Header = () => {
                         <span className={s.span}>Play </span>
 
                     </div>
-                    <div className={s.stop_icon}>
+                    <div className={isActive ? s.stop_icon: `${s.stop_icon}${s.active}`}>
                         <TbMusicOff onClick={handleStopMusic } />
                         <span className={s.span_second}>Stop </span>
                     </div>

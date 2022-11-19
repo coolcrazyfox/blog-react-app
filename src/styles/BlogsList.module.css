@@ -26,7 +26,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     min-width: 772px;
-    height: 140px;
+    height: 90px;
     margin: 10px 5px 0 15px;
     /*height: 48px;*/
     /*top: 283px;*/
@@ -36,12 +36,15 @@
 
 }
 .image_blog{
-    width: 136px;
-    height: 116px;
+    width: 76px;
+    height: 66px;
     /*border: 1px solid #ffcc00;*/
     margin: 5px 35px 10px 15px;
     border-radius: 5px;
-    background: url("https://st2.depositphotos.com/2001755/8564/i/450/depositphotos_85647140-stock-photo-beautiful-landscape-with-birds.jpg");
+    background: rgba(235, 235, 241, 0);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    /*box-shadow: rgba(235, 235, 241, 0.25) 0px 54px 55px, rgba(235, 235, 241, 0.12) 0px -12px 30px, rgba(235, 235, 241, 0.12) 0px 4px 6px, rgba(235, 235, 241, 0.17) 0px 12px 13px, rgba(235, 235, 241, 0.09) 0px -3px 5px;*/
+    /*background: url("https://st2.depositphotos.com/2001755/8564/i/450/depositphotos_85647140-stock-photo-beautiful-landscape-with-birds.jpg");*/
     background-size: cover;
 }
 .text_container{
@@ -53,16 +56,18 @@
 
 }
 .text_container h2{
-    padding-bottom: 10px;
+    font-size: 1rem;
+    margin-top: -12px;
+    padding-bottom: 5px;
 }
 .text_container h5{
     color: #c4dbff;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     padding-bottom: 5px;
 }
 .text_container p{
     color: #c4dbff;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     padding-bottom: 5px;
 }
 .text_container a{

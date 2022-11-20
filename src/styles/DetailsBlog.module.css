@@ -1,0 +1,26 @@
+.main_container {
+    display: grid;
+    grid-template-areas:
+            "h h"
+            "n s"
+            "n b"
+            "n f";
+    /*'n b' 'n f' */
+
+    grid-template-rows: 60px 1fr;
+    grid-template-columns:2fr 10fr ;
+    /*grid-gap: 5px;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    height: 100vh;
+    max-width: 1900px;
+    min-width: 1600px;
+    /*background: url("https://bigtimeaventura.com/wp-content/uploads/2015/12/IMG_6592-1.jpg") center center  no-repeat fixed;*/
+    background: url("https://www.rock-climbing.ru/images/general/back_1_light.jpg") center center  no-repeat fixed;
+    /*background: url("http://rockclimber.ru/wp-content/uploads/2014/08/what_climbing_header.jpg")   no-repeat fixed;*/
+    /*background: url("https://million-wallpapers.ru/wallpapers/1/13/403941726888229/tolko-besstrashnym-pokaryayutsya-vershiny.jpg") center center  no-repeat fixed;*/
+    background-size: cover;
+    /*    background-position: center center;*/
+    /*    background-attachment: fixed;*/
+
+}

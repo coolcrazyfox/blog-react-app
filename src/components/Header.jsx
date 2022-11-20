@@ -4,8 +4,6 @@ import {SiApplemusic} from "react-icons/si";
 import {TbMusicOff} from "react-icons/tb";
 import useSound from "use-sound";
 import sound from '../assets/message-to-bears-mountains.mp3'
-import Modal from "./Modal";
-
 
 const Header = () => {
     const [modalActive, setModalActive]= useState(true)

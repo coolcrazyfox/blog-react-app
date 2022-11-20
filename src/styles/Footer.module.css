@@ -7,9 +7,11 @@
     min-width: 600px;
     color: #ebedf1;
     background: rgba(14, 44, 35, 0.79);
-    border: 1px solid white;
+    border-left: 1px solid white;
     border-radius: 5px;
     margin: 0 25px 20px 5px;
+    box-shadow: rgb(17, 16, 16) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    /*border-top: 1px solid #ebedf1;*/
 
 }
 .footer_container{
@@ -22,6 +24,7 @@
     margin: 10px 1px 10px 20px;
 
 
+
 }
 .link {
     position: relative;
@@ -31,7 +34,7 @@
     text-transform: uppercase;
     letter-spacing: 4px;
     /*text-decoration: none;*/
-    font-size: 14px;
+    font-size: 12px;
     overflow: hidden;
     transition: 0.2s;
     /*border: 1px solid #ff9900;*/

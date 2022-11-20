@@ -3,7 +3,10 @@ import s from '../styles/Search.module.css'
 import Select from "./Select";
 import {ImSearch} from "react-icons/im";
 import {AiOutlineClear} from "react-icons/ai";
+import {initialState} from "./NavBar";
 const Search = () => {
+    const [inform,setInform]=useState(initialState)
+    const info = inform[1]
     const [carList, setCarList]= useState([])
     const [searchTerm, setSearchTerm]= useState('')
     // const handlerEnterSearch =(event)=>{
@@ -14,7 +17,7 @@ const Search = () => {
     // }
     return (
         <div className={s.search}>
-            <div className={s.title}> Blogs</div>
+            <div className={s.title}> {info.title}</div>
             <div className={s.search_box}>
                 <div className={s.search_input_form}>
                     <span className={s.loop}>

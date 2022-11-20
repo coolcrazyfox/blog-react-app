@@ -16,17 +16,17 @@ const DetailBlock = () => {
                                  style={{backgroundImage:`url(${card.image})`}}>
                             </div>
                         </div>
-                        <div>
-                            <div>
-                                <div style={{backgroundImage:`url(${card.image})`}}>img</div>
+                        <div className={s.main_blog_box}>
+                            <div className={s.main_blog_box_img}>
+                                <div className={s.main_blog_box_icon}style={{backgroundImage:`url(${card.image})`}}>img</div>
                             </div>
-                            <div>
-                                <div>{card.title}</div>
-                                <div>Blog creation date: {card.date}</div>
-                                <div>
+                            <div className={s.main_blog_form}>
+                                <div className={s.main_blog_title}>{card.title}</div>
+                                <div className={s.main_blog_date}>Blog creation date: &nbsp;&nbsp;{card.date}</div>
+                                <div className={s.main_blog_web}> Website:
                                     <a href={`${card.website}`}>{card.website}</a>
                                 </div>
-                                <div>{card.text}</div>
+                                <div className={s.main_blog_text}>{card.text}</div>
                             </div>
 
 

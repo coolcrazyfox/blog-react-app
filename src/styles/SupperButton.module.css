@@ -86,3 +86,12 @@
     transition: 1s;
     transition-delay: 0.75s;
 }
+.button_label_box{
+    display: flex;
+    flex-direction: row;
+}
+.button_label_box .button_icon{
+    margin: 0 8px 0 0;
+    padding-top: 2px;
+    /*border: 1px solid #ff9900;*/
+}

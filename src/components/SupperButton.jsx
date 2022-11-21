@@ -3,8 +3,8 @@ import s from "../styles/SupperButton.module.css";
 
 const SupperButton = () => {
     return (
-        <div className={s.footer_container}>
-            <a href="btn" className={s.link}>
+        <div className={s.button_container}>
+            <a href="btn" className={s.link_button}>
                 <span className={s.span}></span>
                 <span className={s.span}></span>
                 <span className={s.span}></span>

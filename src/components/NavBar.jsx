@@ -90,7 +90,7 @@ const NavBar = () => {
 
                         </ul>) :
                     (<ul>
-                        <ul>
+
                             {tasks.map((t) => {
                                     return (
                                         <li key={t.id} className={ s.list }
@@ -143,7 +143,7 @@ const NavBar = () => {
                             }
 
 
-                        </ul>
+
 
                     </ul>)}
 

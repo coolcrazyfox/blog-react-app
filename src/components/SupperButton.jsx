@@ -2,10 +2,10 @@ import React from 'react';
 import s from "../styles/SupperButton.module.css";
 import {TiArrowBackOutline} from "react-icons/ti";
 
-const SupperButton = () => {
+const SupperButton = ({label}) => {
     return (
         <div className={s.button_container}>
-            <a href="btn" className={s.link_button}>
+            <a href="/users" className={s.link_button}>
                 <span className={s.span}></span>
                 <span className={s.span}></span>
                 <span className={s.span}></span>
@@ -14,7 +14,7 @@ const SupperButton = () => {
                     <div className={s.button_icon}>
                         {/*<TiArrowBackOutline/>*/}
                     </div>
-                    <div> Back to </div>
+                    <div> Back to {label} </div>
                 </div>
 
             </a>

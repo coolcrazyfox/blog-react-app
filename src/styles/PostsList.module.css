@@ -35,11 +35,11 @@
     /*align-items: flex-start;*/
     width: 31.5% ;
     height: 300px;
-    margin: 10px 5px 0 15px;
+    margin: 14px 5px 0 15px;
     /*height: 48px;*/
     /*top: 283px;*/
     /*left:  444px;*/
-    border: 1px solid #ebedf1;
+    /*border: 1px solid #ebedf1;*/
     padding: 5px 5px 10px 15px;
 
 }
@@ -64,7 +64,7 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
-    border: 1px solid #0033ff;
+    /*border: 1px solid #0033ff;*/
 }
 .image_post{
     width: 75px;

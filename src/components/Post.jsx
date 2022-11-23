@@ -35,14 +35,14 @@ export const initialPostsTasks = [
     },
     {
         id: 5,
-        image: 'https://st2.depositphotos.com/2001755/5967/i/450/depositphotos_59677045-stock-photo-beautiful-landscape.jpg',
+        image: 'https://picsy.ru/images/photos/1200/1/foto-na-avatarku-priroda-28098386.jpg',
         text: 'IT industry',
         title: "Cooking buns",
         date: '2022-11-22'
     },
     {
         id: 6,
-        image: 'https://st2.depositphotos.com/2001755/5967/i/450/depositphotos_59677045-stock-photo-beautiful-landscape.jpg',
+        image: 'https://bipbap.ru/wp-content/uploads/2017/04/2-8.jpg',
         text: 'Blog of beauties',
         title: "First day at the office",
         date: '2022-11-23'

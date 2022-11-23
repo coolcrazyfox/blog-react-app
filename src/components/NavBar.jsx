@@ -12,7 +12,7 @@ export const initialState = [
     {id: 1, link: '/', title: "Home", color: "#D73486FF", act: false, icon: SiHomeassistant},
     {id: 2, link: '/blogger', title: "Blogs", color: "#cea602", act: false, icon: SiMicrodotblog},
     {id: 3, link: '/posts', title: "Posts", color: "#864E4CFF", act: false, icon: SiApostrophe},
-    {id: 4, link: '/registration', title: "Log In", color: "#2196f3", act: false, icon: RiLoginCircleFill},
+    {id: 4, link: '/registration', title: "Log In", color: "#ec8434", act: false, icon: RiLoginCircleFill},
     {id: 5, link: '/users', title: "Users", color: "#8BB92CFF", act: false, icon: HiUserGroup},
     {id: 6, link: '/settings', title: "Settings", color: "#A61111FF", act: false, icon: MdSettingsSuggest}
 ]

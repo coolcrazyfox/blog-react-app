@@ -15,7 +15,10 @@
 .navigation  {
     position: fixed;
     inset: 40px 0 40px 20px;
-    background: rgb(207, 204, 239);
+    background: url("https://acegif.com/wp-content/uploads/gifs/water-20.gif") no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+    /*background: rgb(207, 204, 239);*/
     width: 70px;
     display: flex;
     /*flex-direction: column;*/
@@ -245,10 +248,12 @@
     background: #ebedf1;
     line-height: 2.5rem;
     border: 6px solid transparent;
+    /*box-shadow: rgb(17, 16, 16) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;*/
     transition: 0.5s;
 }
 .icon{
     padding-bottom: 2px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 .list .a .icon{
     color: #ebedf1;

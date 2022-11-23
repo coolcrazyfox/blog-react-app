@@ -3,8 +3,8 @@ import s from "../styles/DetailsPost.module.css";
 import Header from "../components/Header";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
-import DetailBlock from "../components/DetailBlock";
 import InfoPanel from "../components/InfoPanel";
+import DetailPostBlock from "../components/DetailPostBlock";
 
 const DetailsPost = () => {
     return (
@@ -12,7 +12,7 @@ const DetailsPost = () => {
             <Header/>
             <NavBar/>
             <InfoPanel/>
-            <DetailBlock/>
+            <DetailPostBlock/>
             <Footer/>
         </div>
     );

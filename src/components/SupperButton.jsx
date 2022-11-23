@@ -12,7 +12,7 @@ const SupperButton = ({label}) => {
                 <span className={s.span}></span>
                 <div className={s.button_label_box}>
                     <div className={s.button_icon}>
-                        {/*<TiArrowBackOutline/>*/}
+                        <TiArrowBackOutline/>
                     </div>
                     <div> Back to {label} </div>
                 </div>

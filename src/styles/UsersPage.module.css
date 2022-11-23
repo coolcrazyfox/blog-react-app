@@ -24,6 +24,7 @@
 .mainn li.active{
     color: #ff9900;
     border-color: #af8b9a;
+    background: #2f1422;
 }
 .mainn .btn_box{
     display: flex;

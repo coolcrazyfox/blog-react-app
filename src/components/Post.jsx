@@ -72,7 +72,7 @@ const Post = () => {
                                              style={{backgroundImage:`url(${b.image})`}}
                                         ></div>
                                         <div className={s.text_container}>
-                                            <Link to={'/detblog'}>
+                                            <Link to={'/postdetails'}>
                                                 <h2 className={s.title}> {b.title}</h2>
                                             </Link>
 

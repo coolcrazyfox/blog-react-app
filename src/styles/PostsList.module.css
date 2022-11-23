@@ -1,0 +1,106 @@
+.blogs{
+    grid-area: b;
+    /*background: #576cc0;*/
+
+}
+.box{
+    display: flex;
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    height: 78vh;
+    min-width: 800px;
+    background: rgba(12, 107, 107, 0.63);
+    box-shadow: rgb(17, 16, 16) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    /*border-top: 1px solid #ebedf1;*/
+    border-left: 1px solid #ebedf1;
+    border-radius: 5px;
+    margin: 5px 25px 4px 5px;
+}
+.container_items{
+    display: flex;
+    flex-direction: column;
+}
+.posts_list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 1340px;
+    min-height: 180px;
+    /*border: 1px solid #0033ff;*/
+}
+.post_item{
+    display: flex;
+    flex-direction: column;
+    /*justify-content: flex-start;*/
+    /*align-items: flex-start;*/
+    width: 31.5% ;
+    height: 300px;
+    margin: 10px 5px 0 15px;
+    /*height: 48px;*/
+    /*top: 283px;*/
+    /*left:  444px;*/
+    border: 1px solid #ebedf1;
+    padding: 5px 5px 10px 15px;
+
+}
+.main_img_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*border: 1px solid #19b27b;*/
+    margin-bottom: 5px;
+}
+.main_img_box .main_img{
+    height: 160px;
+    width: 155px;
+    /*border: 1px solid #ebedf1;*/
+    border-radius: 5px;
+    background: rgba(235, 235, 241, 0);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    background-size: cover;
+}
+.card_box{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: 1px solid #0033ff;
+}
+.image_post{
+    width: 75px;
+    height: 62px;
+    /*border: 1px solid #ffcc00;*/
+    margin: 19px 35px 10px 15px;
+    border-radius: 5px;
+    background: rgba(235, 235, 241, 0);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    background-size: cover;
+}
+.text_container{
+    color: #ebedf1;
+    /*border: 1px solid #ebedf1;*/
+    height: 100%;
+    width: 100%;
+    padding-bottom: 10px;
+
+}
+.text_container .title{
+    color: #ebedf1;
+    font-size: 1rem;
+    margin-top: -19px;
+    padding-bottom: 7px;
+}
+.text_container h5{
+    color: #c4dbff;
+    font-size: 0.9rem;
+    padding-bottom: 5px;
+}
+.text_container p{
+    color: #c4dbff;
+    font-size: 0.8rem;
+    padding-bottom: 5px;
+}
+.text_container a{
+    color: #ff9900;
+    padding-left: 10px;
+}

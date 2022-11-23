@@ -6,6 +6,9 @@ import NavBar from "../components/NavBar";
 import BlogsList from "../components/BlogsList";
 import Footer from "../components/Footer";
 import PostsPanel from "../components/PostsPanel";
+import PostsList from "../components/PostsList";
+
+
 
 const Posts = () => {
     return (
@@ -13,7 +16,7 @@ const Posts = () => {
             <Header/>
             <NavBar/>
             <PostsPanel/>
-            <BlogsList/>
+            <PostsList/>
             <Footer/>
         </div>
     );

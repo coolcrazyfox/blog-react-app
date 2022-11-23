@@ -1,4 +1,4 @@
-.info{
+.info_posts{
     grid-area: i;
     background: rgba(91, 122, 148, 0.6);
     height: 65px;
@@ -8,14 +8,14 @@
     /*box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;*/
     margin: -14px 23px 3px 4px;
 }
-.title_box{
+.info_posts .title_box{
     display: flex;
     flex-direction: row;
     font-size: 1.3rem;
     font-family: 'Inter';
 
 }
-.title {
+.info_posts .title_box .title{
     margin-left: 27px;
     margin-bottom: 3px;
     align-items: center;
@@ -61,12 +61,15 @@
     font-size: 1.2rem;
     /*border: 1px solid greenyellow;*/
 }
-.container{
+.info_posts .box{
     position: relative;
+    display: flex;
+    justify-content: flex-end;
     top: 0;
-    left: 10px;
-    width: 200px;
-    display: block;
+    right: 0;
+    width: 100%;
+    padding-right: 30px;
+    /*display: block;*/
     /*border: 1px solid greenyellow;*/
 
 }

@@ -14,7 +14,7 @@ const PostsPanel = () => {
     const card = initialTasks[1]
 
     return (
-        <div className={s.info}>
+        <div className={s.info_posts}>
             <div className={s.title_box}>
                 <div className={s.title}>{info.title}</div>
 
@@ -24,7 +24,7 @@ const PostsPanel = () => {
                 {/*<div className={s.title_text}>{card.title}</div>*/}
 
             </div>
-            <div className={s.container}>
+            <div className={s.box}>
                 <SelectPosts/>
             {/*    <Link to={'/posts'} className={s.link}>*/}
             {/*        <span className={s.span}></span>*/}

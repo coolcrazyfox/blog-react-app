@@ -108,32 +108,38 @@ const NavBar = () => {
 
                                                 {t.id === 1 && (
                                                     <span className={s.icon}>
-                                                    <SiHomeassistant/>
+                                                    {/*<SiHomeassistant/>*/}
+                                                        {t.icon}
                                                 </span>
                                                 )}
                                                 {t.id === 2 && (
                                                     <span className={s.icon}>
-                                                    <SiMicrodotblog/>
+                                                    {/*<SiMicrodotblog/>*/}
+                                                        {t.icon}
                                                 </span>
                                                 )}
                                                 {t.id === 3 && (
                                                     <span className={s.icon}>
-                                                    <SiApostrophe/>
+                                                    {/*<SiApostrophe/>*/}
+                                                        {t.icon}
                                                 </span>
                                                 )}
                                                 {t.id === 4 && (
                                                     <span className={s.icon}>
-                                                    <RiLoginCircleFill/>
+                                                    {/*<RiLoginCircleFill/>*/}
+                                                        {t.icon}
                                                 </span>
                                                 )}
                                                 {t.id === 5 && (
                                                     <span className={s.icon}>
-                                                    <HiUserGroup/>
+                                                    {/*<HiUserGroup/>*/}
+                                                        {t.icon}
                                                 </span>
                                                 )}
                                                 {t.id === 6 && (
                                                     <span className={s.icon}>
-                                                    <MdSettingsSuggest/>
+                                                    {/*<MdSettingsSuggest/>*/}
+                                                        {t.icon}
                                                 </span>
                                                 )}
 

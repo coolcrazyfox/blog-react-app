@@ -7,6 +7,7 @@ import {HiUserGroup} from "react-icons/hi";
 import {MdSettingsSuggest} from "react-icons/md";
 import {Link} from "react-router-dom";
 import NavBarList from "./NavBarList";
+import NavBarActiveList from "./NavBarActiveList";
 
 
 export const initialState = [
@@ -36,63 +37,9 @@ const NavBar = () => {
         <div className={isActive ? s.main_active : s.main}>
             <div className={isActive ? s.navigation_active : s.navigation}>
                 <div className={s.menuToggle} onClick={handleOnClick}></div>
-                {isActive ? (<NavBarList handleClick={handleClick}/>
-                        ) :
-                    (<ul>
-
-                        {initialState.map((t) => {
-                                return (
-                                    <li key={t.id} className={s.list}
-                                        onClick={handleClick}
-                                    >
-                                        {/*<li key={t.id} className={check ? s.list : `${s.list} ${s.active}` }*/}
-                                        {/*    // onClick={handleClick}*/}
-                                        {/*>*/}
-
-                                        <Link to={t.link} style={{color: `${t.color}`}}>
-
-                                            {t.id === 1 && (
-                                                <span className={s.icon}>
-                                                        {t.icon}
-                                                </span>
-                                            )}
-                                            {t.id === 2 && (
-                                                <span className={s.icon}>
-                                                        {t.icon}
-                                                </span>
-                                            )}
-                                            {t.id === 3 && (
-                                                <span className={s.icon}>
-                                                        {t.icon}
-                                                </span>
-                                            )}
-                                            {t.id === 4 && (
-                                                <span className={s.icon}>
-                                                        {t.icon}
-                                                </span>
-                                            )}
-                                            {t.id === 5 && (
-                                                <span className={s.icon}>
-                                                        {t.icon}
-                                                </span>
-                                            )}
-                                            {t.id === 6 && (
-                                                <span className={s.icon}>
-                                                        {t.icon}
-                                                </span>
-                                            )}
-
-
-                                            <span className={s.text}>{t.title}</span>
-                                        </Link>
-                                    </li>
-                                )
-                            }
-                        )
-                        }
-
-
-                    </ul>)
+                {isActive ?
+                    (<NavBarList handleClick={handleClick}/>) :
+                    (<NavBarActiveList handleClick={handleClick}/>)
                 }
 
             </div>

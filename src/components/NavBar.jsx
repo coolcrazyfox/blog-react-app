@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
 import s from '../styles/NavBar.module.css'
-import {SiHomeassistant, SiMicrodotblog, SiApostrophe} from "react-icons/si";
+import {SiApostrophe, SiHomeassistant, SiMicrodotblog} from "react-icons/si";
 import {RiLoginCircleFill} from "react-icons/ri";
 // import {SlLogin} from "react-icons/sl";
 import {HiUserGroup} from "react-icons/hi";
 import {MdSettingsSuggest} from "react-icons/md";
-import {Link, NavLink} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 
 export const initialState = [
@@ -16,9 +16,9 @@ export const initialState = [
     {id: 5, link: '/users', title: "Users", color: "#8BB92CFF", act: false, icon: <HiUserGroup/>},
     {id: 6, link: '/settings', title: "Settings", color: "#A61111FF", act: false, icon: <MdSettingsSuggest/>}
 ]
-console.log('style',s)
+console.log('style', s)
 const NavBar = () => {
-    const [tasks, setTasks] = useState(initialState)
+    // const [tasks, setTasks] = useState(initialState)
     const [isActive, setIsActive] = useState(false)
     const [check, setCheck] = useState(false)
     const handleOnClick = () => {
@@ -30,14 +30,14 @@ const NavBar = () => {
 
     }
     return (
-        <div className={isActive? s.main_active: s.main}>
+        <div className={isActive ? s.main_active : s.main}>
             <div className={isActive ? s.navigation_active : s.navigation}>
                 <div className={s.menuToggle} onClick={handleOnClick}></div>
                 {isActive ? (
                         <ul>
-                            {tasks.map((t) => {
+                            {initialState.map((t, i) => {
                                     return (
-                                        <li key={t.id} className={ s.list }
+                                        <li key={t.id} className={s.list}
                                             onClick={handleClick}
                                         >
                                             {/*<li key={t.id} className={check ? s.list : `${s.list} ${s.active}` }*/}
@@ -46,40 +46,40 @@ const NavBar = () => {
 
                                             <Link
                                                 // activeClassName={s.active}
-                                                  className={s.a}
-                                                  to={t.link} style={{color: `${t.color}`}}>
+                                                className={s.a}
+                                                to={t.link} style={{color: `${t.color}`}}>
 
-                                                {t.id === 1 && (
-                                                    <span className={s.icon} style={{background: `${t.color}`}}   >
-                                                    {/*<SiHomeassistant/>*/}{t.icon}
+                                                {t.id === i && (
+                                                    <span className={s.icon} style={{background: `${t.color}`}}>
+                                                        {t.icon}
                                                 </span>
                                                 )}
                                                 {t.id === 2 && (
-                                                    <span className={s.icon} style={{background: `${t.color}`}} >
-                                                    {/*<SiMicrodotblog/>*/}
+                                                    <span className={s.icon} style={{background: `${t.color}`}}>
+
                                                         {t.icon}
                                                 </span>
                                                 )}
                                                 {t.id === 3 && (
-                                                    <span className={s.icon} style={{background: `${t.color}`}} >
-                                                    {/*<SiApostrophe/>*/}
+                                                    <span className={s.icon} style={{background: `${t.color}`}}>
+
                                                         {t.icon}
                                                 </span>
                                                 )}
                                                 {t.id === 4 && (
-                                                    <span className={s.icon} style={{background: `${t.color}`}} >
-                                                    {/*<RiLoginCircleFill/>*/}
+                                                    <span className={s.icon} style={{background: `${t.color}`}}>
+
                                                         {t.icon}
                                                 </span>
                                                 )}
                                                 {t.id === 5 && (
-                                                    <span className={s.icon} style={{background: `${t.color}`}} >
-                                                    {/*<HiUserGroup/>*/}
+                                                    <span className={s.icon} style={{background: `${t.color}`}}>
+
                                                 </span>
                                                 )}
                                                 {t.id === 6 && (
-                                                    <span className={s.icon} style={{background: `${t.color}`}} >
-                                                    {/*<MdSettingsSuggest/>*/}
+                                                    <span className={s.icon} style={{background: `${t.color}`}}>
+
                                                         {t.icon}
                                                 </span>
                                                 )}
@@ -95,64 +95,56 @@ const NavBar = () => {
                         </ul>) :
                     (<ul>
 
-                            {tasks.map((t) => {
-                                    return (
-                                        <li key={t.id} className={ s.list }
-                                            onClick={handleClick}
-                                        >
-                                            {/*<li key={t.id} className={check ? s.list : `${s.list} ${s.active}` }*/}
-                                            {/*    // onClick={handleClick}*/}
-                                            {/*>*/}
+                        {initialState.map((t) => {
+                                return (
+                                    <li key={t.id} className={s.list}
+                                        onClick={handleClick}
+                                    >
+                                        {/*<li key={t.id} className={check ? s.list : `${s.list} ${s.active}` }*/}
+                                        {/*    // onClick={handleClick}*/}
+                                        {/*>*/}
 
-                                            <Link to={t.link} style={{color: `${t.color}`}}>
+                                        <Link to={t.link} style={{color: `${t.color}`}}>
 
-                                                {t.id === 1 && (
-                                                    <span className={s.icon}>
-                                                    {/*<SiHomeassistant/>*/}
+                                            {t.id === 1 && (
+                                                <span className={s.icon}>
                                                         {t.icon}
                                                 </span>
-                                                )}
-                                                {t.id === 2 && (
-                                                    <span className={s.icon}>
-                                                    {/*<SiMicrodotblog/>*/}
+                                            )}
+                                            {t.id === 2 && (
+                                                <span className={s.icon}>
                                                         {t.icon}
                                                 </span>
-                                                )}
-                                                {t.id === 3 && (
-                                                    <span className={s.icon}>
-                                                    {/*<SiApostrophe/>*/}
+                                            )}
+                                            {t.id === 3 && (
+                                                <span className={s.icon}>
                                                         {t.icon}
                                                 </span>
-                                                )}
-                                                {t.id === 4 && (
-                                                    <span className={s.icon}>
-                                                    {/*<RiLoginCircleFill/>*/}
+                                            )}
+                                            {t.id === 4 && (
+                                                <span className={s.icon}>
                                                         {t.icon}
                                                 </span>
-                                                )}
-                                                {t.id === 5 && (
-                                                    <span className={s.icon}>
-                                                    {/*<HiUserGroup/>*/}
+                                            )}
+                                            {t.id === 5 && (
+                                                <span className={s.icon}>
                                                         {t.icon}
                                                 </span>
-                                                )}
-                                                {t.id === 6 && (
-                                                    <span className={s.icon}>
-                                                    {/*<MdSettingsSuggest/>*/}
+                                            )}
+                                            {t.id === 6 && (
+                                                <span className={s.icon}>
                                                         {t.icon}
                                                 </span>
-                                                )}
+                                            )}
 
 
-                                                <span className={s.text}>{t.title}</span>
-                                            </Link>
-                                        </li>
-                                    )
-                                }
-                            )
+                                            <span className={s.text}>{t.title}</span>
+                                        </Link>
+                                    </li>
+                                )
                             }
-
-
+                        )
+                        }
 
 
                     </ul>)}

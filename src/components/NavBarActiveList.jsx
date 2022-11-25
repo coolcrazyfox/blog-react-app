@@ -3,16 +3,22 @@ import s from "../styles/NavBar.module.css";
 import {Link} from "react-router-dom";
 import {initialState} from "./NavBar";
 
-const NavBarActiveList = ({handleClick}) => {
+const NavBarActiveList = () => {
+    const [activeIndex, setActiveIndex] = useState(0)
+    const handleClick = (i) => {
+        // setCheck(current => !current)
+        setActiveIndex(i)
+
+    }
 
     return (
         <>
             <ul>
 
-                {initialState.map((t) => {
+                {initialState.map((t, i) => {
                         return (
-                            <li key={t.id} className={s.list}
-                                onClick={handleClick}
+                            <li key={t.id} className={activeIndex === i ? `${s.list} ${s.active}` : s.list}
+                                onClick={() => handleClick(i)}
                             >
                                 {/*<li key={t.id} className={check ? s.list : `${s.list} ${s.active}` }*/}
                                 {/*    // onClick={handleClick}*/}

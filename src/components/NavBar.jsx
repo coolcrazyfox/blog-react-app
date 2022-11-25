@@ -23,8 +23,10 @@ const NavBar = () => {
     // const [tasks, setTasks] = useState(initialState)
     const [isActive, setIsActive] = useState(false)
     const [check, setCheck] = useState(false)
-    const handleClick = () => {
+    const [activeIndex, setActiveIndex] = useState(0)
+    const handleClick = (i) => {
         setCheck(current => !current)
+        setActiveIndex(i)
 
     }
 
@@ -38,8 +40,8 @@ const NavBar = () => {
             <div className={isActive ? s.navigation_active : s.navigation}>
                 <div className={s.menuToggle} onClick={handleOnClick}></div>
                 {isActive ?
-                    (<NavBarList handleClick={handleClick}/>) :
-                    (<NavBarActiveList handleClick={handleClick}/>)
+                    (<NavBarList /> ) :
+                    (<NavBarActiveList />)
                 }
 
             </div>

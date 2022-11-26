@@ -5,6 +5,7 @@ import {initialState} from "./NavBar";
 
 const NavBarActiveList = () => {
     const [activeIndex, setActiveIndex] = useState(0)
+    const [check, setCheck] = useState(false)
     const handleClick = (i) => {
         setCheck(current => !current)
         setActiveIndex(i)

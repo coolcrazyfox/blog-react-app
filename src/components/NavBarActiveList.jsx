@@ -18,7 +18,7 @@ const NavBarActiveList = () => {
 
                 {initialState.map((t, i) => {
                         return (
-                            <li key={t.id} className={activeIndex === i ? `${s.list} ${s.active}` : s.list}
+                            <li key={t.id} className={activeIndex === i ? `${s.list}${s.active}` : s.list}
                                 onClick={() => handleClick(i)}
                             >
                                 {/*<li key={t.id} className={check ? s.list : `${s.list} ${s.active}` }*/}

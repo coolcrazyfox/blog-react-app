@@ -28,10 +28,12 @@ const NavBar = () => {
         setCheck(current => !current)
         setActiveIndex(i)
 
+
     }
 
     const handleOnClick = () => {
         setIsActive(current => !current)
+        setIsActive(!isActive)
 
     }
 

@@ -317,10 +317,20 @@
     justify-content: center;
     align-items: center;
     font-size: 1.75rem;
-    border-radius: 15px;
+    border-radius: 10px;
     border: 1px solid #0c6b6b;
 }
-
+.navigation_active ul .list .icon{
+    background: black ;
+    min-width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.75rem;
+    border-radius: 10px;
+    border: 1px solid #0c6b6b;
+}
 /* .navigation .list .a .text{*/
 /*    position: relative;*/
 /*    padding: 0 15px;*/

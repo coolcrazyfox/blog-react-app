@@ -50,7 +50,7 @@ const NavBar = () => {
 
                                         {t.id === i + 1 && (
                                             <span className={s.icon}
-                                                  style={{background: `${t.color}`}}
+                                                  style={activeIndex === i ?{background:'#0c6b6b'}:{background: `${t.color}`}}
                                             >
                                                         {t.icon}
                                                 </span>

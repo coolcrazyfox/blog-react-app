@@ -2,7 +2,15 @@ import React, {useState} from 'react';
 import s from '../styles/UsersPage.module.css'
 import SupperButton from "../components/SupperButton";
 import NavBarList from "../components/NavBarList";
+import {SiAbbvie, SiAcer, SiApostrophe} from "react-icons/si";
 const UsersPage = () => {
+    const items=[
+        {value:'Home', href:'/', icon:<SiApostrophe/>},
+        {value:'Blogs', href:'/blogs', icon:<SiAbbvie/>},
+        {value:'Posts', href:'/posts', icon:<SiAcer/>},
+
+    ]
+
     const [active, setActive] = useState(0)
     const title = ['blogs', 'posts',' details']
     const handleOnClick = (index) => {

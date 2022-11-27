@@ -3,6 +3,7 @@ import s from '../styles/UsersPage.module.css'
 import SupperButton from "../components/SupperButton";
 import NavBarList from "../components/NavBarList";
 import {SiAbbvie, SiAcer, SiApostrophe} from "react-icons/si";
+import Menu from "../components/Menu";
 const UsersPage = () => {
     const items=[
         {value:'Home', href:'/', icon:<SiApostrophe/>},
@@ -19,7 +20,8 @@ const UsersPage = () => {
     }
     return (
         <div className={s.mainn}>
-            <NavBarList/>
+            <Menu items={items} header={'Menu'}/>
+            {/*<NavBarList/>*/}
             {/*<ul>*/}
             {/*    {title.map((t, i) => (*/}
             {/*        <li*/}

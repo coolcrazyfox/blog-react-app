@@ -2,10 +2,16 @@
     background: #0c6b6b;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    /*justify-content: center;*/
+    /*align-items: center;*/
     /*flex-direction: column;*/
     height: 100vh;
+}
+.main_btn{
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    margin: 20px;
 }
 /*.mainn ul {*/
 /*    display: flex;*/

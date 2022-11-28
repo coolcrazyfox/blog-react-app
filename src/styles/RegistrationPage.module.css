@@ -10,7 +10,7 @@
     left: 0;
     width: 250px;
     height: 100%;
-    background: #8bafae;
+    background: #063146;
 }
 .sidebar header{
     font-size: 22px;
@@ -18,4 +18,24 @@
     text-align: center;
     line-height: 70px;
     background: #af8b9a;
+    user-select: none;
+}
+.sidebar ul a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: #ebedf1;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid black;
+    transition: .4s;
+}
+ul li:hover a{
+    padding-left: 50px;
+}
+.sidebar ul a li{
+    margin-right:  16px;
 }

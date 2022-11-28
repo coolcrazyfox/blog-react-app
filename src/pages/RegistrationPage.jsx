@@ -1,14 +1,34 @@
-import React from 'react';
+import React, {useState} from 'react';
 import s from '../styles/RegistrationPage.module.css'
 import {SiHomeassistant} from "react-icons/si";
+import {FaBars} from "react-icons/fa";
+import {ImCancelCircle} from "react-icons/im";
 
 const RegistrationPage = () => {
+    const [active, setActive]=useState(false)
+    const handelOnClick=(active)=>{
+        setActive(active)
+    }
     return (
         <div className={s.main_container}>
+            {/*<input type="checkbox" className={s.check}/>*/}
+            {/*<label htmlFor={'check'} >*/}
+            {/*    <i className={s.btn} onClick={()=>handelOnClick(!active)}>*/}
+            {/*        <FaBars/>*/}
+            {/*    </i>*/}
+            {/*    <i className={s.cancel} onClick={()=>handelOnClick(!active)}>*/}
+            {/*        <ImCancelCircle/>*/}
+            {/*    </i>*/}
+            {/*</label>*/}
 
 
-            <div className={s.sidebar}>
-                <header>Menu</header>
+            <div className={ s.sidebar }>
+                <header>Menu-
+                    <i className={s.cancel} onClick={()=>handelOnClick(active)}>
+                    <ImCancelCircle/>
+                </i>
+                </header>
+
                 <ul>
                     <li>
                         <a href="#">
@@ -28,6 +48,7 @@ const RegistrationPage = () => {
                     </li>
                 </ul>
             </div>
+            <section></section>
 
 
 

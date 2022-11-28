@@ -1,0 +1,21 @@
+.main_container{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+
+}
+.sidebar{
+    position: fixed;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background: #8bafae;
+}
+.sidebar header{
+    font-size: 22px;
+    color: #ebedf1;
+    text-align: center;
+    line-height: 70px;
+    background: #af8b9a;
+}

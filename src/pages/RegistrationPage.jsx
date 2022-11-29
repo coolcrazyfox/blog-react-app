@@ -5,24 +5,28 @@ import {FaBars} from "react-icons/fa";
 import {ImCancelCircle} from "react-icons/im";
 
 const RegistrationPage = () => {
-    const [active, setActive]=useState(false)
-    const handelClick=(active)=>{
+    const [isActive, setIsActive]=useState(false)
+    const handelClick=()=>{
         // setActive(current => !current)
-        setActive(!active)
+        setIsActive(!isActive)
 
 
     }
     return (
         <div className={s.main_container}>
-            <div className={active? `${s.navigationn}${s.active}`: s.navigationn}>
-                <div className={s.menu_toggle} onClick={()=>setActive(!active)}></div>
-            </div>
+
+            {/*<div className={isActive? s.navigation_box: ''}>*/}
+                <div className={isActive? s.navigationn_active: s.navigationn}>
+                    <div className={s.menu_toggle} onClick={()=>setIsActive(!isActive)}></div>
+                </div>
 
 
 
 
 
+            {/*</div>*/}
         </div>
+
     );
 };
 

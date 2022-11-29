@@ -6,49 +6,19 @@ import {ImCancelCircle} from "react-icons/im";
 
 const RegistrationPage = () => {
     const [active, setActive]=useState(false)
-    const handelOnClick=(active)=>{
-        setActive(active)
+    const handelClick=(active)=>{
+        // setActive(current => !current)
+        setActive(!active)
+
+
     }
     return (
         <div className={s.main_container}>
-            {/*<input type="checkbox" className={s.check}/>*/}
-            {/*<label htmlFor={'check'} >*/}
-            {/*    <i className={s.btn} onClick={()=>handelOnClick(!active)}>*/}
-            {/*        <FaBars/>*/}
-            {/*    </i>*/}
-            {/*    <i className={s.cancel} onClick={()=>handelOnClick(!active)}>*/}
-            {/*        <ImCancelCircle/>*/}
-            {/*    </i>*/}
-            {/*</label>*/}
-
-
-            <div className={ s.sidebar }>
-                <header>Menu-
-                    <i className={s.cancel} onClick={()=>handelOnClick(active)}>
-                    <ImCancelCircle/>
-                </i>
-                </header>
-
-                <ul>
-                    <li>
-                        <a href="#">
-                            <i className={s.fas}>
-                                <SiHomeassistant/>
-                                Blogs
-                            </i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i className={s.fas}>
-                                <SiHomeassistant/>
-                                Posts
-                            </i>
-                        </a>
-                    </li>
-                </ul>
+            <div className={active? `${s.navigationn}${s.active}`: s.navigationn}>
+                <div className={s.menu_toggle} onClick={()=>setActive(!active)}></div>
             </div>
-            <section></section>
+
+
 
 
 

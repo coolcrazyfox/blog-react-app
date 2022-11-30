@@ -107,7 +107,7 @@
     border-radius: 12px;
     border: 8px solid transparent;
 }
-.navigationn ul li .lists::before{
+.navigationn ul .lists::before{
     content: '';
     position: absolute;
     top: -10px;
@@ -122,12 +122,12 @@
     transform-origin: bottom right;
     transition: 0.5s;
 }
-.navigationn ul li .lists_active::before{
+.navigationn ul .lists_active::before{
     right: 22px;
     transform: scale(1);
 
 }
-.navigationn ul li .lists::after{
+.navigationn ul .lists::after{
     content: '';
     position: absolute;
     bottom: -28px;
@@ -142,8 +142,109 @@
     transform-origin: bottom right;
     transition: 0.5s;
 }
-.navigationn ul li .lists_active::after{
+.navigationn ul .lists_active::after{
     right: 22px;
     transform: scale(1);
+}
+
+.navigationn ul .lists .a{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    z-index: 1000;
+}
+.navigationn ul .lists .a .icons{
+    position: relative;
+    /*margin-top: 3px;*/
+    /*margin-left: 4px;*/
+    display: block;
+    min-width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 10px;
+    font-size: 1.75rem;
+    background: #ebedf1;
+    line-height: 60px;
+    border: 6px solid transparent;
+    /*box-shadow: rgb(17, 16, 16) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;*/
+    transition: 0.5s;
+}
+.navigationn ul .lists_active .a .icons{
+    position: relative;
+    /*margin-top: 3px;*/
+    /*margin-left: 4px;*/
+    display: block;
+    min-width: 2.5rem;
+    height: 3rem;
+    border-radius: 10px;
+    font-size: 1.75rem;
+    background: #988785;
+    line-height: 60px;
+    border: 6px solid transparent;
+    color: #ebedf1;
+}
+.navigationn ul .lists .a .icons::before{
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(138, 43, 226, 0.32);
+    filter: blur(8px);
+    opacity: 0;
+    transition: 0.5s;
+}
+.navigationn ul .lists_active .a .icons::before{
+    opacity: .5;
+}
+.navigationn ul .lists .a .icons::after{
+    content: '';
+    position: absolute;
+    top: 14px;
+    left: -60px;
+    width: 10px;
+    height: 10px;
+    background: #0095ff;
+    border: 6px solid #0c6b6b;
+    border-radius: 50%;
+}
+.navigationn ul .lists_active .a .icons::after{
+    content: '';
+    position: absolute;
+    top: 14px;
+    left: -54px;
+    width: 10px;
+    height: 10px;
+    background: #0095ff;
+    border: 6px solid #0c6b6b;
+    border-radius: 50%;
+}
+.navigationn ul .lists .a .title{
+    position: relative;
+    padding: 0 15px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    opacity: 0;
+    /*font-size: 0;*/
+
+    visibility: hidden;
+    transition: .5s;
+}
+.navigationn_active ul .lists .a .title{
+    visibility: visible;
+    opacity: 1;
 
 }
+.navigationn ul .lists_active .a .title{
+    color: #ebedf1;
+    font-size: 0;
+    width: 0;
+    height: 0;
+}
+

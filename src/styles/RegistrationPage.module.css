@@ -101,8 +101,49 @@
 }
 .navigationn ul .lists_active{
     transform: translateX(30px);
-    background: #0c6b6b;
+    background: rgba(12, 107, 107);
     list-style: none;
     height: 76px;
     border-radius: 12px;
+    border: 8px solid transparent;
+}
+.navigationn ul li .lists::before{
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    background: red;
+    border-bottom-right-radius: 20px;
+    /*box-shadow: 6px 5px 0 5px var(--bg);*/
+    box-shadow: 6px 3px 0 3px rgba(12, 107, 107);
+    transform: scale(0);
+    transform-origin: bottom right;
+    transition: 0.5s;
+}
+.navigationn ul li .lists_active::before{
+    right: 22px;
+    transform: scale(1);
+
+}
+.navigationn ul li .lists::after{
+    content: '';
+    position: absolute;
+    bottom: -28px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    background: red;
+    border-top-right-radius: 20px;
+    /*box-shadow: 6px 5px 0 5px var(--bg);*/
+    box-shadow: 6px -3px 0 3px rgba(12, 107, 107);
+    transform: scale(0);
+    transform-origin: bottom right;
+    transition: 0.5s;
+}
+.navigationn ul li .lists_active::after{
+    right: 22px;
+    transform: scale(1);
+
 }

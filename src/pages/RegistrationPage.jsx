@@ -7,7 +7,7 @@ const RegistrationPage = () => {
     const tasks = initialState
     const [isActive, setIsActive] = useState(false)
     const [liActive, setLiActive] = useState(false)
-    const [activeId, setActiveId] = useState(1)
+    const [activeId, setActiveId] = useState(tasks[0].id)
     const handelClick = () => {
         // setActive(current => !current)
         setIsActive(!isActive)
@@ -21,10 +21,10 @@ const RegistrationPage = () => {
             <div className={isActive ? s.navigationn_active : s.navigationn}>
                 <div className={s.menu_toggle} onClick={() => setIsActive(!isActive)}></div>
                 <ul>
-                    {tasks.map((t, id) => {
+                    {tasks.map((t) => {
                             return (
-                                <li key={t.id} className={ activeId===id? s.lists_active : s.lists} style={{color:`${t.color}`}} onClick={()=>setActiveId(id)}>
-                                    <Link to={t.link}>
+                                <li key={t.id} className={ activeId===t.id? s.lists_active : s.lists} style={{color:`${t.color}`}} onClick={()=>setActiveId(t.id)}>
+                                    <Link to={'/registration'}>
                                         <span className={s.icons}>{t.icon}</span>
                                         <span className={s.title}>{t.title}</span>
                                     </Link>

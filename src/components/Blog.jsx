@@ -41,10 +41,7 @@ export const initialTasks = [
 
 const Blog = () => {
     // const [loading, setLoading]=useState(true)
-
     const [tasks, setTask] = useState(initialTasks)
-    // const image= { backgroundImage:`url(${tasks.image})`}
-
     return (
         <>
             {tasks.map( b => {

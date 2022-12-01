@@ -10,18 +10,15 @@ import {initialTasks} from "../components/Blog";
 const DetailsBlog = () => {
     const [selected, setSelected]=useState(0)
     const details = initialTasks
-    const inform= initialState
     const sortDetails=details[selected]
     const onClickListItem=(i)=>{
         setSelected(i)
-
     }
     return (
         <div className={s.main_container}>
             <Header/>
             <NavBar />
             <InfoPanel
-                inform={inform}
                 sortDetails={sortDetails}/>
             <DetailBlock
                 onClickListItem={onClickListItem}

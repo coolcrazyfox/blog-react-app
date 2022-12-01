@@ -7,6 +7,7 @@ import BlogsList from "../components/BlogsList";
 import Footer from "../components/Footer";
 
 const Blogger = () => {
+
     return (
         <div className={s.main_container}>
             <Header/>

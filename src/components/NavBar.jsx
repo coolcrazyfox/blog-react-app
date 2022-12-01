@@ -24,8 +24,6 @@ const NavBar = () => {
     const handleClick = (i) => {
         setCheck(current => !current)
         setActiveIndex(i)
-
-
     }
 
     const handleOnClick = () => {

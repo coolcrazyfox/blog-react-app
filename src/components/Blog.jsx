@@ -46,7 +46,7 @@ const Blog = () => {
     // const image= { backgroundImage:`url(${tasks.image})`}
 
     return (
-        <Fragment>
+        <>
             {tasks.map( b => {
                     return (
                         <div key={b.id} className={s.blog_item}>
@@ -69,7 +69,7 @@ const Blog = () => {
                 }
             )
             }
-        </Fragment>
+        </>
 
     );
 };

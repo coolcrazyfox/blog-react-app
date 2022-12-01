@@ -25,7 +25,7 @@ const DetailBlock = () => {
                             </div>
                             <div className={s.main_blog_box}>
                                 <div className={s.main_blog_box_img}>
-                                    <div className={s.main_blog_box_icon}style={{backgroundImage:`url(${sortDetails.image})`}}></div>
+                                    <div className={s.main_blog_box_icon} style={{backgroundImage:`url(${sortDetails.image})`}}></div>
                                 </div>
                                 <div className={s.main_blog_form}>
                                     <div className={s.main_blog_title}>{sortDetails.title}</div>

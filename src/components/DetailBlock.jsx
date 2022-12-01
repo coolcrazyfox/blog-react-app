@@ -3,15 +3,9 @@ import s from "../styles/DetailBlock.module.css";
 import {initialTasks} from "./Blog";
 
 
-const DetailBlock = () => {
+const DetailBlock = ({onClickListItem, details, sortDetails}) => {
     const [isOpen, setIsOpen]= useState(false)
-    const [selected, setSelected]=useState(0)
-    const details = initialTasks
-    const sortDetails=details[selected]
-    const onClickListItem=(i)=>{
-        setSelected(i)
 
-    }
     return (
         <div className={s.blogs}>
             <div className={s.box}>
@@ -46,7 +40,7 @@ const DetailBlock = () => {
                         {details.map((d, i) => {
                                 return (
                                     <article key={d.id} className={s.blogs_list_column} onClick={()=>onClickListItem(i)}>
-                                        <div className={s.blog_box_img} onClick={()=>setIsOpen(!isOpen)}>
+                                        <div className={s.blog_box_img} onClick={()=>setIsOpen(true)}>
                                             <div className={s.blog_cad_img}
                                                           style={{backgroundImage:`url(${d.image})`}}>
 

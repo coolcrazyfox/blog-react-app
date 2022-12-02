@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import s from '../styles/UsersPage.module.css'
 import SupperButton from "../components/SupperButton";
-import NavBarList from "../components/NavBarList";
+
 import {SiApostrophe,SiMicrodotblog, SiPostman} from "react-icons/si";
 import Menu from "../components/Menu";
 const UsersPage = () => {
@@ -25,21 +25,7 @@ const UsersPage = () => {
             </nav>
 
             <Menu items={items} header={'Menu'}  active={menuActive} setActive={setMenuActive}/>
-            {/*<NavBarList/>*/}
-            {/*<ul>*/}
-            {/*    {title.map((t, i) => (*/}
-            {/*        <li*/}
-            {/*            className={active === i ? `${s.active}` : ''}*/}
-            {/*            onClick={() => handleOnClick(i)}*/}
-            {/*        >*/}
-            {/*            <SupperButton label={t}/>*/}
-            {/*            /!*{t}*!/*/}
-            {/*        </li>*/}
-            {/*    ))}*/}
-            {/*</ul>*/}
-            {/*/!*<div className={s.btn_box}>*!/*/}
-            {/*/!*    <SupperButton/>*!/*/}
-            {/*/!*</div>*!/*/}
+
 
         </div>
     );

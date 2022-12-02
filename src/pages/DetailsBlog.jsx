@@ -6,7 +6,6 @@ import Footer from "../components/Footer";
 import DetailBlock from "../components/DetailBlock";
 import InfoPanel from "../components/InfoPanel";
 import {initialTasks} from "../components/Blog";
-import Fade from "react-reveal/Fade";
 
 const DetailsBlog = () => {
     const [selected, setSelected]=useState(0)
@@ -18,9 +17,7 @@ const DetailsBlog = () => {
     return (
         <div className={s.main_container}>
             <Header/>
-            <Fade left>
-                <NavBar/>
-            </Fade>
+            <NavBar />
             <InfoPanel
                 sortDetails={sortDetails}/>
             <DetailBlock

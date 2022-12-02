@@ -51,7 +51,7 @@ const NavBar = () => {
 
                                                 {t.id === i + 1 && (
                                                     <span className={s.icon}
-                                                          style={activeIndex === i ?{background:'#0c6b6b'}:{background: `${t.color}`}}
+                                                          style={activeIndex === i ? {background: '#0c6b6b'} : {background: `${t.color}`}}
                                                     >
                                                         {t.icon}
                                                 </span>
@@ -70,10 +70,7 @@ const NavBar = () => {
                     </div>
                 </div>
             </Fade>
-
         </>
-
-
     );
 };
 

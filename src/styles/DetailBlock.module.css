@@ -124,12 +124,14 @@
     margin: 15px 17px 0 20px;
     min-height: 80px;
     width: 30%;
+
     /*border: 1px solid #859887;*/
 }
 .blogs_list_column:hover{
     background: rgba(0, 0, 0, 0.66);
     border-radius: 10px;
     transition: all 1s ease-in-out ;
+    cursor: pointer;
 }
 .blog_box_img{
     display: flex;

@@ -14,7 +14,7 @@
 }
 .navigation  {
     position: fixed;
-    inset: 40px 0 40px 20px;
+    inset: 0;
     background: url("https://wallpaperaccess.com/full/2084344.jpg") center center  no-repeat;
     /*background: url("https://thumbs.dreamstime.com/b/abstract-colorful-hexagon-background-abstract-colored-hexagons-colorful-hex-pixelated-pattern-background-abstract-colorful-hexagon-256331079.jpg")right center no-repeat;*/
     /*background: url("https://acegif.com/wp-content/uploads/gifs/water-20.gif") no-repeat;*/
@@ -73,7 +73,7 @@
 .navigation_active{
     /*color: red;*/
     position: fixed;
-    inset: 40px 10px 40px 40px;
+    inset: 0 10px 0 20px;
     background: url("https://wallpaperaccess.com/full/2084344.jpg") center center  no-repeat;
     background-size: cover;
     /*background: rgba(213, 239, 231, 0.7);*/

@@ -2,6 +2,7 @@ import React, {Fragment, useState} from 'react';
 import s from "../styles/PostsList.module.css";
 import {Link} from "react-router-dom";
 import Loader from "./Loader";
+import Flip from 'react-reveal/Flip';
 
 
 export const initialPostsTasks = [
@@ -62,27 +63,28 @@ const Post = () => {
                         return (
                             <article key={b.id} className={s.post_item}>
                                 <article className={s.main_img_box}>
-                                    <div className={s.main_img}
-                                         style={{backgroundImage:`url(${b.image})`}}>
-                                    </div>
+                                    <Flip left>
+                                        <div className={s.main_img}
+                                             style={{backgroundImage:`url(${b.image})`}}>
+                                        </div>
+                                    </Flip>
                                 </article>
                                 <article>
-                                    <div className={s.card_box }>
-                                        <div className={s.image_post}
-                                             style={{backgroundImage:`url(${b.image})`}}
-                                        ></div>
-                                        <div className={s.text_container}>
-                                            <Link to={'/postdetails'}>
-                                                <h2 className={s.title}> {b.title}</h2>
-                                            </Link>
+                                    <Flip left>
+                                        <div className={s.card_box }>
+                                            <div className={s.image_post}
+                                                 style={{backgroundImage:`url(${b.image})`}}
+                                            ></div>
+                                            <div className={s.text_container}>
 
-                                            {/*<h5>Website:*/}
-                                            {/*    <a href={`${b.website}`}>{b.website}</a>*/}
-                                            {/*</h5>*/}
-                                            <p>{b.text}</p>
-                                            <p>{b.date}</p>
+                                                <Link to={'/postdetails'}>
+                                                    <h2 className={s.title}> {b.title}</h2>
+                                                </Link>
+                                                <p>{b.text}</p>
+                                                <p>{b.date}</p>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </Flip>
                                 </article>
 
 

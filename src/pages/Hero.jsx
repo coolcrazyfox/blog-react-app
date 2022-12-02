@@ -5,14 +5,16 @@ import Header from "../components/Header";
 // import Search from "../components/Search";
 // import BlogsList from "../components/BlogsList";
 // import Footer from "../components/Footer";
-
+import Fade from 'react-reveal/Fade'
 
 const Hero = () => {
     return (
         <div className={s.main_container}>
 
             <Header/>
-            <NavBar/>
+            <Fade left>
+                <NavBar/>
+            </Fade>
             {/*<Search/>*/}
             {/*<BlogsList/>*/}
             {/*<Footer/>*/}

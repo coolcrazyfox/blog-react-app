@@ -2,6 +2,8 @@ import React, {Fragment, useState} from 'react';
 import s from "../styles/BlogsList.module.css";
 import {Link} from "react-router-dom";
 import Loader from "./Loader";
+import Bounce from 'react-reveal/Bounce';
+
 
 
 export const initialTasks = [
@@ -46,22 +48,25 @@ const Blog = () => {
         <>
             {tasks.map( b => {
                     return (
-                        <div key={b.id} className={s.blog_item}>
-                            <div className={s.image_blog}
-                                style={{backgroundImage:`url(${b.image})`}}
-                            ></div>
-                            <div className={s.text_container}>
-                                <Link to={'/detblog'}>
-                                    <h2 className={s.title}> {b.title}</h2>
-                                </Link>
+                        <Bounce right>
+                            <div key={b.id} className={s.blog_item}>
+                                <div className={s.image_blog}
+                                     style={{backgroundImage:`url(${b.image})`}}
+                                ></div>
+                                <div className={s.text_container}>
+                                    <Link to={'/detblog'}>
+                                        <h2 className={s.title}> {b.title}</h2>
+                                    </Link>
 
-                                <h5>Website:
-                                    <a href={`${b.website}`}>{b.website}</a>
-                                </h5>
-                                <p>{b.text}</p>
+                                    <h5>Website:
+                                        <a href={`${b.website}`}>{b.website}</a>
+                                    </h5>
+                                    <p>{b.text}</p>
+                                </div>
+
                             </div>
+                        </Bounce>
 
-                        </div>
                     )
                 }
             )

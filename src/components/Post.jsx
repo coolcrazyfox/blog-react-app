@@ -92,9 +92,12 @@ const Post = () => {
                                                 <p>{b.date}</p>
                                             </div>
                                             <div className={s.btns_box}>
-                                                <span onClick={handleOnClickEditButton}>
-                                                    <AiTwotoneEdit/>
-                                                </span>
+                                                <Link to={'/postedit'}>
+                                                    <span onClick={handleOnClickEditButton}>
+                                                        <AiTwotoneEdit/>
+                                                    </span>
+                                                </Link>
+
                                                 <span onClick={handleOnClickDeleteButton}>
                                                     <AiTwotoneDelete/>
                                                 </span>

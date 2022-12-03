@@ -9,6 +9,7 @@ import Settings from "../pages/Settings";
 import Error404 from "../pages/Error404";
 import DetailsBlog from "../pages/DetailsBlog";
 import DetailsPost from "../pages/DetailsPost";
+import EditPost from "../pages/EditPost";
 
 export const PATH ={
     USERS:'/users',
@@ -18,6 +19,7 @@ export const PATH ={
     POSTS: '/posts',
     DETAILS: '/detblog',
     POST_DETAILS: '/postdetails',
+    POST_EDIT: '/postedit',
     SETTINGS: '/settings'
 }
 const RouterRoot = () => {
@@ -31,6 +33,7 @@ const RouterRoot = () => {
                 <Route path={PATH.POSTS} element={<Posts/>}/>
                 <Route path={PATH.DETAILS} element={<DetailsBlog/>}/>
                 <Route path={PATH.POST_DETAILS} element={<DetailsPost/>}/>
+                <Route path={PATH.POST_EDIT} element={<EditPost/>}/>
                 <Route path={PATH.SETTINGS} element={<Settings/>}/>
                 <Route path={'*'} element={<Error404/>}/>
             </Routes>

@@ -53,11 +53,17 @@ export const initialPostsTasks = [
 
 const Post = () => {
     // const [loading, setLoading]=useState(true)
+    const [selected, setSelected] = useState(0)
+    const details = initialPostsTasks
+    const sortDetails = details[selected]
+    const onClickListItem = (i) => {
+        setSelected(i)
+    }
 
-    const [tasks, setTask] = useState(initialPostsTasks)
+    // const [tasks, setTasks] = useState(initialPostsTasks)
     // const image= { backgroundImage:`url(${tasks.image})`}
     const handleOnClickEditButton=()=>{
-        return alert('Edit post')
+
     }
     const handleOnClickDeleteButton=()=>{
         return alert('Delete post')
@@ -65,7 +71,7 @@ const Post = () => {
     return (
         <>
             <section className={s.posts_list}>
-                {tasks.map( b => {
+                {details.map( (b, i) => {
                         return (
                             <article key={b.id} className={s.post_item}>
                                 <article className={s.main_img_box}>
@@ -83,7 +89,7 @@ const Post = () => {
                                             ></div>
                                             <div className={s.text_container}>
                                                 <div className={s.text_container_header}>
-                                                    <Link to={'/postdetails'}>
+                                                    <Link to={'/postdetails'} >
                                                         <h2 className={s.title}> {b.title}</h2>
                                                     </Link>
 
@@ -92,8 +98,8 @@ const Post = () => {
                                                 <p>{b.date}</p>
                                             </div>
                                             <div className={s.btns_box}>
-                                                <Link to={'/postedit'}>
-                                                    <span onClick={handleOnClickEditButton}>
+                                                <Link to={'/postedit'} >
+                                                    <span onClick={()=>onClickListItem(i)}>
                                                         <AiTwotoneEdit/>
                                                     </span>
                                                 </Link>

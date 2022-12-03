@@ -4,27 +4,26 @@ import {initialPostsTasks} from "./Post";
 
 
 
-const EditPostBlock = () => {
-    const [detail, setDetail] = useState(initialPostsTasks)
-    const card = detail[0]
+const EditPostBlock = ({onClickListItem, details, sortDetails}) => {
+
     return (
         <div className={s.blogs}>
             <div className={s.box}>
                 <div className={s.container}>
                     <div className={s.post_info_box}>
-                        <img src={card.image} alt="img"/>
-                        <p>Test</p>
+                        <img src={sortDetails.image} alt="img"/>
+                        <p>{sortDetails.title}</p>
                     </div>
                     <div className={s.title}>
                        <h2>
-                           First day at the office
+                           First day at the office{sortDetails.title}
                        </h2>
                     </div>
                     <div className={s.date_info}>
-                        12/12/2022 at 15:46:58
+                        {sortDetails.date} at 15:46:58
                     </div>
                     <div className={s.main_img}>
-                        <img src={card.image}  alt="img"/>
+                        <img src={sortDetails.image}  alt="img"/>
                     </div>
                     <textarea className={s.text_form} name="" id="" cols="30" rows="10">
                     </textarea>

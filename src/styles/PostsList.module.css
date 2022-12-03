@@ -64,7 +64,13 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
+    border-radius: 5px;
     /*border: 1px solid #0033ff;*/
+}
+.card_box:hover{
+    border-radius: 5px;
+    background: rgba(17, 16, 16, 0.7);
+    transition: 1s ease;
 }
 .image_post{
     width: 75px;
@@ -87,7 +93,7 @@
 .text_container .title{
     color: #ebedf1;
     font-size: 1rem;
-    margin-top: -19px;
+    margin-right: 20px;
     padding-bottom: 7px;
 }
 .text_container h5{
@@ -100,7 +106,23 @@
     font-size: 0.8rem;
     padding-bottom: 5px;
 }
-.text_container a{
-    color: #ff9900;
-    padding-left: 10px;
+
+.text_container_header{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.btns_box{
+    margin-left: 2px;
+    color: rgba(235, 237, 241, 0);
+}
+.card_box:hover .btns_box span{
+    color: #ebedf1;
+    transition: 1s;
+}
+.card_box:hover .btns_box span:hover{
+    cursor: pointer;
+    color: #b6345b;
+    transition: 1s;
 }

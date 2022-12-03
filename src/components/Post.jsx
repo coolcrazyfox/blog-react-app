@@ -3,6 +3,7 @@ import s from "../styles/PostsList.module.css";
 import {Link} from "react-router-dom";
 import Loader from "./Loader";
 import Flip from 'react-reveal/Flip';
+import {AiTwotoneEdit, AiTwotoneDelete} from "react-icons/ai";
 
 
 export const initialPostsTasks = [
@@ -57,7 +58,7 @@ const Post = () => {
     // const image= { backgroundImage:`url(${tasks.image})`}
 
     return (
-        <Fragment>
+        <>
             <section className={s.posts_list}>
                 {tasks.map( b => {
                         return (
@@ -76,12 +77,22 @@ const Post = () => {
                                                  style={{backgroundImage:`url(${b.image})`}}
                                             ></div>
                                             <div className={s.text_container}>
+                                                <div className={s.text_container_header}>
+                                                    <Link to={'/postdetails'}>
+                                                        <h2 className={s.title}> {b.title}</h2>
+                                                    </Link>
 
-                                                <Link to={'/postdetails'}>
-                                                    <h2 className={s.title}> {b.title}</h2>
-                                                </Link>
+                                                </div>
                                                 <p>{b.text}</p>
                                                 <p>{b.date}</p>
+                                            </div>
+                                            <div className={s.btns_box}>
+                                                <span onClick={()=>{}}>
+                                                    <AiTwotoneEdit/>
+                                                </span>
+                                                <span onClick={()=>{}}>
+                                                    <AiTwotoneDelete/>
+                                                </span>
                                             </div>
                                         </div>
                                     </Flip>
@@ -96,7 +107,7 @@ const Post = () => {
                 }
             </section>
 
-        </Fragment>
+        </>
 
     );
 };

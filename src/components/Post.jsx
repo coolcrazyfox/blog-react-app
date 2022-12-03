@@ -56,7 +56,12 @@ const Post = () => {
 
     const [tasks, setTask] = useState(initialPostsTasks)
     // const image= { backgroundImage:`url(${tasks.image})`}
-
+    const handleOnClickEditButton=()=>{
+        return alert('Edit post')
+    }
+    const handleOnClickDeleteButton=()=>{
+        return alert('Delete post')
+    }
     return (
         <>
             <section className={s.posts_list}>
@@ -87,10 +92,10 @@ const Post = () => {
                                                 <p>{b.date}</p>
                                             </div>
                                             <div className={s.btns_box}>
-                                                <span onClick={()=>{}}>
+                                                <span onClick={handleOnClickEditButton}>
                                                     <AiTwotoneEdit/>
                                                 </span>
-                                                <span onClick={()=>{}}>
+                                                <span onClick={handleOnClickDeleteButton}>
                                                     <AiTwotoneDelete/>
                                                 </span>
                                             </div>

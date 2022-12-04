@@ -21,7 +21,7 @@ const Blogger = () => {
             <NavBar
                 // onClick={handleTitleChange}
             />
-            <Search  setSearchTerm={handleSearchChange}/>
+            <Search  onChange={handleSearchChange}/>
             <BlogsList/>
             <Footer/>
         </div>

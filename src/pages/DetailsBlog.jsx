@@ -19,7 +19,7 @@ const DetailsBlog = () => {
             <Header/>
             <NavBar />
             <InfoPanel
-                sortDetails={sortDetails}/>
+                details={details[1]}/>
             <DetailBlock
                 onClickListItem={onClickListItem}
                 details={details}

@@ -18,7 +18,7 @@
     text-transform: uppercase;
     letter-spacing: 4px;
     /*text-decoration: none;*/
-    font-size: 12px;
+    font-size: 10px;
     overflow: hidden;
     transition: 0.2s;
     /*border: 1px solid #ff9900;*/
@@ -89,9 +89,13 @@
 .button_label_box{
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-width: 146px;
+    /*border: 1px solid #ff9900;*/
 }
 .button_label_box .button_icon{
-    margin: 0 8px 0 0;
+    margin: 0 10px 0 0;
     padding-top: 2px;
     /*border: 1px solid #ff9900;*/
 }

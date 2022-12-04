@@ -4,20 +4,22 @@ import Select from "./Select";
 import {ImSearch} from "react-icons/im";
 import {AiOutlineClear} from "react-icons/ai";
 import {initialState} from "./NavBar";
-const Search = ({ onChange}) => {
+const Search = ({title, onChange}) => {
     const [inform,setInform]=useState(initialState)
     const info = inform[1]
     const [carList, setCarList]= useState([])
     const [searchTerm, setSearchTerm]= useState('')
     const handlerEnterSearch =(e)=>{
         setSearchTerm(e.target.value)
-        onChange(searchTerm)
-        // console.log('set',searchTerm)
-        // if (e.key ==="Enter" || e.onClick){
-        //     console.log('er',searchTerm)
-        //     onChange(searchTerm)
-        // }
+        onChange(e.target.value)
+        // console.log(searchTerm)
+        // onChange(e.target.value)
+        if (e.key ==="Enter" || e.onClick){
+            console.log(searchTerm)
+            onChange(searchTerm)
+        }
     }
+
     return (
         <div className={s.search}>
             <div className={s.title}> {info.title}</div>
@@ -44,6 +46,7 @@ const Search = ({ onChange}) => {
                     }
                 </div>
                 <Select/>
+                {searchTerm}
 
             </div>
 

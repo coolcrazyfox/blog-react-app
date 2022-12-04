@@ -23,7 +23,7 @@ const Header = ({title}) => {
     return (
         <div className={s.header}>
             <div className={s.title}>
-                <h4>Blogger Platform -- {title}</h4>
+                <h4>Blogger Platform </h4>
                 <div className={s.music_box }>
                     <Zoom >
                         <div className={s.play_icon}>

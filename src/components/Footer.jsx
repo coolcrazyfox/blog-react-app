@@ -8,13 +8,9 @@ const Footer = () => {
         <div className={s.footer}>
                 <div className={s.footer_container}>
                     <Flip>
-                        {/*<a href="btn" className={s.link}>*/}
-                        {/*<span className={s.span}></span>*/}
-                        {/*<span className={s.span}></span>*/}
-                        {/*<span className={s.span}></span>*/}
-                        {/*<span className={s.span}></span>*/}
-                        <SupperButton link={'/'}> Show more </SupperButton>
-                    {/*</a>*/}
+                        <SupperButton link={'/'}>
+                            Show more
+                        </SupperButton>
                     </Flip>
                 </div>
         </div>

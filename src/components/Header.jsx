@@ -7,6 +7,7 @@ import sound from '../assets/message-to-bears-mountains.mp3';
 import Zoom from 'react-reveal/Zoom';
 
 const Header = ({title}) => {
+    const headerTitle='Blogger Platform '
     const [modalActive, setModalActive]= useState(true)
     const [isActive, setIsActive]=useState(false)
     const [play, {stop}]=useSound(sound)
@@ -23,7 +24,7 @@ const Header = ({title}) => {
     return (
         <div className={s.header}>
             <div className={s.title}>
-                <h4>Blogger Platform </h4>
+                <h4>{headerTitle}</h4>
                 <div className={s.music_box }>
                     <Zoom >
                         <div className={s.play_icon}>

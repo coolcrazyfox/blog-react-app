@@ -21,9 +21,10 @@ const EditPost = () => {
             <NavBar/>
             <InfoPostsPanel/>
             <EditPostBlock
-                onClickListItem={onClickListItem}
-                details={details}
-                sortDetails={sortDetails}/>
+                // onClickListItem={onClickListItem}
+                // details={details}
+                // sortDetails={sortDetails}
+            />
             <Footer/>
         </div>
     );

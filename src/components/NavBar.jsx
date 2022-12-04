@@ -18,7 +18,7 @@ export const initialState = [
     {id: 6, link: '/settings', title: "Settings", color: "#A61111FF", icon: <MdSettingsSuggest/>}
 ]
 
-const NavBar = ({onClick}) => {
+const NavBar = () => {
     const [isActive, setIsActive] = useState(false)
     const [check, setCheck] = useState(false)
     const [activeIndex, setActiveIndex] = useState(0)
@@ -28,8 +28,8 @@ const NavBar = ({onClick}) => {
     const handleClick = (i) => {
         setCheck(current => !current)
         setActiveIndex(i)
-        onClick(i)
-        console.log('click',  setActiveIndex(i))
+        // onClick(i)
+        // console.log('click',  onClick)
 
     }
 

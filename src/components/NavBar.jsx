@@ -18,13 +18,19 @@ export const initialState = [
     {id: 6, link: '/settings', title: "Settings", color: "#A61111FF", icon: <MdSettingsSuggest/>}
 ]
 
-const NavBar = () => {
+const NavBar = ({onClick}) => {
     const [isActive, setIsActive] = useState(false)
     const [check, setCheck] = useState(false)
     const [activeIndex, setActiveIndex] = useState(0)
+    // const handleOnChange=(event)=>{
+    //     onChange(event.title)
+    // }
     const handleClick = (i) => {
         setCheck(current => !current)
         setActiveIndex(i)
+        onClick(i)
+        console.log('click',  setActiveIndex(i))
+
     }
 
     const handleOnClick = () => {
@@ -44,6 +50,7 @@ const NavBar = () => {
                                     return (
                                         <li key={t.id} className={activeIndex === i ? `${s.list}${s.active}` : s.list}
                                             onClick={() => handleClick(i)}
+                                            // onChange={()=>handleOnChange(t.title)}
                                         >
                                             <Link
                                                 className={s.a}

@@ -13,6 +13,7 @@
     height: 700px;
     width: 900px;
     border: 1px solid wheat;
+    background: rgba(43, 57, 69, 0.9);
 }
 .main_btn{
     position: fixed;

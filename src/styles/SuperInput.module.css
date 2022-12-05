@@ -1,0 +1,33 @@
+.search_input_form{
+    margin: 10px;
+}
+.search_input_form .loop{
+    position: relative;
+    top: 3px;
+    left: 25px;
+    color: #0c6b6b ;
+    /*border: 1px solid darkred;*/
+
+}
+.search_input_form .input{
+    width: 600px;
+    height: 27px;
+    margin-left: 4px;
+    padding-left: 30px;
+    border-radius: 5px;
+    border-color: rgba(235, 237, 241, 0.01);
+    background: #bbefd9;
+    color: #0c6b6b ;
+    outline-color: rgba(255, 153, 0, 0.66);
+    box-shadow: rgba(133, 133, 162, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+
+}
+.search_input_form .clear{
+    position: relative;
+    top: 4px;
+    right: 22px;
+    color: #0c6b6b ;
+}
+.search_input_form .clear:hover{
+    color: #ab0e32;
+}

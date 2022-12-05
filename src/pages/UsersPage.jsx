@@ -4,6 +4,7 @@ import SuperButton from "../components/SuperButton";
 
 import {SiApostrophe,SiMicrodotblog, SiPostman} from "react-icons/si";
 import Menu from "../components/Menu";
+import SuperInput from "../components/SuperInput";
 const UsersPage = () => {
     const items=[
         {value:'Home', link:'/', icon:<SiApostrophe/>},
@@ -21,6 +22,8 @@ const UsersPage = () => {
     return (
         <div className={s.mainn}>
             <form className={s.form}>
+                <SuperInput/>
+                <SuperInput/>
                 <SuperButton> send</SuperButton>
                 <SuperButton> cancel</SuperButton>
 

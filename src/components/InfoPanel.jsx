@@ -3,7 +3,7 @@ import s from "../styles/InfoPanel.module.css";
 import {MdDoubleArrow} from "react-icons/md";
 import {TiArrowBackOutline} from "react-icons/ti";
 import {Link} from "react-router-dom";
-import SupperButton from "./SupperButton";
+import SuperButton from "./SuperButton";
 
 const InfoPanel = ({details}) => {
     const info=['Blogs', 'Posts']
@@ -18,12 +18,12 @@ const InfoPanel = ({details}) => {
 
             </div>
             <div className={s.container}>
-                <SupperButton
+                <SuperButton
                     link={'/blogger'}
                     label={<TiArrowBackOutline/>}
                 >
                     Back to {info[0]}
-                </SupperButton>
+                </SuperButton>
 
                 {/*<Link to={'/blogger'} className={s.link}>*/}
                 {/*    <span className={s.span}></span>*/}

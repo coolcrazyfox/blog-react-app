@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import s from '../styles/UsersPage.module.css'
-import SupperButton from "../components/SupperButton";
+import SuperButton from "../components/SuperButton";
 
 import {SiApostrophe,SiMicrodotblog, SiPostman} from "react-icons/si";
 import Menu from "../components/Menu";
@@ -20,11 +20,19 @@ const UsersPage = () => {
     }
     return (
         <div className={s.mainn}>
-            <nav>
-                <button className={s.main_btn} onClick={()=>setMenuActive(!menuActive)}>x</button>
-            </nav>
+            <form className={s.form}>
+                <SuperButton> send</SuperButton>
+                <SuperButton> cancel</SuperButton>
 
-            <Menu items={items} header={'Menu'}  active={menuActive} setActive={setMenuActive}/>
+
+
+
+            </form>
+            {/*<div>*/}
+            {/*    <button className={s.main_btn} onClick={()=>setMenuActive(!menuActive)}>x</button>*/}
+            {/*</div>*/}
+
+            {/*<Menu items={items} header={'Menu'}  active={menuActive} setActive={setMenuActive}/>*/}
 
 
         </div>

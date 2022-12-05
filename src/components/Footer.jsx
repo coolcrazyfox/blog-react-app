@@ -1,16 +1,16 @@
 import React from 'react';
 import s from '../styles/Footer.module.css'
 import Flip from 'react-reveal/Flip';
-import SupperButton from "./SupperButton";
+import SuperButton from "./SuperButton";
 
 const Footer = () => {
     return (
         <div className={s.footer}>
                 <div className={s.footer_container}>
                     <Flip>
-                        <SupperButton link={'/'}>
+                        <SuperButton link={'/'}>
                             Show more
-                        </SupperButton>
+                        </SuperButton>
                     </Flip>
                 </div>
         </div>

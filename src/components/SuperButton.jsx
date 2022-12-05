@@ -1,9 +1,9 @@
 import React from 'react';
-import s from "../styles/SupperButton.module.css";
+import s from "../styles/SuperButton.module.css";
 import {TiArrowBackOutline} from "react-icons/ti";
 import {Link} from "react-router-dom";
 
-const SupperButton = ({children, link, label}) => {
+const SuperButton = ({children, link, label}) => {
     return (
         <div className={s.button_container}>
             <Link to={link} className={s.link_button}>
@@ -29,4 +29,4 @@ const SupperButton = ({children, link, label}) => {
     );
 };
 
-export default SupperButton;
+export default SuperButton;

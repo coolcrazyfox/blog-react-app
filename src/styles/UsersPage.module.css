@@ -1,11 +1,18 @@
 .mainn{
-    background: #0c6b6b;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
-    /*justify-content: center;*/
-    /*align-items: center;*/
-    /*flex-direction: column;*/
+    justify-content: center;
+    align-items: center;
     height: 100vh;
+    min-width: 1600px;
+    background: #0c6b6b;
+}
+.form{
+    /*margin: 20px;*/
+    height: 700px;
+    width: 900px;
+    border: 1px solid wheat;
 }
 .main_btn{
     position: fixed;

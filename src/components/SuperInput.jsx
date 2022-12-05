@@ -1,26 +1,28 @@
-import React from 'react';
+import React, {useState} from 'react';
 import s from '../styles/SuperInput.module.css'
 import {ImSearch} from "react-icons/im";
 import {AiOutlineClear} from "react-icons/ai";
-const SuperInput = () => {
+const SuperInput = ({...props}) => {
+    // const [valueTerm, setValueTerm]= useState('')
     return (
         <div className={s.search_input_form}>
             <span className={s.loop}>
                         <ImSearch/>
            </span>
             <input className={s.input}
+                   {...props}
                    autoFocus
                 // autoComplete={'off'}
-                   type="text"
+                //    type="text"
                    // value={searchTerm}
-                   placeholder={"Search"}
+                   // placeholder={"Search"}
                    // onChange={handlerEnterSearch}
                 // onChange={(e) =>setSearchTerm(e.target.value)}
             />
-            {/*{searchTerm &&(*/}
+            {/*{valueTerm &&(*/}
             {/*    <span className={s.clear}>*/}
-            {/*                <AiOutlineClear onClick={()=>setSearchTerm('')}/>*/}
-            {/*            </span>*/}
+            {/*          <AiOutlineClear onClick={()=>setValueTerm('')}/>*/}
+            {/*    </span>*/}
             {/*)*/}
             {/*}*/}
         </div>

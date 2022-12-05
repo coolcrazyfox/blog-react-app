@@ -10,10 +10,14 @@
 }
 .form{
     /*margin: 20px;*/
-    height: 700px;
+    height: 200px;
     width: 900px;
     border: 1px solid wheat;
     background: rgba(43, 57, 69, 0.9);
+}
+.form .input_block{
+    display: flex;
+    flex-direction: row;
 }
 .main_btn{
     position: fixed;
@@ -21,6 +25,17 @@
     left: 30px;
     margin: 20px;
 }
+.form .input_block .clear{
+    position: relative;
+    top: 14px;
+    right: 30px;
+    color: #0c6b6b ;
+    /*border: 1px solid wheat;*/
+}
+.form .input_block .clear:hover{
+    color: #ab0e32;
+}
+
 /*.mainn ul {*/
 /*    display: flex;*/
 /*    flex-direction: column;*/

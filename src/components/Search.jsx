@@ -4,6 +4,7 @@ import Select from "./Select";
 import {ImSearch} from "react-icons/im";
 import {AiOutlineClear} from "react-icons/ai";
 import {initialState} from "./NavBar";
+import SuperInput from "./SuperInput";
 const Search = ({title, onChange}) => {
     const [inform,setInform]=useState(initialState)
     const info = inform[1]
@@ -26,18 +27,24 @@ const Search = ({title, onChange}) => {
             {/*<div className={s.title}> {title}</div>*/}
             <div className={s.search_box}>
                 <div className={s.search_input_form}>
-                    <span className={s.loop}>
-                        <ImSearch/>
-                    </span>
-                    <input className={s.input}
-                           autoFocus
-                           // autoComplete={'off'}
-                           type="text"
-                           value={searchTerm}
-                           placeholder={"Search"}
-                           onChange={handlerEnterSearch}
-                           // onChange={(e) =>setSearchTerm(e.target.value)}
+                    <SuperInput
+                        value={searchTerm}
+                        onChange={handlerEnterSearch}
+                        type="text"
+                        placeholder={"Search"}
                     />
+                    {/*<span className={s.loop}>*/}
+                    {/*    <ImSearch/>*/}
+                    {/*</span>*/}
+                    {/*<input className={s.input}*/}
+                    {/*       autoFocus*/}
+                    {/*       // autoComplete={'off'}*/}
+                    {/*       type="text"*/}
+                    {/*       value={searchTerm}*/}
+                    {/*       placeholder={"Search"}*/}
+                    {/*       onChange={handlerEnterSearch}*/}
+                    {/*       // onChange={(e) =>setSearchTerm(e.target.value)}*/}
+                    {/*/>*/}
                     {searchTerm &&(
                         <span className={s.clear}>
                             <AiOutlineClear onClick={()=>setSearchTerm('')}/>

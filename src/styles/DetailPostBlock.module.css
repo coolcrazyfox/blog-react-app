@@ -85,13 +85,13 @@
 }
 .box .container .main_img img{
     position: fixed;
-    height: 199px;
-    width: 200px;
+    height: 187px;
+    width: 190px;
     /*border: 1px solid #ffcc00;*/
     /*background: #0c6b6b;*/
     border-radius: 5px;
-    padding: 2px;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    margin: 2px;
+    box-shadow: rgba(0, 0, 0, 0.33) 0px 19px 38px, rgba(0, 0, 0, 0.27) 0px 15px 12px;
     background-size:cover ;
 }
 .box .container .text_form{

@@ -5,6 +5,7 @@ import {initialPostsTasks} from "./Post";
 
 
 const DetailPostBlock = ({onClickListItem, details, sortDetails}) => {
+    const [open, setOpen]=useState(false)
 
     return (
         <div className={s.blogs}>

@@ -64,6 +64,7 @@
     margin-left: 20px;
     margin-top: 7px;
     color: #ff9900;
+    cursor: pointer;
     /*border: 1px solid #ffcc00;*/
 }
 .box .container  .date_info{

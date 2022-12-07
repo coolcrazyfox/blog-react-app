@@ -6,7 +6,7 @@ import {initialPostsTasks} from "./Post";
 
 const DetailPostBlock = ({onClickListItem, details, sortDetails}) => {
     const [open, setOpen]=useState(false)
-
+    const selectTitle=['for public posts','for private posts']
     return (
         <div className={s.blogs}>
             <div className={s.box}>
@@ -20,6 +20,14 @@ const DetailPostBlock = ({onClickListItem, details, sortDetails}) => {
                            First day at the office
                        </h2>
                         <span>(for public posts)</span>
+                    </div>
+                    <div className={s.select_box}>
+                        <ul>
+                            {selectTitle.map((s , i)=>(
+                                <li key={i}> {s}</li>)
+                            )}
+
+                        </ul>
                     </div>
                     <div className={s.date_info}>
                         12/12/2022 at 15:46:58

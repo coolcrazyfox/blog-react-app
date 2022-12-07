@@ -60,6 +60,20 @@
     flex-direction: row;
 
 }
+.box .container .select_box{
+    position: fixed;
+    top: 246px;
+    left: 540px;
+    height: 100px;
+    width:130px;
+    padding-left: 10px;
+    padding-top: 5px;
+
+    background: #19b27b;
+}
+.box .container .select_box ul{
+    list-style: none;
+}
 .box .container .title span{
     margin-left: 20px;
     margin-top: 7px;

@@ -56,6 +56,15 @@
 .box .container .title{
     padding-left: 15px;
     font-size: 1rem;
+    display: flex;
+    flex-direction: row;
+
+}
+.box .container .title span{
+    margin-left: 20px;
+    margin-top: 7px;
+    color: #ff9900;
+    /*border: 1px solid #ffcc00;*/
 }
 .box .container  .date_info{
     padding-left: 15px;

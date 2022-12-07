@@ -18,6 +18,7 @@ const DetailPostBlock = ({onClickListItem, details, sortDetails}) => {
                        <h2>
                            First day at the office
                        </h2>
+                        <span>(for public posts)</span>
                     </div>
                     <div className={s.date_info}>
                         12/12/2022 at 15:46:58

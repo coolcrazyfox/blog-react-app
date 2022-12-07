@@ -62,18 +62,41 @@
 }
 .box .container .select_box{
     position: fixed;
-    top: 246px;
+    top: 252px;
     left: 540px;
-    height: 50px;
+    height: 70px;
     width:130px;
     padding-left: 10px;
     padding-top: 5px;
+    cursor: pointer;
     border-radius: 10px;
-    background: #0c6b6b;
+    border-left: 1px solid #ebedf1;
+    background: rgba(12, 107, 107, 0.91);
     box-shadow: rgba(0, 0, 0, 0.33) 0px 19px 38px, rgba(0, 0, 0, 0.27) 0px 15px 12px;
+
 }
-.box .container .select_box ul{
+/*.box .container .select_box {*/
+/*   color: #ebedf1;*/
+/*    padding: 5px;*/
+
+/*}*/
+.box .container .select_box .lis{
+    /*color: #19b27b;*/
+    cursor: pointer;
+    /*border: 1px solid #ffcc00;*/
     list-style: none;
+    margin-bottom: 2px;
+    /*background: #ebedf1;*/
+
+}
+.box .container .select_box .lisActive{
+    color: #ff9900;
+    /*border: 1px solid #ffcc00;*/
+    list-style: none;
+    /*background: #3cb687;*/
+    cursor: pointer;
+    margin-bottom: 5px;
+
 }
 .box .container .title span{
     margin-left: 20px;

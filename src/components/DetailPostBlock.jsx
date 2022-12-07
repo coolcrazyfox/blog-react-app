@@ -4,7 +4,15 @@ import s from "../styles/DetailPostBlock.module.css";
 
 const DetailPostBlock = ({onClickListItem, details, sortDetails}) => {
     const [open, setOpen] = useState(false)
-    const selectTitle = ['for public posts', 'for private posts']
+    const [selected, setSelected] = useState(0)
+    const list = ['for public posts', 'for private posts']
+    const sortName = list[selected]
+    const onClickListenItem = (i) => {
+        setSelected(i)
+        setOpen(false)
+    }
+    // console.log('set', setSelected)
+
     return (
         <div className={s.blogs}>
             <div className={s.box}>
@@ -17,13 +25,19 @@ const DetailPostBlock = ({onClickListItem, details, sortDetails}) => {
                         <h2>
                             First day at the office
                         </h2>
-                        <span onClick={()=>setOpen(!open)}>(for public posts)</span>
+                        <span onClick={() => setOpen(!open)}>({sortName})</span>
                     </div>
                     {open && (
                         <div className={s.select_box}>
                             <ul>
-                                {selectTitle.map((s, i) => (
-                                    <li key={i}> {s}</li>)
+                                {list.map((name, i) => (
+                                    <li
+                                        key={i}
+                                        onClick={() => onClickListenItem(i)}
+                                        className={selected === i ? s.lisActive : s.lis}
+                                    >
+                                        {name}
+                                    </li>)
                                 )}
 
                             </ul>

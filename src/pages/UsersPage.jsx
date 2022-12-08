@@ -72,7 +72,7 @@ const UsersPage = () => {
                     <button onClick={addNewPost}>send</button>
                 </div>
                 <div>
-                    <button onClick={addNewPost}>delete</button>
+                    <button onClick={()=>setBodyTerm('')}>delete</button>
                 </div>
 
 
@@ -90,7 +90,7 @@ const UsersPage = () => {
             {/*    <button className={s.main_btn} onClick={()=>setMenuActive(!menuActive)}>x</button>*/}
             {/*</div>*/}
 
-            {/*<Menu items={items} header={'Menu'}  active={menuActive} setActive={setMenuActive}/>*/}
+            <Menu items={items} header={'Menu'}  active={menuActive} setActive={setMenuActive}/>
 
 
         </div>

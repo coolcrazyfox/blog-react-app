@@ -1,28 +1,130 @@
-.menu{
+.navigation{
     position: fixed;
-    width: 95px;
-    height: 80vh;
-    top: 70px;
-    left: 30px;
-    transform: translateX(-130%);
-    transition: all 1s;
+    width: 250px;
+    height: 20px;
+    top: 20px;
+    right: 30px;
+    z-index: 100;
 
 }
-.menu.active{
-    transform: translateX(0);
+.navigation_active{
+    /*transform: translateX(0);*/
     position: fixed;
-    width: 95px;
-    height: 80vh;
-    top: 70px;
-    left: 30px;
+    width: 250px;
+    height: 20px;
+    top: 20px;
+    right: 30px;
+    z-index: 100;
 }
-.blur{
-    /*width: 100%;*/
-    /*height: 100vh;*/
-    /*left: 30%;*/
-    /*backdrop-filter: blur(2px);*/
-    /*position: absolute;*/
+.toggle{
+    position: relative;
+    padding: 5px 20px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: #3cb687;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #ebedf1;
+
 }
+.toggle::before{
+    content: 'Menu';
+    margin-right: 10px;
+}
+.toggle_active{
+    position: relative;
+    padding: 5px 20px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: #3cb687;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #ebedf1;
+}
+.toggle_active::before{
+    content: 'Close';
+    margin-right: 10px;
+}
+.toggle span{
+    position: relative;
+    width: 20px;
+    height: 50px;
+}
+.toggle span::before{
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #ebedf1;
+    transition: .5s;
+}
+.toggle span::after{
+    content: '';
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #ebedf1;
+    transition: .5s;
+}
+.toggle_active span::before{
+    transform:  rotate(225deg);
+    top: 24px;
+    content: '';
+    position: absolute;
+    /*top: 20px;*/
+    right: 0;
+    width: 20px;
+    height: 2px;
+    background: #ebedf1;
+    /*transition: .5s;*/
+}
+.toggle_active span::after{
+    transform:  rotate(135deg);
+    bottom: 24px;
+    content: '';
+    position: absolute;
+    /*bottom: 20px;*/
+    right: 0;
+    width: 20px;
+    height: 2px;
+    background: #ebedf1;
+    /*transition: .5s;*/
+}
+ul{
+    position: relative;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+ul li{
+    position: relative;
+    list-style: none;
+    transition: .5s;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(-250px);
+    transition-delay: calc(.1s*var(--i));
+}
+.navigation_active ul li{
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0px);
+
+}
+
+
 .menu_content{
     width: 93px;
     height: 70vh;
@@ -60,7 +162,7 @@
 }
 .icons{
     margin-top: 2px;
-    color: #ff9900;
+    color: #ebedf1;
     margin-left: 6px;
     font-size: 1.1rem;
     /*border: 1px solid #ab0e32;*/

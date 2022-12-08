@@ -102,13 +102,13 @@
     background: #ebedf1;
     /*transition: .5s;*/
 }
-ul{
+.ul{
     position: relative;
     list-style: none;
     display: flex;
     flex-direction: column;
 }
-ul li{
+.ul .li{
     position: relative;
     list-style: none;
     transition: .5s;
@@ -117,7 +117,7 @@ ul li{
     transform: translateX(-250px);
     transition-delay: calc(.1s*var(--i));
 }
-.navigation_active ul li{
+.navigation_active .ul .li{
     visibility: visible;
     opacity: 1;
     transform: translateX(0px);

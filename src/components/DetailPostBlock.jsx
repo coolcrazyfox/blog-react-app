@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import s from "../styles/DetailPostBlock.module.css";
+import Bounce from 'react-reveal/Bounce';
 
 
 const DetailPostBlock = ({onClickListItem, details, sortDetails}) => {
@@ -28,20 +29,24 @@ const DetailPostBlock = ({onClickListItem, details, sortDetails}) => {
                         <span onClick={() => setOpen(!open)}>({sortName})</span>
                     </div>
                     {open && (
-                        <div className={s.select_box}>
-                            <ul>
-                                {list.map((name, i) => (
-                                    <li
-                                        key={i}
-                                        onClick={() => onClickListenItem(i)}
-                                        className={selected === i ? s.lisActive : s.lis}
-                                    >
-                                        {name}
-                                    </li>)
-                                )}
+                        <Bounce top>
+                            <div className={s.select_box}>
 
-                            </ul>
-                        </div>
+                                    <ul>
+                                        {list.map((name, i) => (
+                                            <li
+                                                key={i}
+                                                onClick={() => onClickListenItem(i)}
+                                                className={selected === i ? s.lisActive : s.lis}
+                                            >
+                                                {name}
+                                            </li>)
+                                        )}
+
+                                    </ul>
+
+                            </div>
+                        </Bounce>
                     )
                     }
 

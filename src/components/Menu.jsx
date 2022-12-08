@@ -8,9 +8,9 @@ const Menu = ({header, items, active, setActive}) => {
             <div className={active? s.toggle_active: s.toggle} onClick={()=>setActive(!active)}>
                 <span></span>
             </div>
-            <ul>
-                <li><a href="#">home</a></li>
-                <li><a href="#">home</a></li>
+            <ul className={s.ul}>
+                <li className={s.li}><a href="#">home</a></li>
+                <li className={s.li}><a href="#">home</a></li>
             </ul>
             {/*<div className={s.menu_content}>*/}
             {/*    <div className={s.menu_header}>{header}</div>*/}

@@ -6,6 +6,7 @@ import {SiApostrophe,SiMicrodotblog, SiPostman} from "react-icons/si";
 import Menu from "../components/Menu";
 import SuperInput from "../components/SuperInput";
 import {AiOutlineClear} from "react-icons/ai";
+import CircleTimerCount from "../components/CircleTimerCount";
 
 
 
@@ -101,10 +102,15 @@ const UsersPage = () => {
                     <button onClick={() => setTimerActive(!timerActive)}>
                         {timerActive ? 'stop' : 'start'}
                     </button>
-                    <div>{seconds}</div>
+                    <div>
+                        {/*{seconds}*/}
+                        <CircleTimerCount/>
+                    </div>
                 </React.Fragment>
-                : <button onClick={() => setSeconds(20)}>ещё раз</button>
+                : <button onClick={() => setSeconds(15)}>ещё раз</button>
             }
+            {/*<CircleTimerCount/>*/}
+
             {/*<div>*/}
             {/*    <button className={s.main_btn} onClick={()=>setMenuActive(!menuActive)}>x</button>*/}
             {/*</div>*/}

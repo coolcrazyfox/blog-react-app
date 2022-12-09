@@ -6,7 +6,23 @@ import {SiApostrophe,SiMicrodotblog, SiPostman} from "react-icons/si";
 import Menu from "../components/Menu";
 import SuperInput from "../components/SuperInput";
 import {AiOutlineClear} from "react-icons/ai";
+
+
+
+
 const UsersPage = () => {
+    const [ seconds, setSeconds ] = React.useState(20);
+    const [ timerActive, setTimerActive ] = React.useState(false);
+
+    React.useEffect(() => {
+        if (seconds > 0 && timerActive) {
+            setTimeout(setSeconds, 100, seconds - 1);
+        } else {
+            setTimerActive(false);
+        }
+    }, [ seconds, timerActive ]);
+
+
     const [valueTerm, setValueTerm]= useState('')
     const [bodyTerm, setBodyTerm]= useState('')
     const items=[
@@ -74,23 +90,26 @@ const UsersPage = () => {
                 <div>
                     <button onClick={()=>setBodyTerm('')}>delete</button>
                 </div>
-
-
                 {/*<SuperButton onClick={addNewPost}> send</SuperButton>*/}
                 {/*<SuperButton> cancel</SuperButton>*/}
-
-
-
-
             </form>
             {valueTerm}
             <br/>
             {bodyTerm}
+            {seconds
+                ? <React.Fragment>
+                    <button onClick={() => setTimerActive(!timerActive)}>
+                        {timerActive ? 'stop' : 'start'}
+                    </button>
+                    <div>{seconds}</div>
+                </React.Fragment>
+                : <button onClick={() => setSeconds(20)}>ещё раз</button>
+            }
             {/*<div>*/}
             {/*    <button className={s.main_btn} onClick={()=>setMenuActive(!menuActive)}>x</button>*/}
             {/*</div>*/}
 
-            <Menu items={items} header={'Menu'}  active={menuActive} setActive={setMenuActive}/>
+            {/*<Menu items={items} header={'Menu'}  active={menuActive} setActive={setMenuActive}/>*/}
 
 
         </div>

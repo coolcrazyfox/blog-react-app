@@ -32,18 +32,18 @@ const DetailPostBlock = ({onClickListItem, details, sortDetails}) => {
                         <Bounce top>
                             <div className={s.select_box}>
 
-                                    <ul>
-                                        {list.map((name, i) => (
-                                            <li
-                                                key={i}
-                                                onClick={() => onClickListenItem(i)}
-                                                className={selected === i ? s.lisActive : s.lis}
-                                            >
-                                                {name}
-                                            </li>)
-                                        )}
+                                <ul>
+                                    {list.map((name, i) => (
+                                        <li
+                                            key={i}
+                                            onClick={() => onClickListenItem(i)}
+                                            className={selected === i ? s.lisActive : s.lis}
+                                        >
+                                            {name}
+                                        </li>)
+                                    )}
 
-                                    </ul>
+                                </ul>
 
                             </div>
                         </Bounce>

@@ -97,18 +97,21 @@ const UsersPage = () => {
             {valueTerm}
             <br/>
             {bodyTerm}
-            {seconds
-                ? <React.Fragment>
-                    <button onClick={() => setTimerActive(!timerActive)}>
-                        {timerActive ? 'stop' : 'start'}
-                    </button>
-                    <div>
-                        {/*{seconds}*/}
-                        <CircleTimerCount/>
-                    </div>
-                </React.Fragment>
-                : <button onClick={() => setSeconds(15)}>ещё раз</button>
-            }
+            <div>
+                {seconds
+                    ? <React.Fragment>
+                        <button onClick={() => setTimerActive(!timerActive)}>
+                            {timerActive ? 'stop' : 'start'}
+                        </button>
+                        <div>
+                            {/*{seconds}*/}
+                            <CircleTimerCount/>
+                        </div>
+                    </React.Fragment>
+                    : <button onClick={() => setSeconds(15)}>ещё раз</button>
+                }
+            </div>
+
             {/*<CircleTimerCount/>*/}
 
             {/*<div>*/}

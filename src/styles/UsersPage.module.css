@@ -35,7 +35,11 @@
 .form .input_block .clear:hover{
     color: #ab0e32;
 }
-
+.form_modal{
+    width: 600px;
+    height: 200px;
+    border: 1px solid snow;
+}
 /*.mainn ul {*/
 /*    display: flex;*/
 /*    flex-direction: column;*/

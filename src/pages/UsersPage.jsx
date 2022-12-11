@@ -94,6 +94,9 @@ const UsersPage = () => {
                 {/*<SuperButton onClick={addNewPost}> send</SuperButton>*/}
                 {/*<SuperButton> cancel</SuperButton>*/}
             </form>
+            <div className={s.form_modal}>
+
+            </div>
             {valueTerm}
             <br/>
             {bodyTerm}
@@ -104,7 +107,7 @@ const UsersPage = () => {
                             {timerActive ? 'stop' : 'start'}
                         </button>
                         <div>
-                            {/*{seconds}*/}
+                            {seconds}
                             <CircleTimerCount/>
                         </div>
                     </React.Fragment>

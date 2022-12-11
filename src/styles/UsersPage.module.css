@@ -36,9 +36,21 @@
     color: #ab0e32;
 }
 .form_modal{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     width: 600px;
-    height: 200px;
+    height: 80px;
     border: 1px solid snow;
+}
+.form_modal .circle{
+    position: relative;
+    border: 1px solid snow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 100%;
 }
 /*.mainn ul {*/
 /*    display: flex;*/

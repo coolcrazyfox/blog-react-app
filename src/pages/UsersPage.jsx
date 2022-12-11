@@ -14,6 +14,7 @@ import CircleTimerCount from "../components/CircleTimerCount";
 const UsersPage = () => {
     const [ seconds, setSeconds ] = React.useState(20);
     const [ timerActive, setTimerActive ] = React.useState(false);
+    const [modalActive, setModalActive]=React.useState(false);
 
     React.useEffect(() => {
         if (seconds > 0 && timerActive) {
@@ -44,6 +45,20 @@ const UsersPage = () => {
         e.preventDefault()
         setValueTerm(valueTerm)
         setBodyTerm(bodyTerm)
+        setModalActive(!modalActive)
+        // const newPost={
+        //     id: Date.now(),
+        //     valueTerm,
+        //     bodyTerm
+        // }
+        // setPosts([...posts, newPost])
+        console.log('valueTerm',valueTerm)
+    }
+    const deleteNewPost=(e)=>{
+        e.preventDefault()
+        setValueTerm('')
+        setBodyTerm('')
+        setModalActive(!modalActive)
         // const newPost={
         //     id: Date.now(),
         //     valueTerm,
@@ -94,26 +109,30 @@ const UsersPage = () => {
                 {/*<SuperButton onClick={addNewPost}> send</SuperButton>*/}
                 {/*<SuperButton> cancel</SuperButton>*/}
             </form>
-            <div className={s.form_modal}>
-
-            </div>
-            {valueTerm}
-            <br/>
-            {bodyTerm}
-            <div>
-                {seconds
-                    ? <React.Fragment>
-                        <button onClick={() => setTimerActive(!timerActive)}>
-                            {timerActive ? 'stop' : 'start'}
-                        </button>
-                        <div>
-                            {seconds}
-                            <CircleTimerCount/>
-                        </div>
-                    </React.Fragment>
-                    : <button onClick={() => setSeconds(15)}>ещё раз</button>
-                }
-            </div>
+            {modalActive ?( <div className={s.form_modal}>
+                <div className={s.circle}>
+                    <CircleTimerCount/>
+                </div>
+                <div>The {valueTerm} will be delete</div>
+                <button onClick={deleteNewPost}>cancel</button>
+            </div>):<div></div>}
+            {/*{valueTerm}*/}
+            {/*<br/>*/}
+            {/*{bodyTerm}*/}
+            {/*<div>*/}
+            {/*    {seconds*/}
+            {/*        ? <React.Fragment>*/}
+            {/*            <button onClick={() => setTimerActive(!timerActive)}>*/}
+            {/*                {timerActive ? 'stop' : 'start'}*/}
+            {/*            </button>*/}
+            {/*            <div>*/}
+            {/*                {seconds}*/}
+            {/*                <CircleTimerCount/>*/}
+            {/*            </div>*/}
+            {/*        </React.Fragment>*/}
+            {/*        : <button onClick={() => setSeconds(15)}>ещё раз</button>*/}
+            {/*    }*/}
+            {/*</div>*/}
 
             {/*<CircleTimerCount/>*/}
 

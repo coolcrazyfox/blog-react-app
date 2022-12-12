@@ -51,6 +51,7 @@
     align-items: center;
     width: 80px;
     height: 100%;
+    border-radius: 10px;
 }
 /*.mainn ul {*/
 /*    display: flex;*/

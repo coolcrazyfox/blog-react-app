@@ -130,6 +130,11 @@ const UsersPage = () => {
                 <div>The {valueTerm} will be delete</div>
                 <button onClick={deleteNewPost}>cancel</button>
             </div>):<div></div>}
+            <div>
+                Count: {count}
+                <br />
+                setTimeout Count: {countInTimeout}
+            </div>
             {/*{valueTerm}*/}
             {/*<br/>*/}
             {/*{bodyTerm}*/}

@@ -23,12 +23,21 @@ const UsersPage = () => {
             setTimerActive(false);
         }
     }, [ seconds, timerActive ]);
+
+    const [count, setCount] = useState(0);
+    const [countInTimeout, setCountInTimeout] = useState(0);
     React.useEffect(() => {
-        const timer = setTimeout(() => {
-            console.log('This will run after 1 second!')
-        }, 1000);
-        return () => clearTimeout(timer);
+        setTimeout(() => {
+            setCountInTimeout(count); // count is 0 here
+        }, 3000);
+        setCount(5); // Update count to be 5 after timeout is scheduled
     }, []);
+    // React.useEffect(() => {
+    //     const timer = setTimeout(() => {
+    //         console.log('This will run after 1 second!')
+    //     }, 1000);
+    //     return () => clearTimeout(timer);
+    // }, []);
 
     const [valueTerm, setValueTerm]= useState('')
     const [bodyTerm, setBodyTerm]= useState('')

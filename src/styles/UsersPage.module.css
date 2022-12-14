@@ -42,7 +42,7 @@
     width: 400px;
     height: 60px;
     margin: 10px;
-    border: 1px solid snow;
+    border-left: 1px solid snow;
     border-radius: 15px;
     background: #142f3b;
 }

@@ -128,13 +128,17 @@ const UsersPage = () => {
                     <CircleTimerCount/>
                 </div>
                 <div className={s.message}>The {valueTerm} will be delete</div>
-                <button onClick={deleteNewPost}>cancel</button>
+                <div onClick={deleteNewPost} className={s.cancel_btn}>
+                    <SuperButton >cancel</SuperButton>
+                </div>
+
+                {/*<button onClick={deleteNewPost}>cancel</button>*/}
             </div>):<div></div>}
-            <div>
-                Count: {count}
-                <br />
-                setTimeout Count: {countInTimeout}
-            </div>
+            {/*<div>*/}
+            {/*    Count: {count}*/}
+            {/*    <br />*/}
+            {/*    setTimeout Count: {countInTimeout}*/}
+            {/*</div>*/}
             {/*{valueTerm}*/}
             {/*<br/>*/}
             {/*{bodyTerm}*/}

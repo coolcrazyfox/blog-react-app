@@ -41,7 +41,10 @@
     flex-wrap: wrap;
     width: 400px;
     height: 60px;
+    margin: 10px;
     border: 1px solid snow;
+    border-radius: 15px;
+    background: #142f3b;
 }
 .form_modal .circle{
     position: relative;
@@ -52,6 +55,10 @@
     width: 80px;
     height: 100%;
     border-radius: 10px;
+}
+.form_modal .message{
+    margin: 15px;
+    color: #ebedf1;
 }
 /*.mainn ul {*/
 /*    display: flex;*/

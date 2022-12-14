@@ -127,7 +127,7 @@ const UsersPage = () => {
                 <div className={s.circle}>
                     <CircleTimerCount/>
                 </div>
-                <div>The {valueTerm} will be delete</div>
+                <div className={s.message}>The {valueTerm} will be delete</div>
                 <button onClick={deleteNewPost}>cancel</button>
             </div>):<div></div>}
             <div>

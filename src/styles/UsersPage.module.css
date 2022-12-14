@@ -48,8 +48,9 @@
 }
 .form_modal .circle{
     position: relative;
-    border: 1px solid snow;
+    /*border: 1px solid snow;*/
     display: flex;
+    color: #ebedf1;
     justify-content: center;
     align-items: center;
     width: 80px;

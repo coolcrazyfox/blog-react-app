@@ -4,9 +4,9 @@ import s from '../styles/Error404.module.css'
 import {Link} from "react-router-dom";
 
 const Error404 = () => {
-    let img404 ='https://tabthemes.com/wp-content/uploads/2022/04/404-error-page-iconfinder.jpg'
+    let img404 = 'https://tabthemes.com/wp-content/uploads/2022/04/404-error-page-iconfinder.jpg'
     return (
-        // <>Error</>
+
         <div className={s.errorBlock}>
             <div className={s.nameContainer}>
                 <img src={img404} alt="404"/>

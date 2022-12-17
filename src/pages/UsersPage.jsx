@@ -17,7 +17,9 @@ const UsersPage = () => {
         const text=prompt('Text task')
         setTasks([...tasks, text])
     }
-
+    const onClickEdit = (index)=>{
+        setTasks(tasks.map((_, i)=> i!==index))
+    }
 
 
     const [ seconds, setSeconds ] = React.useState(20);

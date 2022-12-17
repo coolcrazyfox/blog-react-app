@@ -12,6 +12,14 @@ import CircleTimerCount from "../components/CircleTimerCount";
 
 
 const UsersPage = () => {
+    const [tasks, setTasks]=useState(['1','2'])
+    const onClickAdd=()=>{
+        const text=prompt('Text task')
+        setTasks([...tasks, text])
+    }
+
+
+
     const [ seconds, setSeconds ] = React.useState(20);
     const [ timerActive, setTimerActive ] = React.useState(false);
     const [modalActive, setModalActive]=React.useState(false);

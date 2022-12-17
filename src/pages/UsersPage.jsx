@@ -12,13 +12,19 @@ import CircleTimerCount from "../components/CircleTimerCount";
 
 
 const UsersPage = () => {
-    const [tasks, setTasks]=useState(['1','2'])
+    const [tasks, setTasks]=useState([{text:'1'}])
     const onClickAdd=()=>{
         const text=prompt('Text task')
-        setTasks([...tasks, text])
+        setTasks([...tasks, {text}])
     }
     const onClickEdit = (index)=>{
-        setTasks(tasks.map((_, i)=> i!==index))
+        const text=prompt('New text task')
+        setTasks(tasks.map((obj, i)=> {
+            if (index===i){
+                obj.text=text
+            }
+            return obj
+        }))
     }
     const onClickRemove =(index)=>{
         setTasks(tasks.filter((_,i)=>i!==index))

@@ -21,7 +21,8 @@ const UsersPage = () => {
         const text=prompt('New text task')
         setTasks(tasks.map((obj, i)=> {
             if (index===i){
-                obj.text=text
+                // obj.text=text
+                return {...obj, text: text}
             }
             return obj
         }))
@@ -29,6 +30,8 @@ const UsersPage = () => {
     const onClickRemove =(index)=>{
         setTasks(tasks.filter((_,i)=>i!==index))
     }
+
+
 
     const [ seconds, setSeconds ] = React.useState(20);
     const [ timerActive, setTimerActive ] = React.useState(false);
@@ -182,6 +185,18 @@ const UsersPage = () => {
             {/*</div>*/}
 
             {/*<Menu items={items} header={'Menu'}  active={menuActive} setActive={setMenuActive}/>*/}
+
+            <ul>
+                {tasks.map((task,i)=>(
+                    <li key={i}>
+                        {task}
+                        <button onClick={()=>onClickEdit(i)}>edit</button>
+                        <button onClick={()=>onClickRemove(i)}>x</button>
+
+                    </li>
+                ))}
+            </ul>
+            <button onClick={onClickAdd}>Add</button>
 
 
         </div>

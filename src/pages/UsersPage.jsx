@@ -20,7 +20,9 @@ const UsersPage = () => {
     const onClickEdit = (index)=>{
         setTasks(tasks.map((_, i)=> i!==index))
     }
-
+    const onClickRemove =(index)=>{
+        setTasks(tasks.filter((_,i)=>i!==index))
+    }
 
     const [ seconds, setSeconds ] = React.useState(20);
     const [ timerActive, setTimerActive ] = React.useState(false);

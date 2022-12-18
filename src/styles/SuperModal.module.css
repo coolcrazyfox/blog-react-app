@@ -8,7 +8,8 @@
     background: rgba(20, 47, 59, 0.78);
 }
 .myModalContent{
-    padding: 25px;background: #ebedf1;
+    padding: 25px;
+    background: #1a1f1d;
     border-radius: 16px;
     min-width: 250px;
 

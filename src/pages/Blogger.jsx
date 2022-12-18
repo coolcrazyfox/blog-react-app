@@ -6,6 +6,8 @@ import Search from "../components/Search";
 import BlogsList from "../components/BlogsList";
 import Footer from "../components/Footer";
 import SuperModal from "../components/SuperModal";
+import SuperInput from "../components/SuperInput";
+import SuperButton from "../components/SuperButton";
 
 export const initialTasks = [
     {
@@ -42,6 +44,7 @@ export const initialTasks = [
     },
 ]
 const Blogger = () => {
+    const [modal, setModal]=useState(false)
     const [tasks, setTasks]=useState(initialTasks)
     const [title, setTitle]= useState('')
     const [image, setImage]= useState('')
@@ -72,7 +75,16 @@ const Blogger = () => {
                 // onClick={handleTitleChange}
             />
             <Search  onChange={handleSearchChange}/>
-            <BlogsList tasks={tasks}/>
+            <BlogsList tasks={tasks} setModal={setModal} modal={modal}/>
+            <SuperModal visible={modal} setVisible={setModal}>
+                <form action="#">
+                    <SuperInput/>
+                    <SuperInput/>
+                    <SuperInput/>
+                    <SuperInput/>
+                    <SuperButton>Add</SuperButton>
+                </form>
+            </SuperModal>
 
             <Footer/>
         </div>

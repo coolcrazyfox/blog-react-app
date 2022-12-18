@@ -102,6 +102,13 @@
     transition: .5s;
     /*cursor: pointer;*/
 }
+.main_blog_title span:hover{
+    opacity: 1;
+    margin-left: 10px;
+    color: #ff9900;
+    transition: .5s;
+    /*cursor: pointer;*/
+}
 .main_blog_date, .main_blog_web{
     color: #ebedf1;
     font-size: 0.7rem;

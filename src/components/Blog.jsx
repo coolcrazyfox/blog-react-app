@@ -41,12 +41,12 @@ export const initialTasks = [
     },
 ]
 
-const Blog = () => {
+const Blog = ({tasks}) => {
     // const [loading, setLoading]=useState(true)
-    const [tasks, setTask] = useState(initialTasks)
+    const [initTasks, setInitTasks] = useState(tasks)
     return (
         <>
-            {tasks.map( b => {
+            {initTasks.map( b => {
                     return (
                         <Bounce right>
                             <div key={b.id} className={s.blog_item}>

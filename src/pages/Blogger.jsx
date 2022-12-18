@@ -51,19 +51,6 @@ const Blogger = () => {
     const [website, setWebsite]= useState('')
     const [text, setText]= useState('')
     const [date, setDate]= useState('')
-
-    // {
-    //     id: 1,
-    //         image: 'https://st2.depositphotos.com/2001755/8564/i/450/depositphotos_85647140-stock-photo-beautiful-landscape-with-birds.jpg',
-    //     title: 'The best blog in our village',
-    //     website: 'https://www.youtube.com/',
-    //     text: 'Lorem ipsum dolor sit amet, consectet adipiscing elit...',
-    //     date: '2022-11-19'
-    // }
-    // const [text, setText]= useState('')
-    // const handleTitleChange=(title)=>{
-    //     setTitle(title)
-    // }
     const handleSearchChange=(text)=>{
         setText(text)
     }

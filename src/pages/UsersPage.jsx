@@ -104,6 +104,9 @@ const UsersPage = () => {
     }
     return (
         <div className={s.mainn}>
+            <SuperButton link={'/'}>
+                back
+            </SuperButton>
             <form className={s.form}>
                 <div className={s.input_block}>
                     <SuperInput

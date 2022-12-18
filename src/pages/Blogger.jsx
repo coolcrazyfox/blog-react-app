@@ -5,6 +5,7 @@ import NavBar from "../components/NavBar";
 import Search from "../components/Search";
 import BlogsList from "../components/BlogsList";
 import Footer from "../components/Footer";
+import SuperModal from "../components/SuperModal";
 
 export const initialTasks = [
     {
@@ -65,12 +66,14 @@ const Blogger = () => {
     }
     return (
         <div className={s.main_container}>
+
             <Header text={text}/>
             <NavBar
                 // onClick={handleTitleChange}
             />
             <Search  onChange={handleSearchChange}/>
             <BlogsList tasks={tasks}/>
+
             <Footer/>
         </div>
     );

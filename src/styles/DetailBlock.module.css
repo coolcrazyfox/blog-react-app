@@ -89,7 +89,18 @@
 }
 .main_blog_title{
     margin-bottom: 2px;
+    cursor: pointer;
 
+}
+.main_blog_title span{
+    opacity: 0;
+    margin-left: 10px;
+}
+.main_blog_title:hover span{
+    opacity: 1;
+    margin-left: 10px;
+    transition: .5s;
+    /*cursor: pointer;*/
 }
 .main_blog_date, .main_blog_web{
     color: #ebedf1;

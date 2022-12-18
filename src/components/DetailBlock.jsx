@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import s from "../styles/DetailBlock.module.css";
 import {initialTasks} from "./Blog";
 import Zoom from 'react-reveal/Zoom';
+import {AiTwotoneEdit} from "react-icons/ai";
 
 
 
@@ -27,7 +28,13 @@ const DetailBlock = ({onClickListItem, details, sortDetails}) => {
                                         <div className={s.main_blog_box_icon} style={{backgroundImage:`url(${sortDetails.image})`}}></div>
                                     </div>
                                     <div className={s.main_blog_form}>
-                                        <div className={s.main_blog_title}>{sortDetails.title}</div>
+                                        <div className={s.main_blog_title}>{sortDetails.title}
+                                            <span
+                                                // onClick={()=>onClickListItem(i)}
+                                            >
+                                                        <AiTwotoneEdit/>
+                                            </span>
+                                        </div>
                                         <div className={s.main_blog_date}>Blog creation date: &nbsp;&nbsp;{sortDetails.date}</div>
                                         <div className={s.main_blog_web}> Website:
                                             <a href={`${sortDetails.website}`}>{sortDetails.website}</a>

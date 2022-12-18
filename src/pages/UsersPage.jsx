@@ -189,7 +189,7 @@ const UsersPage = () => {
             <ul>
                 {tasks.map((task,i)=>(
                     <li key={i}>
-                        {task}
+                        {task.text}
                         <button onClick={()=>onClickEdit(i)}>edit</button>
                         <button onClick={()=>onClickRemove(i)}>x</button>
 

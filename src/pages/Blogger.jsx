@@ -77,6 +77,9 @@ const Blogger = () => {
                     <SuperInput
                         placeholder={"Website"}
                     />
+                    <SuperInput
+                        placeholder={"yyyy-mm-dd"}
+                    />
                     <SuperButton>Add</SuperButton>
                 </form>
             </SuperModal>

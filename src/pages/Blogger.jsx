@@ -65,8 +65,12 @@ const Blogger = () => {
             <BlogsList tasks={tasks} setModal={setModal} modal={modal}/>
             <SuperModal visible={modal} setVisible={setModal}>
                 <form action="#">
-                    <SuperInput/>
-                    <SuperInput/>
+                    <SuperInput
+                        placeholder={"Image link"}
+                    />
+                    <SuperInput
+                        placeholder={"Title"}
+                    />
                     <SuperInput/>
                     <SuperInput/>
                     <SuperButton>Add</SuperButton>

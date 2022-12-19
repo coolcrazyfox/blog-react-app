@@ -65,7 +65,16 @@ const Blogger = () => {
             <Search  onChange={handleSearchChange}/>
             <BlogsList tasks={tasks} setModal={setModal} modal={modal}/>
             <SuperModal visible={modal} setVisible={setModal}>
-                <BlogInputForm />
+                <BlogInputForm
+                    image={image}
+                    setImage={setImage}
+                    title={title}
+                    setTitle={setTitle}
+                    website={website}
+                    setWebsite={setWebsite}
+                    date={date}
+                    setDate={setDate}
+                />
             </SuperModal>
 
             <Footer/>

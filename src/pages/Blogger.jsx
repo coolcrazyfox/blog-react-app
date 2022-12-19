@@ -71,8 +71,12 @@ const Blogger = () => {
                     <SuperInput
                         placeholder={"Title"}
                     />
-                    <SuperInput/>
-                    <SuperInput/>
+                    <SuperInput
+                        placeholder={"Text"}
+                    />
+                    <SuperInput
+                        placeholder={"Website"}
+                    />
                     <SuperButton>Add</SuperButton>
                 </form>
             </SuperModal>

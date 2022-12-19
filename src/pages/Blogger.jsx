@@ -70,6 +70,8 @@ const Blogger = () => {
                     setImage={setImage}
                     title={title}
                     setTitle={setTitle}
+                    text={text}
+                    setText={setText}
                     website={website}
                     setWebsite={setWebsite}
                     date={date}

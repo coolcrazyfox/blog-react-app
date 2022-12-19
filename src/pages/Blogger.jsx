@@ -8,6 +8,7 @@ import Footer from "../components/Footer";
 import SuperModal from "../components/SuperModal";
 import SuperInput from "../components/SuperInput";
 import SuperButton from "../components/SuperButton";
+import BlogInputForm from "../components/BlogInputForm";
 
 export const initialTasks = [
     {
@@ -64,24 +65,7 @@ const Blogger = () => {
             <Search  onChange={handleSearchChange}/>
             <BlogsList tasks={tasks} setModal={setModal} modal={modal}/>
             <SuperModal visible={modal} setVisible={setModal}>
-                <form action="#">
-                    <SuperInput
-                        placeholder={"Image link"}
-                    />
-                    <SuperInput
-                        placeholder={"Title"}
-                    />
-                    <SuperInput
-                        placeholder={"Text"}
-                    />
-                    <SuperInput
-                        placeholder={"Website"}
-                    />
-                    <SuperInput
-                        placeholder={"yyyy-mm-dd"}
-                    />
-                    <SuperButton>Add</SuperButton>
-                </form>
+                <BlogInputForm />
             </SuperModal>
 
             <Footer/>

@@ -4,8 +4,8 @@ import Blog from "./Blog";
 import SuperModal from "./SuperModal";
 import SuperButton from "./SuperButton";
 import SuperInput from "./SuperInput";
-const BlogsList = ({tasks, modal,  setModal}) => {
-    // const [modal, setModal]=useState(false)
+const BlogsList = ({tasks, setModal}) => {
+
 
     return (
         <div className={s.blogs}>
@@ -14,15 +14,7 @@ const BlogsList = ({tasks, modal,  setModal}) => {
                     <SuperButton ><span onClick={()=>setModal(true)}>Create a new blog</span></SuperButton>
                     <Blog tasks={tasks}/>
                 </div>
-                {/*<SuperModal visible={modal} setVisible={setModal}>*/}
-                {/*    <form action="#">*/}
-                {/*        <SuperInput/>*/}
-                {/*        <SuperInput/>*/}
-                {/*        <SuperInput/>*/}
-                {/*        <SuperInput/>*/}
-                {/*        <SuperButton>Add</SuperButton>*/}
-                {/*    </form>*/}
-                {/*</SuperModal>*/}
+
             </div>
 
         </div>

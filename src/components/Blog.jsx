@@ -44,6 +44,9 @@ export const initialTasks = [
 const Blog = ({tasks}) => {
     // const [loading, setLoading]=useState(true)
     const [initTasks, setInitTasks] = useState(tasks)
+    const skeletonImage= 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png'
+    // const skeletonImage='http://pngimagesfree.com/frame/Polaroid/polaroid-photo-frame-transparent-png_pngimagesfree.png'
+
     return (
         <>
             {initTasks.map( b => {
@@ -52,7 +55,13 @@ const Blog = ({tasks}) => {
                             <div key={b.id} className={s.blog_item}>
                                 <div className={s.image_blog}
                                      style={{backgroundImage:`url(${b.image})`}}
-                                ></div>
+                                     // style={{backgroundImage:`url(${skeletonImage})`}}
+                                >
+                                    {/*<img*/}
+                                    {/*    // src={b.image}*/}
+                                    {/*    alt={skeletonImage}*/}
+                                    {/*/>*/}
+                                </div>
                                 <div className={s.text_container}>
                                     <Link to={'/detblog'}>
                                         <h2 className={s.title}> {b.title}</h2>

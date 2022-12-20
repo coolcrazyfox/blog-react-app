@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { uuid } from 'uuidv4';
 import s from "../styles/Blogger.module.css";
 import Header from "../components/Header";
 import NavBar from "../components/NavBar";
@@ -6,7 +7,6 @@ import Search from "../components/Search";
 import BlogsList from "../components/BlogsList";
 import Footer from "../components/Footer";
 import SuperModal from "../components/UI/SuperModal/SuperModal";
-import BlogInputForm from "../components/BlogInputForm";
 import SuperInput from "../components/UI/SuperInput/SuperInput";
 import SuperButton from "../components/UI/SuperButton/SuperButton";
 
@@ -55,9 +55,19 @@ const Blogger = () => {
     const handleSearchChange = (text) => {
         setText(text)
     }
-        //add new blog
+    //add new blog
     const addNewBlog = (event) => {
         event.preventDefault()
+        const newBlog={
+            // id: Date.now(),
+            id: uuid()
+            image,
+            title,
+            text,
+            website,
+            date
+        }
+        setTasks([...tasks,newBlog])
     }
     return (
         <div className={s.main_container}>
@@ -69,36 +79,36 @@ const Blogger = () => {
             <Search onChange={handleSearchChange}/>
             <BlogsList tasks={tasks} setModal={setModal} modal={modal}/>
             <SuperModal visible={modal} setVisible={setModal}>
-                <form >
+                <form>
                     <SuperInput
                         type={'text'}
                         placeholder={"Image link"}
                         value={image}
-                        onCnange={e=> setImage(e.target.value)}
+                        onCnange={e => setImage(e.target.value)}
                     />
                     <SuperInput
                         type={'text'}
                         placeholder={"Title"}
                         value={title}
-                        onCnange={e=> setTitle(e.target.value)}
+                        onCnange={e => setTitle(e.target.value)}
                     />
                     <SuperInput
                         type={'text'}
                         placeholder={"Text"}
                         value={text}
-                        onCnange={e=> setText(e.target.value)}
+                        onCnange={e => setText(e.target.value)}
                     />
                     <SuperInput
                         type={'text'}
                         placeholder={"Website"}
                         value={website}
-                        onCnange={e=> setWebsite(e.target.value)}
+                        onCnange={e => setWebsite(e.target.value)}
                     />
                     <SuperInput
                         type={'text'}
                         placeholder={"yyyy-mm-dd"}
                         value={date}
-                        onCnange={e=> setDate(e.target.value)}
+                        onCnange={e => setDate(e.target.value)}
                     />
                     <SuperButton onClick={addNewBlog}>Add</SuperButton>
                 </form>

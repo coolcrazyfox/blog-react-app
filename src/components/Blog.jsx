@@ -49,10 +49,10 @@ const Blog = ({tasks}) => {
 
     return (
         <>
-            {initTasks.map( b => {
+            {initTasks.map( b=> {
                     return (
                         <Bounce right>
-                            <div key={b.id} className={s.blog_item}>
+                            <div  key={b.id} className={s.blog_item}>
                                 <div className={s.image_blog}
                                      style={{backgroundImage:`url(${b.image})`}}
                                      // style={{backgroundImage:`url(${skeletonImage})`}}

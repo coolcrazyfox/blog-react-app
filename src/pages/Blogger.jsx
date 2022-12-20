@@ -6,9 +6,9 @@ import Search from "../components/Search";
 import BlogsList from "../components/BlogsList";
 import Footer from "../components/Footer";
 import SuperModal from "../components/UI/SuperModal/SuperModal";
+import BlogInputForm from "../components/BlogInputForm";
 import SuperInput from "../components/UI/SuperInput/SuperInput";
 import SuperButton from "../components/UI/SuperButton/SuperButton";
-import BlogInputForm from "../components/BlogInputForm";
 
 export const initialTasks = [
     {
@@ -45,15 +45,19 @@ export const initialTasks = [
     },
 ]
 const Blogger = () => {
-    const [modal, setModal]=useState(false)
-    const [tasks, setTasks]=useState(initialTasks)
-    const [title, setTitle]= useState('')
-    const [image, setImage]= useState('')
-    const [website, setWebsite]= useState('')
-    const [text, setText]= useState('')
-    const [date, setDate]= useState('')
-    const handleSearchChange=(text)=>{
+    const [modal, setModal] = useState(false)
+    const [tasks, setTasks] = useState(initialTasks)
+    const [title, setTitle] = useState('')
+    const [image, setImage] = useState('')
+    const [website, setWebsite] = useState('')
+    const [text, setText] = useState('')
+    const [date, setDate] = useState('')
+    const handleSearchChange = (text) => {
         setText(text)
+    }
+        //add new blog
+    const addNewBlog = () => {
+
     }
     return (
         <div className={s.main_container}>
@@ -62,21 +66,45 @@ const Blogger = () => {
             <NavBar
                 // onClick={handleTitleChange}
             />
-            <Search  onChange={handleSearchChange}/>
+            <Search onChange={handleSearchChange}/>
             <BlogsList tasks={tasks} setModal={setModal} modal={modal}/>
             <SuperModal visible={modal} setVisible={setModal}>
-                <BlogInputForm
-                    image={image}
-                    setImage={setImage}
-                    title={title}
-                    setTitle={setTitle}
-                    text={text}
-                    setText={setText}
-                    website={website}
-                    setWebsite={setWebsite}
-                    date={date}
-                    setDate={setDate}
-                />
+                <form >
+                    <SuperInput
+                        type={'text'}
+                        value={image}
+                        placeholder={"Image link"}
+                    />
+                    <SuperInput
+                        type={'text'}
+                        placeholder={"Title"}
+                    />
+                    <SuperInput
+                        type={'text'}
+                        placeholder={"Text"}
+                    />
+                    <SuperInput
+                        type={'text'}
+                        placeholder={"Website"}
+                    />
+                    <SuperInput
+                        type={'text'}
+                        placeholder={"yyyy-mm-dd"}
+                    />
+                    <SuperButton onClick={addNewBlog}>Add</SuperButton>
+                </form>
+                {/*<BlogInputForm*/}
+                {/*    image={image}*/}
+                {/*    setImage={setImage}*/}
+                {/*    title={title}*/}
+                {/*    setTitle={setTitle}*/}
+                {/*    text={text}*/}
+                {/*    setText={setText}*/}
+                {/*    website={website}*/}
+                {/*    setWebsite={setWebsite}*/}
+                {/*    date={date}*/}
+                {/*    setDate={setDate}*/}
+                {/*/>*/}
             </SuperModal>
 
             <Footer/>

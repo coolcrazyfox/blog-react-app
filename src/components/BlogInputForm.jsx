@@ -2,11 +2,12 @@ import React from 'react';
 import SuperInput from "./UI/SuperInput/SuperInput";
 import SuperButton from "./UI/SuperButton/SuperButton";
 
-const BlogInputForm = ({...props}) => {
+const BlogInputForm = ({props}) => {
     return (
         <>
-            <form action="#">
+            <form >
                 <SuperInput
+                    value={props.image}
                     placeholder={"Image link"}
                 />
                 <SuperInput

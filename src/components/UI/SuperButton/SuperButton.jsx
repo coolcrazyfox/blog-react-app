@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 
 const SuperButton = ({children, link, label, onClick}) => {
     return (
-        <div className={s.button_container} onClick={()=>{}}>
+        <div className={s.button_container} onClick={onClick}>
             <Link to={link} className={s.link_button}>
                 <span className={s.span}></span>
                 <span className={s.span}></span>

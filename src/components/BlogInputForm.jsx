@@ -2,27 +2,65 @@ import React from 'react';
 import SuperInput from "./UI/SuperInput/SuperInput";
 import SuperButton from "./UI/SuperButton/SuperButton";
 
-const BlogInputForm = ({props}) => {
+const BlogInputForm = ({blog, setBlog, onChange, image, setImage, tasks, setTasks}) => {
+    // const addNewBlog = (e) => {
+    //     e.preventDefault()
+    //     // const newBlog={
+    //     //     // id: Date.now(),
+    //     //     id: uuid(),
+    //     //     image,
+    //     //     title,
+    //     //     text,
+    //     //     website,
+    //     //     date
+    //     // }
+    //     // setTasks([...tasks,{...blog, id:Date.now()}])
+    //     // onCnange(e.target.value)
+    //     // setBlog({image:'', title: '', text: '', website: '', date: '' })
+    //
+    // }
     return (
         <>
-            <form >
+            <form>
+                {/*<SuperInput*/}
+                {/*    type={'text'}*/}
+                {/*    placeholder={"Image link"}*/}
+                {/*    value={blog.image}*/}
+                {/*    onCnange={e => setImage(e.target.value)}*/}
+                {/*/>*/}
                 <SuperInput
-                    value={props.image}
+                    type={'text'}
                     placeholder={"Image link"}
+                    value={image}
+                    onCnange={e => setImage(e.target.value)}
                 />
-                <SuperInput
-                    placeholder={"Title"}
-                />
-                <SuperInput
-                    placeholder={"Text"}
-                />
-                <SuperInput
-                    placeholder={"Website"}
-                />
-                <SuperInput
-                    placeholder={"yyyy-mm-dd"}
-                />
-                <SuperButton>Add</SuperButton>
+                {/*<SuperInput*/}
+                {/*    type={'text'}*/}
+                {/*    placeholder={"Title"}*/}
+                {/*    value={blog.title}*/}
+                {/*    onCnange={addNewBlog}*/}
+                {/*/>*/}
+                {/*<SuperInput*/}
+                {/*    type={'text'}*/}
+                {/*    placeholder={"Text"}*/}
+                {/*    value={blog.text}*/}
+                {/*    onCnange={addNewBlog}*/}
+                {/*/>*/}
+                {/*<SuperInput*/}
+                {/*    type={'text'}*/}
+                {/*    placeholder={"Website"}*/}
+                {/*    value={blog.website}*/}
+                {/*    onCnange={addNewBlog}*/}
+                {/*/>*/}
+                {/*<SuperInput*/}
+                {/*    type={'text'}*/}
+                {/*    placeholder={"yyyy-mm-dd"}*/}
+                {/*    value={blog.date}*/}
+                {/*    onCnange={addNewBlog}*/}
+                {/*/>*/}
+                <SuperButton
+                    // onClick={addNewBlog}
+                >Add</SuperButton>
             </form>
 
         </>

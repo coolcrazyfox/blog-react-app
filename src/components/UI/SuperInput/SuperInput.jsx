@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import s from '../../../styles/SuperInput.module.css'
 import {ImSearch} from "react-icons/im";
 import {AiOutlineClear} from "react-icons/ai";
-const SuperInput = ({...props}) => {
+const SuperInput = (props) => {
     // const [valueTerm, setValueTerm]= useState('')
     return (
         <div className={s.search_input_form}>
@@ -11,7 +11,7 @@ const SuperInput = ({...props}) => {
            </span>
             <input className={s.input}
                    {...props}
-                   autoFocus
+                   // autoFocus
                 // autoComplete={'off'}
                 //    type="text"
                    // value={searchTerm}

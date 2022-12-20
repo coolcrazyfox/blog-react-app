@@ -1,6 +1,6 @@
 import React from 'react';
-import SuperInput from "./SuperInput";
-import SuperButton from "./SuperButton";
+import SuperInput from "./UI/SuperInput/SuperInput";
+import SuperButton from "./UI/SuperButton/SuperButton";
 
 const BlogInputForm = ({...props}) => {
     return (

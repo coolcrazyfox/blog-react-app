@@ -1,5 +1,5 @@
 import React from 'react';
-import s from "../styles/SuperButton.module.css";
+import s from "../../../styles/SuperButton.module.css";
 import {TiArrowBackOutline} from "react-icons/ti";
 import {Link} from "react-router-dom";
 

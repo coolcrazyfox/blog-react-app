@@ -5,9 +5,9 @@ import NavBar from "../components/NavBar";
 import Search from "../components/Search";
 import BlogsList from "../components/BlogsList";
 import Footer from "../components/Footer";
-import SuperModal from "../components/SuperModal";
-import SuperInput from "../components/SuperInput";
-import SuperButton from "../components/SuperButton";
+import SuperModal from "../components/UI/SuperModal/SuperModal";
+import SuperInput from "../components/UI/SuperInput/SuperInput";
+import SuperButton from "../components/UI/SuperButton/SuperButton";
 import BlogInputForm from "../components/BlogInputForm";
 
 export const initialTasks = [

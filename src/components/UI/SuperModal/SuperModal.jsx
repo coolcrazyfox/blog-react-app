@@ -1,5 +1,5 @@
 import React from 'react';
-import s from '../styles/SuperModal.module.css'
+import s from '../../../styles/SuperModal.module.css'
 
 
 

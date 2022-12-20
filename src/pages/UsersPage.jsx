@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import s from '../styles/UsersPage.module.css'
-import SuperButton from "../components/SuperButton";
+import SuperButton from "../components/UI/SuperButton/SuperButton";
 
 import {SiApostrophe,SiMicrodotblog, SiPostman} from "react-icons/si";
 import Menu from "../components/Menu";
-import SuperInput from "../components/SuperInput";
+import SuperInput from "../components/UI/SuperInput/SuperInput";
 import {AiOutlineClear} from "react-icons/ai";
 import CircleTimerCount from "../components/CircleTimerCount";
 

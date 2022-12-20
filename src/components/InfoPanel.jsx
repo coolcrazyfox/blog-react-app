@@ -3,7 +3,7 @@ import s from "../styles/InfoPanel.module.css";
 import {MdDoubleArrow} from "react-icons/md";
 import {TiArrowBackOutline} from "react-icons/ti";
 import {Link} from "react-router-dom";
-import SuperButton from "./SuperButton";
+import SuperButton from "./UI/SuperButton/SuperButton";
 
 const InfoPanel = ({details}) => {
     const info=['Blogs', 'Posts']

@@ -4,7 +4,7 @@ import Select from "./Select";
 import {ImSearch} from "react-icons/im";
 import {AiOutlineClear} from "react-icons/ai";
 import {initialState} from "./NavBar";
-import SuperInput from "./SuperInput";
+import SuperInput from "./UI/SuperInput/SuperInput";
 const Search = ({title, onChange}) => {
     const [inform,setInform]=useState(initialState)
     const info = inform[1]

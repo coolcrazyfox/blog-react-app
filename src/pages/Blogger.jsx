@@ -47,11 +47,12 @@ export const initialTasks = [
 const Blogger = () => {
     const [modal, setModal] = useState(false)
     const [tasks, setTasks] = useState(initialTasks)
-    const [title, setTitle] = useState('')
-    const [image, setImage] = useState('')
-    const [website, setWebsite] = useState('')
-    const [text, setText] = useState('')
-    const [date, setDate] = useState('')
+    // const [title, setTitle] = useState('')
+    // const [image, setImage] = useState('')
+    // const [website, setWebsite] = useState('')
+    // const [text, setText] = useState('')
+    // const [date, setDate] = useState('')
+    const  [blog, setBlog]=useState({image:'', title: '', text: '', website: '', date: '' })
     const handleSearchChange = (text) => {
         setText(text)
     }
@@ -60,7 +61,7 @@ const Blogger = () => {
         event.preventDefault()
         const newBlog={
             // id: Date.now(),
-            id: uuid()
+            id: uuid(),
             image,
             title,
             text,
@@ -68,11 +69,16 @@ const Blogger = () => {
             date
         }
         setTasks([...tasks,newBlog])
+        setImage('')
+        setTitle('')
+        setWebsite('')
+        setText('')
+        setDate('')
     }
     return (
         <div className={s.main_container}>
 
-            <Header text={text}/>
+            <Header/>
             <NavBar
                 // onClick={handleTitleChange}
             />
@@ -80,35 +86,41 @@ const Blogger = () => {
             <BlogsList tasks={tasks} setModal={setModal} modal={modal}/>
             <SuperModal visible={modal} setVisible={setModal}>
                 <form>
+                    {/*<SuperInput*/}
+                    {/*    type={'text'}*/}
+                    {/*    placeholder={"Image link"}*/}
+                    {/*    value={blog.image}*/}
+                    {/*    onCnange={e => setImage(e.target.value)}*/}
+                    {/*/>*/}
                     <SuperInput
                         type={'text'}
                         placeholder={"Image link"}
-                        value={image}
-                        onCnange={e => setImage(e.target.value)}
+                        value={blog.image}
+                        onCnange={e => setBlog({...blog, image: e.target.value})}
                     />
                     <SuperInput
                         type={'text'}
                         placeholder={"Title"}
-                        value={title}
-                        onCnange={e => setTitle(e.target.value)}
+                        value={blog.title}
+                        onCnange={e => setBlog({...blog, title: e.target.value})}
                     />
                     <SuperInput
                         type={'text'}
                         placeholder={"Text"}
-                        value={text}
-                        onCnange={e => setText(e.target.value)}
+                        value={blog.text}
+                        onCnange={e => setBlog({...blog, text: e.target.value})}
                     />
                     <SuperInput
                         type={'text'}
                         placeholder={"Website"}
-                        value={website}
-                        onCnange={e => setWebsite(e.target.value)}
+                        value={blog.website}
+                        onCnange={e => setBlog({...blog, website: e.target.value})}
                     />
                     <SuperInput
                         type={'text'}
                         placeholder={"yyyy-mm-dd"}
-                        value={date}
-                        onCnange={e => setDate(e.target.value)}
+                        value={blog.date}
+                        onCnange={e => setBlog({...blog, date: e.target.value})}
                     />
                     <SuperButton onClick={addNewBlog}>Add</SuperButton>
                 </form>

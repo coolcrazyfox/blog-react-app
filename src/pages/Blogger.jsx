@@ -56,8 +56,8 @@ const Blogger = () => {
         setText(text)
     }
         //add new blog
-    const addNewBlog = () => {
-
+    const addNewBlog = (event) => {
+        event.preventDefault()
     }
     return (
         <div className={s.main_container}>
@@ -72,24 +72,33 @@ const Blogger = () => {
                 <form >
                     <SuperInput
                         type={'text'}
-                        value={image}
                         placeholder={"Image link"}
+                        value={image}
+                        onCnange={e=> setImage(e.target.value)}
                     />
                     <SuperInput
                         type={'text'}
                         placeholder={"Title"}
+                        value={title}
+                        onCnange={e=> setTitle(e.target.value)}
                     />
                     <SuperInput
                         type={'text'}
                         placeholder={"Text"}
+                        value={text}
+                        onCnange={e=> setText(e.target.value)}
                     />
                     <SuperInput
                         type={'text'}
                         placeholder={"Website"}
+                        value={website}
+                        onCnange={e=> setWebsite(e.target.value)}
                     />
                     <SuperInput
                         type={'text'}
                         placeholder={"yyyy-mm-dd"}
+                        value={date}
+                        onCnange={e=> setDate(e.target.value)}
                     />
                     <SuperButton onClick={addNewBlog}>Add</SuperButton>
                 </form>

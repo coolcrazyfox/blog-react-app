@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import SuperInput from "./UI/SuperInput/SuperInput";
 import SuperButton from "./UI/SuperButton/SuperButton";
 
-const BlogForm = () => {
+const BlogForm = ({create}) => {
     const  [blog, setBlog]=useState({image:'', title: '', text: '', website: '', date: '' })
     const addNewBlog = (e) => {
         e.preventDefault()
@@ -16,7 +16,7 @@ const BlogForm = () => {
         //     website,
         //     date
         }
-
+        create(newBlog)
         setBlog({image:'', title: '', text: '', website: '', date: '' })
 
     }

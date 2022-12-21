@@ -13,12 +13,6 @@ const BlogsList = ({tasks, setModal, blog, setBlog, onChange,}) => {
                 <div className={s.container_items}>
                     <SuperButton ><span onClick={()=>setModal(true)}>Create a new blog</span></SuperButton>
                     <Blog tasks={tasks}/>
-                    <SuperInput
-                        type={'text'}
-                        placeholder={"Image link"}
-                        value={blog.image}
-                        onCnange={e => setBlog({...blog, image:e.target.value})}
-                    />
                 </div>
 
             </div>

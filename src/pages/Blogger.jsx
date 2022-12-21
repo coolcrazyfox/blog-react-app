@@ -57,22 +57,10 @@ const Blogger = () => {
         text.preventDefault()
         setText(text)
     }
-    //add new blog
-    const addNewBlog = (event) => {
-        event.preventDefault()
-        // const newBlog={
-        //     // id: Date.now(),
-        //     id: uuid(),
-        //     image,
-        //     title,
-        //     text,
-        //     website,
-        //     date
-        // }
-        setTasks([...tasks,{...blog, id:Date.now()}])
-        setBlog({image:'', title: '', text: '', website: '', date: '' })
-
+    const createNewBlog=(newBlog)=>{
+        setTasks([...tasks,newBlog])
     }
+
     return (
         <div className={s.main_container}>
 
@@ -83,7 +71,7 @@ const Blogger = () => {
             <Search onChange={handleSearchChange}/>
             <BlogsList tasks={tasks} setModal={setModal} modal={modal} />
             <SuperModal visible={modal} setVisible={setModal}>
-                <BlogForm blog={blog} setBlog={setBlog} onChange={addNewBlog}/>
+                <BlogForm create={createNewBlog}/>
 
             </SuperModal>
 

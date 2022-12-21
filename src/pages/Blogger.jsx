@@ -7,7 +7,7 @@ import Search from "../components/Search";
 import BlogsList from "../components/BlogsList";
 import Footer from "../components/Footer";
 import SuperModal from "../components/UI/SuperModal/SuperModal";
-import BlogInputForm from "../components/BlogInputForm";
+import BlogForm from "../components/BlogForm";
 
 
 export const initialTasks = [
@@ -52,7 +52,7 @@ const Blogger = () => {
     // const [website, setWebsite] = useState('')
     const [text, setText] = useState('')
     // const [date, setDate] = useState('')
-    const  [blog, setBlog]=useState({image:'', title: '', text: '', website: '', date: '' })
+
     const handleSearchChange = (text) => {
         text.preventDefault()
         setText(text)
@@ -83,7 +83,7 @@ const Blogger = () => {
             <Search onChange={handleSearchChange}/>
             <BlogsList tasks={tasks} setModal={setModal} modal={modal} />
             <SuperModal visible={modal} setVisible={setModal}>
-                <BlogInputForm blog={blog} setBlog={setBlog} onChange={addNewBlog}/>
+                <BlogForm blog={blog} setBlog={setBlog} onChange={addNewBlog}/>
 
             </SuperModal>
 

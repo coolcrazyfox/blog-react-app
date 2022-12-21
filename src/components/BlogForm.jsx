@@ -4,22 +4,22 @@ import SuperButton from "./UI/SuperButton/SuperButton";
 
 const BlogForm = () => {
     const  [blog, setBlog]=useState({image:'', title: '', text: '', website: '', date: '' })
-    // const addNewBlog = (e) => {
-    //     e.preventDefault()
-    //     // const newBlog={
-    //     //     // id: Date.now(),
-    //     //     id: uuid(),
-    //     //     image,
-    //     //     title,
-    //     //     text,
-    //     //     website,
-    //     //     date
-    //     // }
-    //     // setTasks([...tasks,{...blog, id:Date.now()}])
-    //     // onCnange(e.target.value)
-    //     // setBlog({image:'', title: '', text: '', website: '', date: '' })
-    //
-    // }
+    const addNewBlog = (e) => {
+        e.preventDefault()
+        const newBlog={
+            ...blog,
+            id: Date.now(),
+        //     id: uuid(),
+        //     image,
+        //     title,
+        //     text,
+        //     website,
+        //     date
+        }
+
+        setBlog({image:'', title: '', text: '', website: '', date: '' })
+
+    }
     return (
         <>
             <form>

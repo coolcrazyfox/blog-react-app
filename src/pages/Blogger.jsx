@@ -81,7 +81,7 @@ const Blogger = () => {
                 // onClick={handleTitleChange}
             />
             <Search onChange={handleSearchChange}/>
-            <BlogsList tasks={tasks} setModal={setModal} modal={modal}/>
+            <BlogsList tasks={tasks} setModal={setModal} modal={modal} blog={blog} setBlog={setBlog} onChange={addNewBlog}/>
             <SuperModal visible={modal} setVisible={setModal}>
                 <BlogInputForm blog={blog} setBlog={setBlog} onChange={addNewBlog}/>
 

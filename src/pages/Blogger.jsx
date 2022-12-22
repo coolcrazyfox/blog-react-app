@@ -57,6 +57,7 @@ const Blogger = () => {
         text.preventDefault()
         setText(text)
     }
+    // add new blog
     const createNewBlog=(newBlog)=>{
         setTasks([...tasks,newBlog])
     }

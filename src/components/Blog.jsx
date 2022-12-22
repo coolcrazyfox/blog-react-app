@@ -1,9 +1,7 @@
-import React, {Fragment, useState} from 'react';
+import React from 'react';
 import s from "../styles/BlogsList.module.css";
 import {Link} from "react-router-dom";
-import Loader from "./Loader";
 import Bounce from 'react-reveal/Bounce';
-
 
 
 export const initialTasks = [
@@ -41,45 +39,33 @@ export const initialTasks = [
     },
 ]
 
-const Blog = ({tasks}) => {
-    // const [loading, setLoading]=useState(true)
-    const [initTasks, setInitTasks] = useState(tasks)
-    const skeletonImage= 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png'
-    // const skeletonImage='http://pngimagesfree.com/frame/Polaroid/polaroid-photo-frame-transparent-png_pngimagesfree.png'
-
+const Blog = (props) => {
     return (
         <>
-            {initTasks.map( b=> {
-                    return (
-                        <Bounce right>
-                            <div  key={b.id} className={s.blog_item}>
-                                <div className={s.image_blog}
-                                     style={{backgroundImage:`url(${b.image})`}}
-                                     // style={{backgroundImage:`url(${skeletonImage})`}}
-                                >
-                                    {/*<img*/}
-                                    {/*    // src={b.image}*/}
-                                    {/*    alt={skeletonImage}*/}
-                                    {/*/>*/}
-                                </div>
-                                <div className={s.text_container}>
-                                    <Link to={'/detblog'}>
-                                        <h2 className={s.title}> {b.title}</h2>
-                                    </Link>
+            <Bounce right>
+                <div className={s.blog_item}>
+                    <div className={s.image_blog}
+                         style={{backgroundImage: `url(${props.blog.image})`}}
+                        // style={{backgroundImage:`url(${skeletonImage})`}}
+                    >
+                        {/*<img*/}
+                        {/*    // src={b.image}*/}
+                        {/*    alt={skeletonImage}*/}
+                        {/*/>*/}
+                    </div>
+                    <div className={s.text_container}>
+                        <Link to={'/detblog'}>
+                            <h2 className={s.title}> {props.blog.title}</h2>
+                        </Link>
 
-                                    <h5>Website:
-                                        <a href={`${b.website}`}>{b.website}</a>
-                                    </h5>
-                                    <p>{b.text}</p>
-                                </div>
+                        <h5>Website:
+                            <a href={`${props.blog.website}`}>{props.blog.website}</a>
+                        </h5>
+                        <p>{props.blog.text}</p>
+                    </div>
 
-                            </div>
-                        </Bounce>
-
-                    )
-                }
-            )
-            }
+                </div>
+            </Bounce>
         </>
 
     );

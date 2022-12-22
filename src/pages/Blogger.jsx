@@ -61,6 +61,10 @@ const Blogger = () => {
     const createNewBlog=(newBlog)=>{
         setTasks([...tasks,newBlog])
     }
+    //remove blog
+    const  removeBlog= (blog)=>{
+        setTasks(tasks.filter(b=> b.id !==blog.id))
+    }
 
     return (
         <div className={s.main_container}>
@@ -70,7 +74,12 @@ const Blogger = () => {
                 // onClick={handleTitleChange}
             />
             <Search onChange={handleSearchChange}/>
-            <BlogsList tasks={tasks} setModal={setModal} modal={modal} />
+            <BlogsList
+                tasks={tasks}
+                remove={removeBlog}
+                setModal={setModal}
+                modal={modal}
+            />
             <SuperModal visible={modal} setVisible={setModal}>
                 <BlogForm create={createNewBlog}/>
 

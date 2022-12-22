@@ -28,12 +28,32 @@
     min-width: 772px;
     height: 90px;
     margin: 10px 5px 0 15px;
+    border-radius: 10px;
     /*height: 48px;*/
     /*top: 283px;*/
     /*left:  444px;*/
     /*border: 1px solid #ebedf1;*/
     padding: 5px 5px 10px 15px;
 
+}
+.blog_item:hover {
+    background: rgba(2, 19, 14, 0.57);
+    border-radius: 10px;
+    transition: .5s;
+
+}
+.blog_item span{
+    color: rgba(255, 153, 0, 0);
+    font-size: .8rem;
+}
+.blog_item:hover span{
+    color: #ebedf1;
+    transition: .5s;
+}
+.blog_item:hover span:hover{
+    font-size: 1rem;
+    color: #ff9900;
+    transition: .5s;
 }
 .image_blog{
     width: 60px;

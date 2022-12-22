@@ -2,6 +2,7 @@ import React from 'react';
 import s from "../styles/BlogsList.module.css";
 import {Link} from "react-router-dom";
 import Bounce from 'react-reveal/Bounce';
+import {MdAutoDelete} from "react-icons/md";
 
 
 export const initialTasks = [
@@ -44,6 +45,9 @@ const Blog = (props) => {
         <>
             <Bounce right>
                 <div className={s.blog_item}>
+                    <span>
+                        <MdAutoDelete/>
+                    </span>
                     <div className={s.image_blog}
                          style={{backgroundImage: `url(${props.blog.image})`}}
                         // style={{backgroundImage:`url(${skeletonImage})`}}

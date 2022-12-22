@@ -18,6 +18,7 @@ const BlogsList = ({tasks, setModal, remove,}) => {
                             Create a new blog
                         </span>
                     </SuperButton>
+
                     {tasks.map( blog =>(
                         <Blog
                             key={blog.id}
@@ -25,6 +26,9 @@ const BlogsList = ({tasks, setModal, remove,}) => {
                             remove={remove}
                         />)
                     )}
+                    {tasks.length!==0
+                        ?<div></div>
+                        :<div className={s.empty}> blog form is empty</div>}
                 </div>
 
             </div>

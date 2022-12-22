@@ -45,7 +45,7 @@ const Blog = (props) => {
         <>
             <Bounce right>
                 <div className={s.blog_item}>
-                    <span>
+                    <span onClick={()=>props.remove(props.blog)}>
                         <MdAutoDelete/>
                     </span>
                     <div className={s.image_blog}

@@ -20,6 +20,18 @@
     display: flex;
     flex-direction: column;
 }
+.container_items .empty{
+    display: flex;
+    font-size: 1.5rem;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10%;
+    color: #ebedf1;
+    text-transform: uppercase;
+    transition: .5s;
+    /*border: 1px solid #ebedf1;*/
+}
 .blog_item{
     display: flex;
     flex-direction: row;
@@ -51,7 +63,7 @@
     transition: .5s;
 }
 .blog_item:hover span:hover{
-    font-size: 1rem;
+    font-size: .85rem;
     color: #ff9900;
     transition: .5s;
 }

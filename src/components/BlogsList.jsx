@@ -13,7 +13,11 @@ const BlogsList = ({tasks, setModal, remove,}) => {
         <div className={s.blogs}>
             <div className={s.box}>
                 <div className={s.container_items}>
-                    <SuperButton><span onClick={() => setModal(true)}>Create a new blog</span></SuperButton>
+                    <SuperButton>
+                        <span onClick={() => setModal(true)}>
+                            Create a new blog
+                        </span>
+                    </SuperButton>
                     {tasks.map( blog =>(
                         <Blog
                             key={blog.id}

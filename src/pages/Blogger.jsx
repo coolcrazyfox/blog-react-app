@@ -49,7 +49,7 @@ const Blogger = () => {
     const [tasks, setTasks] = useState(initialTasks)
     //select
     const selectValue = [
-        {value: 'id', name: 'New blogs first'},
+        {value: 'image', name: 'New blogs first'},
         {value: 'text', name: 'Old blogs first'},
         {value: 'title', name: 'From A to Z'},
         {value: 'website', name: 'From Z to A'},
@@ -91,7 +91,7 @@ const Blogger = () => {
 
 
     const  sortedAndSearchedBlogs= useMemo(()=>{
-        return sortedBlogs.filter(blog=> blog.title.includes(searchQuery) )
+        return sortedBlogs.filter(blog=> blog.title.toLowerCase().includes(searchQuery) )
     }, [searchQuery, sortedBlogs])
 
     const sortBlogs = (sort) => {

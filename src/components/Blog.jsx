@@ -57,9 +57,11 @@ const Blog = (props) => {
                         {/*    alt={skeletonImage}*/}
                         {/*/>*/}
                     </div>
-                    <div className={s.text_container}>
+                    <div className={s.text_container} >
                         <Link to={'/detblog'}>
                             <h2 className={s.title}> {props.blog.title}</h2>
+                            {/*<span>{props.blog.id}</span>*/}
+                            {/*<span>{props.blog.date}</span>*/}
                         </Link>
 
                         <h5>Website:

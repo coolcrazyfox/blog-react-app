@@ -47,6 +47,16 @@ export const initialTasks = [
 const Blogger = () => {
     const [modal, setModal] = useState(false)
     const [tasks, setTasks] = useState(initialTasks)
+    const selectValue=[
+        {value: 'id', name: 'New blogs first'},
+        {value: 'text', name: 'Old blogs first'},
+        {value: 'title', name: 'From A to Z'},
+        {value: 'website', name: 'From Z to A'},
+
+    ]
+    const [selectedSort, setSelectedSort]=useState('')
+    const arOptions = ['New blogs first', 'Old blogs first', 'From A to Z', 'From Z to A'];
+    const defaultSelectValue=arOptions[0]
     // const [title, setTitle] = useState('')
     // const [image, setImage] = useState('')
     // const [website, setWebsite] = useState('')
@@ -65,13 +75,25 @@ const Blogger = () => {
     const  removeBlog= (blog)=>{
         setTasks(tasks.filter(b=> b.id !==blog.id))
     }
+    //sort blogs by select values
+    const sortBlogs=(sort)=>{
+        setSelectedSort(sort)
+        setTasks([...tasks].sort((a,b)=>a[sort].localeCompare(b[sort])))
+    }
 
     return (
         <div className={s.main_container}>
 
             <Header/>
             <NavBar/>
-            <Search onChange={handleSearchChange}/>
+            <Search
+                // onChange={handleSearchChange}
+                onChange={sortBlogs}
+                value={selectedSort}
+                defaultValue={defaultSelectValue}
+                options={selectValue}
+
+            />
             <BlogsList
                 tasks={tasks}
                 remove={removeBlog}

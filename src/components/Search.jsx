@@ -5,7 +5,7 @@ import {ImSearch} from "react-icons/im";
 import {AiOutlineClear} from "react-icons/ai";
 import {initialState} from "./NavBar";
 import SuperInput from "./UI/SuperInput/SuperInput";
-const Search = ({title, onChange}) => {
+const Search = ({options,defaultValue, value, onChange}) => {
     const [inform,setInform]=useState(initialState)
     const info = inform[1]
     const [carList, setCarList]= useState([])
@@ -52,7 +52,7 @@ const Search = ({title, onChange}) => {
                     )
                     }
                 </div>
-                <SuperSelect/>
+                <SuperSelect options={options} defaultValue={defaultValue} value={value} onChange={onChange}/>
             </div>
 
         </div>

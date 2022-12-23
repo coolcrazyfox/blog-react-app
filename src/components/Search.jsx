@@ -5,21 +5,21 @@ import {ImSearch} from "react-icons/im";
 import {AiOutlineClear} from "react-icons/ai";
 import {initialState} from "./NavBar";
 import SuperInput from "./UI/SuperInput/SuperInput";
-const Search = ({options,defaultValue, value, onChange}) => {
+const Search = ({options,defaultValue, value, onChange, onChangeSearch, searchQuery,setSearchQuery}) => {
     const [inform,setInform]=useState(initialState)
     const info = inform[1]
     const [carList, setCarList]= useState([])
-    const [searchTerm, setSearchTerm]= useState('')
-    const handlerEnterSearch =(e)=>{
-        setSearchTerm(e.target.value)
-        onChange(e.target.value)
-        // console.log(searchTerm)
-        // onChange(e.target.value)
-        if (e.key ==="Enter" || e.onClick){
-            console.log(searchTerm)
-            onChange(searchTerm)
-        }
-    }
+
+    // const handlerEnterSearch =(e)=>{
+    //     setSearchTerm(e.target.value)
+    //     onChange(e.target.value)
+    //     // console.log(searchTerm)
+    //     // onChange(e.target.value)
+    //     if (e.key ==="Enter" || e.onClick){
+    //         console.log(searchTerm)
+    //         onChange(searchTerm)
+    //     }
+    // }
 
     return (
         <div className={s.search}>
@@ -28,8 +28,8 @@ const Search = ({options,defaultValue, value, onChange}) => {
             <div className={s.search_box}>
                 <div className={s.search_input_form}>
                     <SuperInput
-                        value={searchTerm}
-                        onChange={handlerEnterSearch}
+                        value={searchQuery}
+                        onChange={onChangeSearch}
                         type="text"
                         placeholder={"Search"}
                     />
@@ -45,9 +45,9 @@ const Search = ({options,defaultValue, value, onChange}) => {
                     {/*       onChange={handlerEnterSearch}*/}
                     {/*       // onChange={(e) =>setSearchTerm(e.target.value)}*/}
                     {/*/>*/}
-                    {searchTerm &&(
+                    {searchQuery &&(
                         <span className={s.clear}>
-                            <AiOutlineClear onClick={()=>setSearchTerm('')}/>
+                            <AiOutlineClear onClick={()=>setSearchQuery('')}/>
                         </span>
                     )
                     }

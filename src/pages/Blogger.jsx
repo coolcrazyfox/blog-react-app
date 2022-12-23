@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useMemo, useState} from 'react';
 // import { uuid } from 'uuidv4';
 import s from "../styles/Blogger.module.css";
 import Header from "../components/Header";
@@ -47,38 +47,50 @@ export const initialTasks = [
 const Blogger = () => {
     const [modal, setModal] = useState(false)
     const [tasks, setTasks] = useState(initialTasks)
-    const selectValue=[
+    //select
+    const selectValue = [
         {value: 'id', name: 'New blogs first'},
         {value: 'text', name: 'Old blogs first'},
         {value: 'title', name: 'From A to Z'},
         {value: 'website', name: 'From Z to A'},
 
     ]
-    const [selectedSort, setSelectedSort]=useState('')
+    const [selectedSort, setSelectedSort] = useState('')
     const arOptions = ['New blogs first', 'Old blogs first', 'From A to Z', 'From Z to A'];
-    const defaultSelectValue=arOptions[0]
-    // const [title, setTitle] = useState('')
-    // const [image, setImage] = useState('')
-    // const [website, setWebsite] = useState('')
+    const defaultSelectValue = arOptions[0]
+    //search
+    const [searchQuery, setSearchQuery] = useState('')
+
+    const handlerEnterSearch = (e) => {
+        setSearchQuery(e.target.value)
+
+    }
     const [text, setText] = useState('')
-    // const [date, setDate] = useState('')
+
 
     const handleSearchChange = (text) => {
         text.preventDefault()
         setText(text)
     }
     // add new blog
-    const createNewBlog=(newBlog)=>{
-        setTasks([...tasks,newBlog])
+    const createNewBlog = (newBlog) => {
+        setTasks([...tasks, newBlog])
     }
     //remove blog
-    const  removeBlog= (blog)=>{
-        setTasks(tasks.filter(b=> b.id !==blog.id))
+    const removeBlog = (blog) => {
+        setTasks(tasks.filter(b => b.id !== blog.id))
     }
     //sort blogs by select values
-    const sortBlogs=(sort)=>{
+    const sortedBlogs = useMemo(()=>{
+        if (selectedSort) {
+            return [...tasks].sort((a, b) => a[selectedSort].localeCompare(b[selectedSort]))
+        }
+        return tasks
+    }, [selectedSort, tasks])
+
+    const sortBlogs = (sort) => {
         setSelectedSort(sort)
-        setTasks([...tasks].sort((a,b)=>a[sort].localeCompare(b[sort])))
+        // setTasks([...tasks].sort((a,b)=>a[sort].localeCompare(b[sort])))
     }
 
     return (
@@ -87,15 +99,17 @@ const Blogger = () => {
             <Header/>
             <NavBar/>
             <Search
-                // onChange={handleSearchChange}
+                onChangeSearch={handlerEnterSearch}
+                searchQuery={searchQuery}
                 onChange={sortBlogs}
                 value={selectedSort}
-                defaultValue={defaultSelectValue}
+                setSearchQuery={setSearchQuery}
+                // defaultValue={defaultSelectValue}
                 options={selectValue}
 
             />
             <BlogsList
-                tasks={tasks}
+                tasks={sortedBlogs}
                 remove={removeBlog}
                 setModal={setModal}
                 modal={modal}

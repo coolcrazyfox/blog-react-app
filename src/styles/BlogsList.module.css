@@ -30,6 +30,7 @@
     color: #ebedf1;
     text-transform: uppercase;
     transition: .5s;
+    cursor: none;
     /*border: 1px solid #ebedf1;*/
 }
 .blog_item{

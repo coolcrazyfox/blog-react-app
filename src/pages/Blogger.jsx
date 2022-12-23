@@ -70,9 +70,7 @@ const Blogger = () => {
         <div className={s.main_container}>
 
             <Header/>
-            <NavBar
-                // onClick={handleTitleChange}
-            />
+            <NavBar/>
             <Search onChange={handleSearchChange}/>
             <BlogsList
                 tasks={tasks}

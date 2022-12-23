@@ -32,6 +32,7 @@ const Search = ({options,defaultValue, value, onChange, onChangeSearch, searchQu
                         onChange={onChangeSearch}
                         type="text"
                         placeholder={"Search"}
+                        setSearchQuery={setSearchQuery}
                     />
                     {/*<span className={s.loop}>*/}
                     {/*    <ImSearch/>*/}
@@ -46,9 +47,9 @@ const Search = ({options,defaultValue, value, onChange, onChangeSearch, searchQu
                     {/*       // onChange={(e) =>setSearchTerm(e.target.value)}*/}
                     {/*/>*/}
                     {searchQuery &&(
-                        <span className={s.clear}>
+                        <div className={s.clear}>
                             <AiOutlineClear onClick={()=>setSearchQuery('')}/>
-                        </span>
+                        </div>
                     )
                     }
                 </div>

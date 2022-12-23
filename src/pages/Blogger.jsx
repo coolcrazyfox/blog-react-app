@@ -81,12 +81,18 @@ const Blogger = () => {
         setTasks(tasks.filter(b => b.id !== blog.id))
     }
     //sort blogs by select values
+
     const sortedBlogs = useMemo(()=>{
         if (selectedSort) {
             return [...tasks].sort((a, b) => a[selectedSort].localeCompare(b[selectedSort]))
         }
         return tasks
     }, [selectedSort, tasks])
+
+
+    const  sortedAndSearchedBlogs= useMemo(()=>{
+        return sortedBlogs.filter(blog=> blog.title.includes(searchQuery) )
+    }, [searchQuery, sortedBlogs])
 
     const sortBlogs = (sort) => {
         setSelectedSort(sort)
@@ -109,7 +115,8 @@ const Blogger = () => {
 
             />
             <BlogsList
-                tasks={sortedBlogs}
+                tasks={sortedAndSearchedBlogs}
+                // tasks={sortedBlogs}
                 remove={removeBlog}
                 setModal={setModal}
                 modal={modal}

@@ -5,7 +5,7 @@ import {AiOutlineClear} from "react-icons/ai";
 const SuperInput = (props) => {
     // const [valueTerm, setValueTerm]= useState('')
     return (
-        <div className={s.search_input_form}>
+        <div className={s.input_form}>
             <span className={s.loop}>
                         <ImSearch/>
            </span>
@@ -19,6 +19,7 @@ const SuperInput = (props) => {
                    // onChange={handlerEnterSearch}
                 // onChange={(e) =>setSearchTerm(e.target.value)}
             />
+
             {/*{valueTerm &&(*/}
             {/*    <span className={s.clear}>*/}
             {/*          <AiOutlineClear onClick={()=>setValueTerm('')}/>*/}

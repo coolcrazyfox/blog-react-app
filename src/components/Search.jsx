@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import s from '../styles/Search.module.css'
-import Select from "./Select";
+import SuperSelect from "./UI/SuperSelect/SuperSelect";
 import {ImSearch} from "react-icons/im";
 import {AiOutlineClear} from "react-icons/ai";
 import {initialState} from "./NavBar";
@@ -52,9 +52,7 @@ const Search = ({title, onChange}) => {
                     )
                     }
                 </div>
-                <Select/>
-                {searchTerm}
-
+                <SuperSelect/>
             </div>
 
         </div>

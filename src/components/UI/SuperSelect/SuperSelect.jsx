@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
-import s from "../styles/Select.module.css";
+import s from "../../../styles/Select.module.css";
 
-const Select = () => {
+const SuperSelect = () => {
     const arOptions = ['New blogs first', 'Old blogs first', 'From A to Z', 'From Z to A'];
     const [value, setValue] = useState('');
     const options = arOptions.map((text, index) => {
@@ -17,4 +17,4 @@ const Select = () => {
     );
 };
 
-export default Select;
+export default SuperSelect;

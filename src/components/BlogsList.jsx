@@ -28,7 +28,7 @@ const BlogsList = ({tasks, setModal, remove,}) => {
                     )}
                     {tasks.length!==0
                         ?<div></div>
-                        :<div className={s.empty}> blog form is empty</div>}
+                        :<h1> className={s.empty}> blog form is empty</h1>}
                 </div>
 
             </div>

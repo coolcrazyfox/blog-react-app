@@ -123,7 +123,6 @@ const Blogger = () => {
             <SuperModal visible={modal} setVisible={setModal}>
                 <BlogForm create={createNewBlog}/>
 
-
             </SuperModal>
 
             <Footer onClick={fetchBlogs}/>

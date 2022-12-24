@@ -23,8 +23,6 @@ const BlogsList = ({blogs, setModal, remove,}) => {
                             Create a new blog
                         </span>
                     </SuperButton>
-
-
                     {blogs.length
                         ?<>
                             {blogs.map( blog =>(

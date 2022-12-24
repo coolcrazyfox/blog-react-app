@@ -13,6 +13,8 @@
     width: 600px;
     height: 27px;
     margin-left: 4px;
+    margin-top: 2px;
+    margin-bottom: 2px;
     padding-left: 30px;
     border-radius: 5px;
     border-color: rgba(235, 237, 241, 0.01);

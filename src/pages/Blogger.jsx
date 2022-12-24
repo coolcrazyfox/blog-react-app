@@ -8,6 +8,7 @@ import BlogsList from "../components/BlogsList";
 import Footer from "../components/Footer";
 import SuperModal from "../components/UI/SuperModal/SuperModal";
 import BlogForm from "../components/BlogForm";
+import {useBlogs} from "../hooks/useBlogs";
 
 
 export const initialTasks = [
@@ -45,7 +46,9 @@ export const initialTasks = [
     },
 ]
 const Blogger = () => {
+    //modal
     const [modal, setModal] = useState(false)
+    //initial tasks
     const [blogs, setBlogs] = useState(initialTasks)
     //select
     const selectValue = [
@@ -82,19 +85,7 @@ const Blogger = () => {
         setBlogs(blogs.filter(b => b.id !== blog.id))
     }
     //sort blogs by select values
-
-    const sortedBlogs = useMemo(()=>{
-        if (filter.sort) {
-            return [...blogs].sort((a, b) => a[filter.sort].localeCompare(b[filter.sort]))
-        }
-        return blogs
-    }, [filter.sort, blogs])
-
-
-    const  sortedAndSearchedBlogs= useMemo(()=>{
-        return sortedBlogs.filter(blog=> blog.title.toLowerCase().includes(filter.query) )
-    }, [filter.query, sortedBlogs])
-
+    const sortedAndSearchedBlogs=useBlogs(blogs, filter.sort, filter.query)
 
     return (
         <div className={s.main_container}>

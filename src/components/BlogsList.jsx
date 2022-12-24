@@ -7,9 +7,11 @@ const BlogsList = ({blogs, setModal, remove,}) => {
     // const [loading, setLoading]=useState(true)
     const skeletonImage = 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png'
     // const skeletonImage='http://pngimagesfree.com/frame/Polaroid/polaroid-photo-frame-transparent-png_pngimagesfree.png'
-    if(!blogs.length){
-
-    }
+    // if(!blogs.length){
+    //     return (
+    //         <h1 className={s.empty}> blog form is empty or not found</h1>
+    //     )
+    // }
 
 
     return (
@@ -22,15 +24,17 @@ const BlogsList = ({blogs, setModal, remove,}) => {
                         </span>
                     </SuperButton>
 
-                    {blogs.map( blog =>(
-                        <Blog
-                            key={blog.id}
-                            blog={blog}
-                            remove={remove}
-                        />)
-                    )}
-                    {blogs.length!==0
-                        ?<div></div>
+
+                    {blogs.length
+                        ?<>
+                            {blogs.map( blog =>(
+                                <Blog
+                                    key={blog.id}
+                                    blog={blog}
+                                    remove={remove}
+                                />)
+                            )}
+                        </>
                         :<h1 className={s.empty}> blog form is empty or not found</h1>}
                 </div>
 

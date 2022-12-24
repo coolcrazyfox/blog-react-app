@@ -25,6 +25,7 @@ const Header = ({title}) => {
         <div className={s.header}>
             <div className={s.title}>
                 <h4>{headerTitle}</h4>
+                <div className={s.logo}></div>
                 <div className={s.music_box }>
                     <Zoom >
                         <div className={s.play_icon}>

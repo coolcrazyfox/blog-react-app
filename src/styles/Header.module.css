@@ -18,6 +18,19 @@
     line-height: 30px;
     /*width: 100px;*/
 }
+.title .logo{
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 5px 10px;
+    /*border: 1px solid #ff9900;*/
+    border-radius: 50%;
+    height: 23px;
+    width: 23px;
+    background: url("https://i.yapx.ru/IndfC.gif") no-repeat;
+    background-size: cover;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 7px 8px, rgba(0, 0, 0, 0.22) 0px 5px 2px;
+}
 
 .music_box{
     position: relative;
@@ -97,7 +110,7 @@ h4{
     text-align: center;
     font-size: 1.5rem;
     font-family: 'Inter';
-    margin: 1px 0 1px;
+    margin: 1px 15px 1px;
     padding-bottom: 12px;
     background: linear-gradient(90deg, #af8b9a, white, #8bafae) no-repeat;
     letter-spacing: 5px;

@@ -46,7 +46,7 @@ export const initialTasks = [
 ]
 const Blogger = () => {
     const [modal, setModal] = useState(false)
-    const [tasks, setTasks] = useState(initialTasks)
+    const [blogs, setBlogs] = useState(initialTasks)
     //select
     const selectValue = [
         {value: 'image', name: 'New blogs first'},
@@ -55,50 +55,46 @@ const Blogger = () => {
         {value: 'website', name: 'From Z to A'},
 
     ]
-    // const [selectedSort, setSelectedSort] = useState('')
-    // const [searchQuery, setSearchQuery] = useState('')
     const arOptions = ['New blogs first', 'Old blogs first', 'From A to Z', 'From Z to A'];
     const defaultSelectValue = arOptions[0]
+    // const [text, setText] = useState('')
+    // const [selectedSort, setSelectedSort] = useState('')
+    // const [searchQuery, setSearchQuery] = useState('')
+    // const handlerEnterSearch = (e) => {
+    //     setFilter(e.target.value)
+    //
+    // }
+    // const handleSearchChange = (text) => {
+    //     text.preventDefault()
+    //     setText(text)
+    // }
+
     //search
     const [filter, setFilter]=useState({sort: '', query: ''})
 
-    const handlerEnterSearch = (e) => {
-        setSearchQuery(e.target.value)
 
-    }
-    const [text, setText] = useState('')
-
-
-    const handleSearchChange = (text) => {
-        text.preventDefault()
-        setText(text)
-    }
     // add new blog
     const createNewBlog = (newBlog) => {
-        setTasks([...tasks, newBlog])
+        setBlogs([...blogs, newBlog])
     }
     //remove blog
     const removeBlog = (blog) => {
-        setTasks(tasks.filter(b => b.id !== blog.id))
+        setBlogs(blogs.filter(b => b.id !== blog.id))
     }
     //sort blogs by select values
 
     const sortedBlogs = useMemo(()=>{
-        if (selectedSort) {
-            return [...tasks].sort((a, b) => a[selectedSort].localeCompare(b[selectedSort]))
+        if (filter.sort) {
+            return [...blogs].sort((a, b) => a[filter.sort].localeCompare(b[filter.sort]))
         }
-        return tasks
-    }, [selectedSort, tasks])
+        return blogs
+    }, [filter.sort, blogs])
 
 
     const  sortedAndSearchedBlogs= useMemo(()=>{
-        return sortedBlogs.filter(blog=> blog.title.toLowerCase().includes(searchQuery) )
-    }, [searchQuery, sortedBlogs])
+        return sortedBlogs.filter(blog=> blog.title.toLowerCase().includes(filter.query) )
+    }, [filter.query, sortedBlogs])
 
-    const sortBlogs = (sort) => {
-        setSelectedSort(sort)
-        // setTasks([...tasks].sort((a,b)=>a[sort].localeCompare(b[sort])))
-    }
 
     return (
         <div className={s.main_container}>
@@ -106,21 +102,24 @@ const Blogger = () => {
             <Header/>
             <NavBar/>
             <Search
-                onChangeSearch={handlerEnterSearch}
-                searchQuery={searchQuery}
-                onChange={sortBlogs}
-                value={selectedSort}
-                setSearchQuery={setSearchQuery}
-                // defaultValue={defaultSelectValue}
+                filter={filter}
+                setFilter={setFilter}
                 options={selectValue}
+                // onChangeSearch={handlerEnterSearch}
+                // searchQuery={searchQuery}
+                // onChange={sortBlogs}
+                // value={selectedSort}
+                // setSearchQuery={setSearchQuery}
+                // defaultValue={defaultSelectValue}
+
 
             />
             <BlogsList
-                tasks={sortedAndSearchedBlogs}
-                // tasks={sortedBlogs}
+                blogs={sortedAndSearchedBlogs}
                 remove={removeBlog}
                 setModal={setModal}
                 modal={modal}
+                // blogs={sortedBlogs}
             />
             <SuperModal visible={modal} setVisible={setModal}>
                 <BlogForm create={createNewBlog}/>

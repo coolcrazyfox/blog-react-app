@@ -5,7 +5,7 @@ import {ImSearch} from "react-icons/im";
 import {AiOutlineClear} from "react-icons/ai";
 import {initialState} from "./NavBar";
 import SuperInput from "./UI/SuperInput/SuperInput";
-const Search = ({options,defaultValue, value, onChange, onChangeSearch, searchQuery,setSearchQuery}) => {
+const Search = ({options, filter, setFilter}) => {
     const [inform,setInform]=useState(initialState)
     const info = inform[1]
     const [carList, setCarList]= useState([])
@@ -28,11 +28,11 @@ const Search = ({options,defaultValue, value, onChange, onChangeSearch, searchQu
             <div className={s.search_box}>
                 <div className={s.search_input_form}>
                     <SuperInput
-                        value={searchQuery}
-                        onChange={onChangeSearch}
+                        value={filter.query}
+                        onChange={e=>setFilter({...filter, query: e.target.value})}
                         type="text"
                         placeholder={"Search"}
-                        setSearchQuery={setSearchQuery}
+                        // setSearchQuery={setSearchQuery}
                     />
                     {/*<span className={s.loop}>*/}
                     {/*    <ImSearch/>*/}
@@ -46,14 +46,18 @@ const Search = ({options,defaultValue, value, onChange, onChangeSearch, searchQu
                     {/*       onChange={handlerEnterSearch}*/}
                     {/*       // onChange={(e) =>setSearchTerm(e.target.value)}*/}
                     {/*/>*/}
-                    {searchQuery &&(
+                    {filter.query &&(
                         <div className={s.clear}>
-                            <AiOutlineClear onClick={()=>setSearchQuery('')}/>
+                            <AiOutlineClear onClick={(e)=>setFilter({...filter, query:''})}/>
                         </div>
                     )
                     }
                 </div>
-                <SuperSelect options={options} defaultValue={defaultValue} value={value} onChange={onChange}/>
+                <SuperSelect
+                    options={options}
+                    value={filter.sort}
+                    onChange={selectedSort=> setFilter({...filter, sort: selectedSort})}
+                />
             </div>
 
         </div>

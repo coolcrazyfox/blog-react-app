@@ -55,11 +55,12 @@ const Blogger = () => {
         {value: 'website', name: 'From Z to A'},
 
     ]
-    const [selectedSort, setSelectedSort] = useState('')
+    // const [selectedSort, setSelectedSort] = useState('')
+    // const [searchQuery, setSearchQuery] = useState('')
     const arOptions = ['New blogs first', 'Old blogs first', 'From A to Z', 'From Z to A'];
     const defaultSelectValue = arOptions[0]
     //search
-    const [searchQuery, setSearchQuery] = useState('')
+    const [filter, setFilter]=useState({sort: '', query: ''})
 
     const handlerEnterSearch = (e) => {
         setSearchQuery(e.target.value)

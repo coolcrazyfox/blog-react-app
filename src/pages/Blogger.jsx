@@ -9,6 +9,7 @@ import Footer from "../components/Footer";
 import SuperModal from "../components/UI/SuperModal/SuperModal";
 import BlogForm from "../components/BlogForm";
 import {useBlogs} from "../hooks/useBlogs";
+import axios from "axios";
 
 
 export const initialTasks = [
@@ -74,11 +75,18 @@ const Blogger = () => {
 
     //search
     const [filter, setFilter]=useState({sort: '', query: ''})
+    //get blogs
+    async function fetchBlogs(){
+        const response= await axios.get('https://nest-blog-platform.vercel.app/blogs')
+        console.log(response.data)
+
+    }
 
 
     // add new blog
     const createNewBlog = (newBlog) => {
         setBlogs([...blogs, newBlog])
+        console.log('input', newBlog)
     }
     //remove blog
     const removeBlog = (blog) => {
@@ -115,9 +123,10 @@ const Blogger = () => {
             <SuperModal visible={modal} setVisible={setModal}>
                 <BlogForm create={createNewBlog}/>
 
+
             </SuperModal>
 
-            <Footer/>
+            <Footer onClick={fetchBlogs}/>
         </div>
     );
 };

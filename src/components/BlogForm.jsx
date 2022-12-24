@@ -20,8 +20,8 @@ const BlogForm = ({create}) => {
 
     }
     return (
-
-            <form>
+        <>
+            <form >
                 <SuperInput
                     type={'text'}
                     placeholder={"Image link"}
@@ -57,6 +57,7 @@ const BlogForm = ({create}) => {
                 >Add</SuperButton>
             </form>
 
+        </>
     );
 };
 

@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import s from '../../../styles/SuperInput.module.css'
 import {ImSearch} from "react-icons/im";
 import {AiOutlineClear} from "react-icons/ai";
-const SuperInput = (props) => {
+const SuperInput = ({...props}) => {
     // const [valueTerm, setValueTerm]= useState('')
     return (
         <div className={s.input_form}>

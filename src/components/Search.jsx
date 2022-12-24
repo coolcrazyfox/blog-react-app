@@ -1,14 +1,14 @@
 import React, {useState} from 'react';
 import s from '../styles/Search.module.css'
 import SuperSelect from "./UI/SuperSelect/SuperSelect";
-import {ImSearch} from "react-icons/im";
 import {AiOutlineClear} from "react-icons/ai";
 import {initialState} from "./NavBar";
 import SuperInput from "./UI/SuperInput/SuperInput";
+
 const Search = ({options, filter, setFilter}) => {
-    const [inform,setInform]=useState(initialState)
+    const [inform, setInform] = useState(initialState)
     const info = inform[1]
-    const [carList, setCarList]= useState([])
+    const [carList, setCarList] = useState([])
 
     // const handlerEnterSearch =(e)=>{
     //     setSearchTerm(e.target.value)
@@ -29,7 +29,7 @@ const Search = ({options, filter, setFilter}) => {
                 <div className={s.search_input_form}>
                     <SuperInput
                         value={filter.query}
-                        onChange={e=>setFilter({...filter, query: e.target.value})}
+                        onChange={e => setFilter({...filter, query: e.target.value})}
                         type="text"
                         placeholder={"Search"}
                         // setSearchQuery={setSearchQuery}
@@ -46,9 +46,9 @@ const Search = ({options, filter, setFilter}) => {
                     {/*       onChange={handlerEnterSearch}*/}
                     {/*       // onChange={(e) =>setSearchTerm(e.target.value)}*/}
                     {/*/>*/}
-                    {filter.query &&(
+                    {filter.query && (
                         <div className={s.clear}>
-                            <AiOutlineClear onClick={(e)=>setFilter({...filter, query:''})}/>
+                            <AiOutlineClear onClick={(e) => setFilter({...filter, query: ''})}/>
                         </div>
                     )
                     }
@@ -56,7 +56,7 @@ const Search = ({options, filter, setFilter}) => {
                 <SuperSelect
                     options={options}
                     value={filter.sort}
-                    onChange={selectedSort=> setFilter({...filter, sort: selectedSort})}
+                    onChange={selectedSort => setFilter({...filter, sort: selectedSort})}
                 />
             </div>
 

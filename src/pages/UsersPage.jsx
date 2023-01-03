@@ -150,10 +150,10 @@ const UsersPage = () => {
             </form>
             {modalActive ?
                 ( <SuperMessageModal
-                    deleteNewPost={deleteNewPost}
+                    onClick={deleteNewPost}
                     valueTerm={valueTerm}
                 />)
-                :<div></div>
+                :<></>
             }
             {/*<div>*/}
             {/*    Count: {count}*/}

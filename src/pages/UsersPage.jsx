@@ -7,6 +7,7 @@ import Menu from "../components/Menu";
 import SuperInput from "../components/UI/SuperInput/SuperInput";
 import {AiOutlineClear} from "react-icons/ai";
 import CircleTimerCount from "../components/CircleTimerCount";
+import SuperMessageModal from "../components/UI/SuperMessageModal/SuperMessageModal";
 
 
 
@@ -147,17 +148,13 @@ const UsersPage = () => {
                 {/*<SuperButton onClick={addNewPost}> send</SuperButton>*/}
                 {/*<SuperButton> cancel</SuperButton>*/}
             </form>
-            {modalActive ?( <div className={s.form_modal}>
-                <div className={s.circle}>
-                    <CircleTimerCount/>
-                </div>
-                <div className={s.message}>The {valueTerm} will be delete</div>
-                <div onClick={deleteNewPost} className={s.cancel_btn}>
-                    <SuperButton >cancel</SuperButton>
-                </div>
-
-                {/*<button onClick={deleteNewPost}>cancel</button>*/}
-            </div>):<div></div>}
+            {modalActive ?
+                ( <SuperMessageModal
+                    deleteNewPost={deleteNewPost}
+                    valueTerm={valueTerm}
+                />)
+                :<div></div>
+            }
             {/*<div>*/}
             {/*    Count: {count}*/}
             {/*    <br />*/}

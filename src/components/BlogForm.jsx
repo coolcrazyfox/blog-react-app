@@ -1,9 +1,13 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import SuperInput from "./UI/SuperInput/SuperInput";
 import SuperButton from "./UI/SuperButton/SuperButton";
 
 const BlogForm = ({create}) => {
     const [blog, setBlog] = useState({image: '', title: '', text: '', website: '', date: ''})
+    useEffect(()=>{
+        const timer= setTimeout(()=>console.log('test'), 4000)
+        return ()=> clearTimeout(timer)
+    }, [])
     const addNewBlog = (e) => {
         e.preventDefault()
         const newBlog = {

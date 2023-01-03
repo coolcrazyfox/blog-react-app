@@ -1,0 +1,41 @@
+.form_modal{
+    position: absolute;
+    top: 25px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 500px;
+    height: 60px;
+    margin: 10px;
+    border-left: 1px solid snow;
+    border-radius: 15px;
+    background: #142f3b;
+    /*opacity: 0;*/
+    /*transform: scale(0);*/
+    transition: 0.5s;
+}
+.form_modal .circle{
+    position: relative;
+    /*border: 1px solid snow;*/
+    display: flex;
+    color: #ebedf1;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 100%;
+    border-radius: 10px;
+}
+.form_modal .message{
+    margin: 15px;
+    color: #ebedf1;
+}
+.form_modal .cancel_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    /*border: 1px solid snow;*/
+}

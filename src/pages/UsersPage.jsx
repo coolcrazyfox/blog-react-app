@@ -1,12 +1,10 @@
 import React, {useState} from 'react';
 import s from '../styles/UsersPage.module.css'
 import SuperButton from "../components/UI/SuperButton/SuperButton";
-
 import {SiApostrophe,SiMicrodotblog, SiPostman} from "react-icons/si";
 import Menu from "../components/Menu";
 import SuperInput from "../components/UI/SuperInput/SuperInput";
 import {AiOutlineClear} from "react-icons/ai";
-import CircleTimerCount from "../components/CircleTimerCount";
 import SuperMessageModal from "../components/UI/SuperMessageModal/SuperMessageModal";
 
 
@@ -151,8 +149,9 @@ const UsersPage = () => {
             {modalActive ?
                 ( <SuperMessageModal
                     onClick={deleteNewPost}
-                    valueTerm={valueTerm}
-                />)
+                    valueTerm={valueTerm}>
+                        delete
+                </SuperMessageModal> )
                 :<></>
             }
             {/*<div>*/}

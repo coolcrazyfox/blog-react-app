@@ -117,7 +117,7 @@ h4{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 80%;
-    animation: shine 6s linear infinite;
+    animation: shine 5s linear infinite;
     position: relative;
 }
 @keyframes shine {

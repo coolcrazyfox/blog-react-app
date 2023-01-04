@@ -81,6 +81,7 @@ const Settings = () => {
     const sortedAndSearchedPosts=usePosts(posts, filter.sort, filter.query)
     return (
         <div>
+            <BlogForm create={createNewPost}/>
             <Search
                 filter={filter}
                 setFilter={setFilter}

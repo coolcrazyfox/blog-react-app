@@ -2,6 +2,9 @@ import React, {useState} from 'react';
 import axios from "axios";
 
 import {usePosts} from "../hooks/usePosts";
+import BlogsList from "../components/BlogsList";
+import BlogForm from "../components/BlogForm";
+import Search from "../components/Search";
 
 
 export const initialPosts = [
@@ -45,7 +48,7 @@ const Settings = () => {
     //initial tasks
     const [posts, setPosts] = useState(initialPosts)
     //select
-    const selectVTerm= [
+    const selectTerm= [
         {value: 'image', name: 'New blogs first'},
         {value: 'text', name: 'Old blogs first'},
         {value: 'title', name: 'From A to Z'},
@@ -78,6 +81,27 @@ const Settings = () => {
     const sortedAndSearchedPosts=usePosts(posts, filter.sort, filter.query)
     return (
         <div>
+            <Search
+                filter={filter}
+                setFilter={setFilter}
+                options={selectTerm}
+                // onChangeSearch={handlerEnterSearch}
+                // searchQuery={searchQuery}
+                // onChange={sortBlogs}
+                // value={selectedSort}
+                // setSearchQuery={setSearchQuery}
+                // defaultValue={defaultSelectValue}
+
+
+            />
+            <BlogsList
+                blogs={sortedAndSearchedPosts}
+                remove={removePost}
+                setModal={setModal}
+                modal={modal}
+                // blogs={sortedBlogs}
+            />
+            <BlogForm create={createNewPost}/>
 
         </div>
     );

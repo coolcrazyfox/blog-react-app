@@ -7,7 +7,7 @@ const Footer = ({onClick}) => {
     return (
         <div className={s.footer}>
                 <div className={s.footer_container}>
-                    <button onClick={onClick}>get</button>
+                    {/*<button onClick={onClick}>get</button>*/}
                     <Flip>
                         <SuperButton link={'/'}>
                             Show more

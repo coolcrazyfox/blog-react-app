@@ -58,13 +58,7 @@ const Settings = () => {
     //initial tasks
     const [posts, setPosts] = useState(initialPosts)
     //select
-    const selectTerm= [
-        {value: 'image', name: 'New blogs first'},
-        {value: 'text', name: 'Old blogs first'},
-        {value: 'title', name: 'From A to Z'},
-        {value: 'website', name: 'From Z to A'},
 
-    ]
     const arOptions = ['New blogs first', 'Old blogs first', 'From A to Z', 'From Z to A'];
     const defaultSelectValue = arOptions[0]
 
@@ -76,7 +70,6 @@ const Settings = () => {
         console.log(response.data)
 
     }
-
 
     // add new post
     const createNewPost = (newPost) => {
@@ -92,25 +85,11 @@ const Settings = () => {
     return (
         <div>
             <BlogForm create={createNewPost}/>
-            <Search
-                filter={filter}
-                setFilter={setFilter}
-                options={selectTerm}
-                // onChangeSearch={handlerEnterSearch}
-                // searchQuery={searchQuery}
-                // onChange={sortBlogs}
-                // value={selectedSort}
-                // setSearchQuery={setSearchQuery}
-                // defaultValue={defaultSelectValue}
-
-
-            />
             <BlogsList
                 blogs={sortedAndSearchedPosts}
                 remove={removePost}
                 setModal={setModal}
                 modal={modal}
-                // blogs={sortedBlogs}
             />
 
 

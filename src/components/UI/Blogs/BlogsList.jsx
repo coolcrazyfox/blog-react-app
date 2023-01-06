@@ -1,7 +1,7 @@
 import React from 'react';
-import s from '../styles/BlogsList.module.css'
+import s from '../../../styles/BlogsList.module.css'
 import Blog from "./Blog";
-import SuperButton from "./UI/SuperButton/SuperButton";
+import SuperButton from "../SuperButton/SuperButton";
 
 const BlogsList = ({blogs, setModal, remove,}) => {
     // const [loading, setLoading]=useState(true)

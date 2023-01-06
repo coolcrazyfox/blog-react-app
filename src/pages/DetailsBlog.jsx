@@ -5,7 +5,7 @@ import NavBar, {initialState} from "../components/NavBar";
 import Footer from "../components/Footer";
 import DetailBlock from "../components/DetailBlock";
 import InfoPanel from "../components/InfoPanel";
-import {initialTasks} from "../components/Blog";
+import {initialTasks} from "../components/UI/Blogs/Blog";
 
 const DetailsBlog = () => {
     const [selected, setSelected]=useState(0)

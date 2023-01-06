@@ -4,10 +4,10 @@ import s from "../styles/Blogger.module.css";
 import Header from "../components/Header";
 import NavBar from "../components/NavBar";
 import Search from "../components/Search";
-import BlogsList from "../components/BlogsList";
+import BlogsList from "../components/UI/Blogs/BlogsList";
 import Footer from "../components/Footer";
 import SuperModal from "../components/UI/SuperModal/SuperModal";
-import BlogForm from "../components/BlogForm";
+import BlogForm from "../components/UI/Blogs/BlogForm";
 import {useBlogs} from "../hooks/useBlogs";
 import axios from "axios";
 

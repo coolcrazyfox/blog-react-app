@@ -2,8 +2,8 @@ import React, {useState} from 'react';
 import axios from "axios";
 
 import {usePosts} from "../hooks/usePosts";
-import BlogsList from "../components/BlogsList";
-import BlogForm from "../components/BlogForm";
+import BlogsList from "../components/UI/Blogs/BlogsList";
+import BlogForm from "../components/UI/Blogs/BlogForm";
 import Search from "../components/Search";
 
 

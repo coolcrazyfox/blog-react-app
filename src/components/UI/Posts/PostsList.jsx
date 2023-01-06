@@ -1,6 +1,6 @@
 import React from 'react';
-import s  from '../styles/PostsList.module.css'
-import Blog from "./Blog";
+import s  from '../../../styles/PostsList.module.css'
+import Blog from "../Blogs/Blog";
 import Post from "./Post";
 const PostsList = () => {
     return (

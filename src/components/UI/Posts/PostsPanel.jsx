@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
-import s from "../styles/PostsPanel.module.css";
+import s from "../../../styles/PostsPanel.module.css";
 import {MdDoubleArrow} from "react-icons/md";
 import {TiArrowBackOutline} from "react-icons/ti";
 import {Link} from "react-router-dom";
-import {initialState} from "./NavBar";
-import {initialTasks} from "./Blog";
-import SelectPosts from "./SelectPosts";
+import {initialState} from "../../NavBar";
+import {initialTasks} from "../Blogs/Blog";
+import SelectPosts from "../../SelectPosts";
 
 const PostsPanel = () => {
     const [inform,setInform]=useState(initialState)

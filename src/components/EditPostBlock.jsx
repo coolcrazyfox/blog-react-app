@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import s from "../styles/DetailPostBlock.module.css";
-import {initialPostsTasks} from "./Post";
+import {initialPostsTasks} from "./UI/Posts/Post";
 
 
 

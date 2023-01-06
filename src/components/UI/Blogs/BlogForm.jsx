@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import SuperInput from "./UI/SuperInput/SuperInput";
-import SuperButton from "./UI/SuperButton/SuperButton";
+import SuperInput from "../SuperInput/SuperInput";
+import SuperButton from "../SuperButton/SuperButton";
 
 const BlogForm = ({create}) => {
     const [blog, setBlog] = useState({image: '', title: '', text: '', website: '', date: ''})

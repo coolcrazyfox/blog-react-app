@@ -5,7 +5,7 @@ import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import DetailPostBlock from "../components/DetailPostBlock";
 import InfoPostsPanel from "../components/InfoPostsPanel";
-import {initialPostsTasks} from "../components/Post";
+import {initialPostsTasks} from "../components/UI/Posts/Post";
 
 
 const DetailsPost = () => {

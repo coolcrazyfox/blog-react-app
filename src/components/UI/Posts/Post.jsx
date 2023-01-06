@@ -1,7 +1,7 @@
 import React, {Fragment, useState} from 'react';
-import s from "../styles/PostsList.module.css";
+import s from "../../../styles/PostsList.module.css";
 import {Link} from "react-router-dom";
-import Loader from "./Loader";
+import Loader from "../../Loader";
 import Flip from 'react-reveal/Flip';
 import {AiTwotoneEdit, AiTwotoneDelete} from "react-icons/ai";
 

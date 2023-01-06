@@ -1,5 +1,5 @@
 import React from 'react';
-import s from "../styles/BlogsList.module.css";
+import s from "../../../styles/BlogsList.module.css";
 import {Link} from "react-router-dom";
 import Bounce from 'react-reveal/Bounce';
 import {MdAutoDelete} from "react-icons/md";

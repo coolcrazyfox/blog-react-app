@@ -1,11 +1,11 @@
 import React from 'react';
 
-const TestList = () => {
+const TestsList = () => {
     return (
         <div>
-            
+
         </div>
     );
 };
 
-export default TestList;
+export default TestsList;

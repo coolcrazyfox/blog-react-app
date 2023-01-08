@@ -9,16 +9,7 @@ const SuperInput = ({...props}) => {
             <span className={s.loop}>
                         <ImSearch/>
            </span>
-            <input className={s.input}
-                   {...props}
-                   // autoFocus
-                // autoComplete={'off'}
-                //    type="text"
-                   // value={searchTerm}
-                   // placeholder={"Search"}
-                   // onChange={handlerEnterSearch}
-                // onChange={(e) =>setSearchTerm(e.target.value)}
-            />
+            <input className={s.input} {...props} />
 
             {/*{valueTerm &&(*/}
             {/*    <span className={s.clear}>*/}

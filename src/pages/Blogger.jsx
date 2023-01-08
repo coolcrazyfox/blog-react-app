@@ -94,7 +94,9 @@ const Blogger = () => {
     }
     //sort blogs by select values
     const sortedAndSearchedBlogs=useBlogs(blogs, filter.sort, filter.query)
-
+    const activeModal=()=>{
+        setModal(true)
+    }
     return (
         <div className={s.main_container}>
 
@@ -116,8 +118,10 @@ const Blogger = () => {
             <BlogsList
                 blogs={sortedAndSearchedBlogs}
                 remove={removeBlog}
-                setModal={setModal}
-                modal={modal}
+                onClick={activeModal}
+
+                // setModal={setModal}
+                // modal={modal}
                 // blogs={sortedBlogs}
             />
             <SuperModal visible={modal} setVisible={setModal}>

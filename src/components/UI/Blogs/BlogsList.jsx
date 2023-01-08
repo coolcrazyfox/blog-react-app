@@ -2,8 +2,9 @@ import React from 'react';
 import s from '../../../styles/BlogsList.module.css'
 import Blog from "./Blog";
 import SuperButton from "../SuperButton/SuperButton";
+import Empty from "./Empty";
 
-const BlogsList = ({blogs, setModal, remove,}) => {
+const BlogsList = ({blogs, onClick, remove}) => {
     // const [loading, setLoading]=useState(true)
     const skeletonImage = 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png'
     // const skeletonImage='http://pngimagesfree.com/frame/Polaroid/polaroid-photo-frame-transparent-png_pngimagesfree.png'
@@ -17,12 +18,16 @@ const BlogsList = ({blogs, setModal, remove,}) => {
     return (
         <div className={s.blogs}>
             <div className={s.box}>
-                <div className={s.container_items}>
+                <div>
                     <SuperButton>
-                        <span onClick={() => setModal(true)}>
+                        <span onClick={onClick}>
                             Create a new blog
                         </span>
                     </SuperButton>
+                </div>
+
+                <div className={s.container_items}>
+
                     {blogs.length
                         ?<>
                             {blogs.map( blog =>(
@@ -33,7 +38,7 @@ const BlogsList = ({blogs, setModal, remove,}) => {
                                 />)
                             )}
                         </>
-                        :<h1 className={s.empty}> blog form is empty or not found</h1>}
+                        :<Empty/>}
                 </div>
 
             </div>

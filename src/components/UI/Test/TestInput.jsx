@@ -2,9 +2,10 @@ import React from 'react';
 
 const TestInput = () => {
     return (
-        <div>
+        <>
+            <input type="text"/>
 
-        </div>
+        </>
     );
 };
 

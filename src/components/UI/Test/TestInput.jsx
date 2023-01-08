@@ -1,9 +1,9 @@
 import React from 'react';
 
-const TestInput = () => {
+const TestInput = ({...props}) => {
     return (
         <>
-            <input type="text"/>
+            <input {...props}/>
 
         </>
     );

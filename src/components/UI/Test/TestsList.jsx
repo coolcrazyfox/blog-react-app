@@ -1,10 +1,12 @@
 import React from 'react';
 import Test from "./Test";
 
-const TestsList = () => {
+const TestsList = ({posts}) => {
     return (
         <div>
-            <Test/>
+            {posts.map(post=>(
+                <Test post={post} key={post.id}/>)
+            )}
 
         </div>
     );

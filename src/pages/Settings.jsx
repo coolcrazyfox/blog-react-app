@@ -84,7 +84,8 @@ const Settings = () => {
         <div>
             <TestForm create={createNewPost}/>
             <TestsList
-                blogs={sortedAndSearchedPosts}
+                posts={posts}
+                // posts={sortedAndSearchedPosts}
                 remove={removePost}
                 setModal={setModal}
                 modal={modal}

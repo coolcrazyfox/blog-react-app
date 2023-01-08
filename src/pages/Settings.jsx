@@ -80,9 +80,13 @@ const Settings = () => {
     }
     //sort posts by select values
     const sortedAndSearchedPosts=usePosts(posts, filter.sort, filter.query)
+    const addNewPost=()=>{}
     return (
         <div>
-            <TestForm create={createNewPost}/>
+            <TestForm
+                onClick={addNewPost}
+                create={createNewPost}
+            />
             <TestsList
                 posts={posts}
                 // posts={sortedAndSearchedPosts}

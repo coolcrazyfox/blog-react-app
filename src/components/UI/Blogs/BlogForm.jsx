@@ -1,20 +1,22 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import SuperInput from "../SuperInput/SuperInput";
 import SuperButton from "../SuperButton/SuperButton";
+import s from "../../../styles/Search.module.css";
+import {AiOutlineClear} from "react-icons/ai";
 
 const BlogForm = ({create}) => {
-    const [blog, setBlog] = useState({image: '', title: '', text: '',website:'', date: ''})
-    useEffect(() => {
-        const timer = setTimeout(() => console.log('test'), 4000)
-        return () => clearTimeout(timer)
-    }, [])
+    const [blog, setBlog] = useState({image: '', title: '', website: '', text: '', date: ''})
+    // useEffect(() => {
+    //     const timer = setTimeout(() => console.log('test'), 4000)
+    //     return () => clearTimeout(timer)
+    // }, [])
     const addNewBlog = (e) => {
         e.preventDefault()
         const newBlog = {
             ...blog, id: Date.now()
         }
         create(newBlog)
-        setBlog({image: '', title: '', text: '',website:'', date: ''})
+        setBlog({image: '', title: '', website: '', text: '', date: ''})
 
     }
     return (
@@ -28,6 +30,12 @@ const BlogForm = ({create}) => {
                 placeholder={"Image link"}
 
             />
+            {blog.image && (
+                <div className={s.clear}>
+                    <AiOutlineClear onClick={(e) => setBlog({...blog, image: ''})}/>
+                </div>
+            )
+            }
             <SuperInput
                 value={blog.title}
                 onCnange={e => setBlog({...blog, title: e.target.value})}
@@ -35,13 +43,12 @@ const BlogForm = ({create}) => {
                 placeholder={"Title"}
 
             />
-            <SuperInput
-                value={blog.text}
-                onCnange={e => setBlog({...blog, text: e.target.value})}
-                type={'text'}
-                placeholder={"Text"}
-
-            />
+            {blog.image && (
+                <div className={s.clear}>
+                    <AiOutlineClear onClick={(e) => setBlog({...blog, image: ''})}/>
+                </div>
+            )
+            }
             <SuperInput
                 value={blog.website}
                 onCnange={e => setBlog({...blog, website: e.target.value})}
@@ -49,6 +56,26 @@ const BlogForm = ({create}) => {
                 placeholder={"Website"}
 
             />
+            {blog.image && (
+                <div className={s.clear}>
+                    <AiOutlineClear onClick={(e) => setBlog({...blog, image: ''})}/>
+                </div>
+            )
+            }
+            <SuperInput
+                value={blog.text}
+                onCnange={e => setBlog({...blog, text: e.target.value})}
+                type={'text'}
+                placeholder={"Text"}
+
+            />
+            {blog.image && (
+                <div className={s.clear}>
+                    <AiOutlineClear onClick={(e) => setBlog({...blog, image: ''})}/>
+                </div>
+            )
+            }
+
             <SuperInput
                 value={blog.date}
                 onCnange={e => setBlog({...blog, date: e.target.value})}
@@ -56,6 +83,12 @@ const BlogForm = ({create}) => {
                 placeholder={"yyyy-mm-dd"}
 
             />
+            {blog.image && (
+                <div className={s.clear}>
+                    <AiOutlineClear onClick={(e) => setBlog({...blog, image: ''})}/>
+                </div>
+            )
+            }
             <SuperButton
                 onClick={addNewBlog}
             >

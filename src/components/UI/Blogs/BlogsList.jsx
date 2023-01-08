@@ -28,8 +28,8 @@ const BlogsList = ({blogs, onClick, remove}) => {
 
                 <div className={s.container_items}>
 
-                    {blogs.length
-                        ?<>
+                    {/*{blogs.length*/}
+                    {/*    ?<>*/}
                             {blogs.map( blog =>(
                                 <Blog
                                     key={blog.id}
@@ -37,8 +37,8 @@ const BlogsList = ({blogs, onClick, remove}) => {
                                     remove={remove}
                                 />)
                             )}
-                        </>
-                        :<Empty/>}
+                        {/*</>*/}
+                        {/*:<Empty/>}*/}
                 </div>
 
             </div>

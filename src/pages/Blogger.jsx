@@ -53,10 +53,10 @@ const Blogger = () => {
     const [blogs, setBlogs] = useState(initialTasks)
     //select
     const selectValue = [
-        {value: 'image', name: 'New blogs first'},
+        {value: 'title', name: 'New blogs first'},
         {value: 'text', name: 'Old blogs first'},
         {value: 'title', name: 'From A to Z'},
-        {value: 'website', name: 'From Z to A'},
+        {value: 'text', name: 'From Z to A'},
 
     ]
     const arOptions = ['New blogs first', 'Old blogs first', 'From A to Z', 'From Z to A'];
@@ -117,6 +117,7 @@ const Blogger = () => {
             />
 
             <BlogsList
+                // blogs={blogs}
                 blogs={sortedAndSearchedBlogs}
                 remove={removeBlog}
                 onClick={activeModal}

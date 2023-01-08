@@ -40,16 +40,16 @@ export const initialTasks = [
     },
 ]
 
-const Blog = (props) => {
+const Blog = ({blog, remove}) => {
     return (
         <>
             <Bounce right>
                 <div className={s.blog_item}>
-                    <span onClick={()=>props.remove(props.blog)}>
+                    <span onClick={()=>remove(blog)}>
                         <MdAutoDelete/>
                     </span>
                     <div className={s.image_blog}
-                         style={{backgroundImage: `url(${props.blog.image})`}}
+                         style={{backgroundImage: `url(${blog.image})`}}
                         // style={{backgroundImage:`url(${skeletonImage})`}}
                     >
                         {/*<img*/}
@@ -59,16 +59,16 @@ const Blog = (props) => {
                     </div>
                     <div className={s.text_container} >
                         <Link to={'/detblog'}>
-                            <h2 className={s.title}> {props.blog.title}</h2>
+                            <h2 className={s.title}> {blog.title}</h2>
                             {/*<span>{props.blog.id}</span>*/}
                             {/*<span>{props.blog.date}</span>*/}
                         </Link>
 
                         <h5>Website:
-                            <a href={`${props.blog.website}`}>{props.blog.website}</a>
+                            <a href={`${blog.website}`}>{blog.website}</a>
                         </h5>
-                        <p>{props.blog.text}</p>
-                        <p>{props.blog.date}</p>
+                        <p>{blog.text}</p>
+                        {/*<p>{props.blog.date}</p>*/}
                     </div>
 
                 </div>

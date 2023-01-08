@@ -131,7 +131,9 @@ const Blogger = () => {
 
             </SuperModal>
 
-            <Footer onClick={fetchBlogs}/>
+            <Footer
+                // onClick={fetchBlogs}
+            />
         </div>
     );
 };

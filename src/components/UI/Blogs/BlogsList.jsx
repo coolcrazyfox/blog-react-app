@@ -19,8 +19,8 @@ const BlogsList = ({blogs, onClick, remove}) => {
         <div className={s.blogs}>
             <div className={s.box}>
                 <div>
-                    <SuperButton>
-                        <span onClick={onClick}>
+                    <SuperButton onClick={onClick}>
+                        <span >
                             Create a new blog
                         </span>
                     </SuperButton>

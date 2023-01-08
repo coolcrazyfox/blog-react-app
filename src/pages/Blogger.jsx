@@ -18,7 +18,7 @@ export const initialTasks = [
         image: 'https://st2.depositphotos.com/2001755/8564/i/450/depositphotos_85647140-stock-photo-beautiful-landscape-with-birds.jpg',
         title: 'The best blog in our village',
         website: 'https://www.youtube.com/',
-        text: 'Lorem ipsum dolor sit amet, consectet adipiscing elit...',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ',
         date: '2022-11-19'
     },
     {
@@ -26,7 +26,7 @@ export const initialTasks = [
         image: 'https://st2.depositphotos.com/2001755/5443/i/600/depositphotos_54431143-stock-photo-beautiful-landscape.jpg',
         title: 'Warriors',
         website: 'https://www.youtube.com/',
-        text: 'Lorem ipsum dolor sit amet, consectet adipiscing elit...',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ',
         date: '2022-11-19'
     },
     {
@@ -34,7 +34,7 @@ export const initialTasks = [
         image: 'https://static8.depositphotos.com/1017908/938/i/450/depositphotos_9385411-stock-photo-dramatic-clouds-with-mountain-and.jpg',
         title: 'Audience Platform',
         website: 'https://www.youtube.com/',
-        text: 'Lorem ipsum dolor sit amet, consectet adipiscing elit...',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ',
         date: '2022-11-19'
     },
     {
@@ -42,7 +42,7 @@ export const initialTasks = [
         image: 'https://st2.depositphotos.com/2001755/5967/i/450/depositphotos_59677045-stock-photo-beautiful-landscape.jpg',
         title: 'Audience Platform',
         website: 'https://www.youtube.com/',
-        text: 'Lorem ipsum dolor sit amet, consectet adipiscing elit...sdfgsdgsd    ',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ',
         date: '2022-11-19'
     },
 ]
@@ -115,6 +115,7 @@ const Blogger = () => {
 
 
             />
+
             <BlogsList
                 blogs={sortedAndSearchedBlogs}
                 remove={removeBlog}

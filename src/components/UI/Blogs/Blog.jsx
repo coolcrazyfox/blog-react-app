@@ -68,6 +68,7 @@ const Blog = (props) => {
                             <a href={`${props.blog.website}`}>{props.blog.website}</a>
                         </h5>
                         <p>{props.blog.text}</p>
+                        <p>{props.blog.date}</p>
                     </div>
 
                 </div>

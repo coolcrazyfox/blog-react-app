@@ -3,6 +3,8 @@ import axios from "axios";
 import {usePosts} from "../hooks/usePosts";
 import TestForm from "../components/UI/Test/TestForm";
 import TestsList from "../components/UI/Test/TestsList";
+import TestButton from "../components/UI/Test/TestButton";
+import SuperModal from "../components/UI/SuperModal/SuperModal";
 
 
 export const initialPosts = [
@@ -80,17 +82,25 @@ const Settings = () => {
     }
     //sort posts by select values
     const sortedAndSearchedPosts=usePosts(posts, filter.sort, filter.query)
-
+    const add=()=>{
+        setModal(true)
+    }
 
     return (
         <div>
-            <TestForm
-                create={createNewPost}
-            />
+
+            <SuperModal visible={modal} setVisible={setModal}>
+                <TestForm
+                    create={createNewPost}
+                />
+            </SuperModal>
+
+
             <TestsList
                 posts={posts}
                 // posts={sortedAndSearchedPosts}
                 remove={removePost}
+                onClick={add}
                 setModal={setModal}
                 modal={modal}
             />

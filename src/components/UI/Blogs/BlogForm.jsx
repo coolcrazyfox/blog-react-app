@@ -21,6 +21,7 @@ const BlogForm = ({create}) => {
 
         <form>
             <SuperInput
+                // value={'im'}
                 value={blog.image}
                 onCnange={e => setBlog({...blog, image: e.target.value})}
                 type={'text'}

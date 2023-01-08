@@ -1,10 +1,8 @@
 import React, {useState} from 'react';
 import axios from "axios";
-
 import {usePosts} from "../hooks/usePosts";
-import BlogsList from "../components/UI/Blogs/BlogsList";
-import BlogForm from "../components/UI/Blogs/BlogForm";
-import Search from "../components/Search";
+import TestForm from "../components/UI/Test/TestForm";
+import TestsList from "../components/UI/Test/TestsList";
 
 
 export const initialPosts = [
@@ -84,8 +82,8 @@ const Settings = () => {
     const sortedAndSearchedPosts=usePosts(posts, filter.sort, filter.query)
     return (
         <div>
-            <BlogForm create={createNewPost}/>
-            <BlogsList
+            <TestForm create={createNewPost}/>
+            <TestsList
                 blogs={sortedAndSearchedPosts}
                 remove={removePost}
                 setModal={setModal}

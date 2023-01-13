@@ -14,6 +14,11 @@ const DetailPostBlock = ({onClickListItem, details, sortDetails}) => {
     }
     console.log('set', setSelected)
 
+    const rootClasses=[s.lis]
+    if(open){
+        rootClasses.push(s.active)
+    }
+
     return (
         <div className={s.blogs}>
             <div className={s.box}>
@@ -29,7 +34,7 @@ const DetailPostBlock = ({onClickListItem, details, sortDetails}) => {
                         <span onClick={() => setOpen(!open)}>({sortName})</span>
                     </div>
                     {open && (
-                        <Bounce top>
+                        // <Bounce top>
                             <div className={s.select_box}>
 
                                 <ul>
@@ -37,16 +42,17 @@ const DetailPostBlock = ({onClickListItem, details, sortDetails}) => {
                                         <li
                                             key={i}
                                             onClick={() => onClickListenItem(i)}
-                                            className={selected === i ? s.lisActive : s.lis}
+                                            className={rootClasses.join(' ')}
+                                            // className={selected === i ? s.lisActive : s.lis}
                                         >
-                                            {name}{i}
+                                            {name}
                                         </li>)
                                     )}
 
                                 </ul>
 
                             </div>
-                        </Bounce>
+                        // </Bounce>
                     )
                     }
 

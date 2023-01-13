@@ -72,6 +72,7 @@
     border-radius: 10px;
     border-left: 1px solid #ebedf1;
     background: rgba(12, 107, 107, 0.91);
+    list-style: none;
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     /*box-shadow: rgba(0, 0, 0, 0.33) 0px 19px 38px, rgba(0, 0, 0, 0.27) 0px 15px 12px;*/
 
@@ -81,8 +82,8 @@
 /*    padding: 5px;*/
 
 /*}*/
-.box .container .select_box .lis{
-    /*color: #19b27b;*/
+.select_box .lis{
+    color: #988785;
     cursor: pointer;
     /*border: 1px solid #ffcc00;*/
     list-style: none;
@@ -90,7 +91,7 @@
     /*background: #ebedf1;*/
 
 }
-.box .container .select_box .lisActive{
+.select_box .lis.active{
     color: #ff9900;
     /*border: 1px solid #ffcc00;*/
     list-style: none;

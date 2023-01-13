@@ -12,7 +12,7 @@ const DetailPostBlock = ({onClickListItem, details, sortDetails}) => {
         setSelected(i)
         setOpen(false)
     }
-    // console.log('set', setSelected)
+    console.log('set', setSelected)
 
     return (
         <div className={s.blogs}>

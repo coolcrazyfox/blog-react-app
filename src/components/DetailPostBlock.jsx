@@ -6,10 +6,10 @@ import Bounce from 'react-reveal/Bounce';
 const DetailPostBlock = ({onClickListItem, details, sortDetails}) => {
     const [open, setOpen] = useState(false)
     const [selected, setSelected] = useState(0)
-    const list = ['for public posts', 'for private posts']
-    const sortName = list[selected]
-    const onClickListenItem = (i) => {
-        setSelected(i)
+    const statePosts = ['for public posts', 'for private posts']
+    const sortName = statePosts[selected]
+    const onClickListenItem = (index) => {
+        setSelected(index)
         setOpen(false)
     }
     console.log('set', setSelected)
@@ -33,13 +33,13 @@ const DetailPostBlock = ({onClickListItem, details, sortDetails}) => {
                             <div className={s.select_box}>
 
                                 <ul>
-                                    {list.map((name, i) => (
+                                    {statePosts.map((name, i) => (
                                         <li
                                             key={i}
                                             onClick={() => onClickListenItem(i)}
                                             className={selected === i ? s.lisActive : s.lis}
                                         >
-                                            {name}
+                                            {name}{i}
                                         </li>)
                                     )}
 

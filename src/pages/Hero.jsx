@@ -7,8 +7,10 @@ import Header from "../components/Header";
 const Hero = () => {
     return (
         <div className={s.main_container}>
+
             <Header/>
             <NavBar/>
+
 
         </div>
     );

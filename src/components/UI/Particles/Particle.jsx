@@ -130,8 +130,8 @@ const Particle = () => {
                 "retina_detect": true,
                 "background": {
                     "color": "rgba(17,17,17,0)",
-                    "image": "",
-                    "position": "50% 50%",
+                    "image": "https://million-wallpapers.ru/wallpapers/1/13/403941726888229/tolko-besstrashnym-pokaryayutsya-vershiny.jpg",
+                    "position": "center",
                     "repeat": "no-repeat",
                     "size": "cover"
                 }

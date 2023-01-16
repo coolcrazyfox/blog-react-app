@@ -11,8 +11,8 @@
     /*align-items: center;*/
     height: 78vh;
     min-width: 800px;
-    background: url("https://player.vimeo.com/external/555034894.hd.mp4?s=5ec048a36bf2004511915005f3b710a4e8cd105b&profile_id=174");
-    /*background: url('https://i.makeagif.com/media/12-04-2018/IxHq7M.gif') no-repeat;*/
+    /*background: url("https://player.vimeo.com/external/555034894.hd.mp4?s=5ec048a36bf2004511915005f3b710a4e8cd105b&profile_id=174");*/
+    background: url('https://i.makeagif.com/media/12-04-2018/IxHq7M.gif') no-repeat;
     background-size: cover;
     opacity: 0.8;
     /*background: rgba(12, 107, 107, 0.63);*/

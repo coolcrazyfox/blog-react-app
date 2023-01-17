@@ -1,6 +1,7 @@
 import React from 'react';
-import arrowUp from '../../assets/arrow-up.svg'
-import arrowDown from '../../assets/down.svg'
+// import arrowUp from '../../assets/arrow-up.svg'
+// import arrowDown from '../../assets/down.svg'
+import {AiOutlineArrowDown, AiOutlineArrowUp} from "react-icons/ai";
 
 const BooksFilter = ({filterBooks, sortBooks, orderBy}) => {
     const onSelectChange = (e) =>{
@@ -9,7 +10,7 @@ const BooksFilter = ({filterBooks, sortBooks, orderBy}) => {
     return (
         <div className="book-filter">
             <div className="book-filter__title" onClick={() => sortBooks()}>
-                <p><b>orderBy</b></p><span><img src={orderBy ? arrowUp : arrowDown} alt="arrow" /></span>
+                <p><b >orderBy</b></p>{orderBy ? <AiOutlineArrowUp/> : <AiOutlineArrowDown/>}
             </div>
             <div>
                 <select onChange={onSelectChange}>
@@ -19,6 +20,8 @@ const BooksFilter = ({filterBooks, sortBooks, orderBy}) => {
                     <option value="music">music</option>
                     <option value="food">food</option>
                 </select>
+
+
             </div>
         </div>
     )

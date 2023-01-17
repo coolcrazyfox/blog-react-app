@@ -6,6 +6,7 @@ import Menu from "../components/Menu";
 import SuperInput from "../components/UI/SuperInput/SuperInput";
 import {AiOutlineClear} from "react-icons/ai";
 import SuperMessageModal from "../components/UI/SuperMessageModal/SuperMessageModal";
+import BooksList from "../components/UI/Books/BooksList";
 
 
 
@@ -196,6 +197,7 @@ const UsersPage = () => {
                 ))}
             </ul>
             <button onClick={onClickAdd}>Add</button>
+            <BooksList/>
 
 
         </div>

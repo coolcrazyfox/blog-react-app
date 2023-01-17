@@ -20,12 +20,10 @@ const BooksFilter = ({filterBooks, sortBooks, orderBy}) => {
                     <option value="music">music</option>
                     <option value="food">food</option>
                 </select>
-
-
             </div>
         </div>
     )
-}
+
 };
 
 export default BooksFilter;

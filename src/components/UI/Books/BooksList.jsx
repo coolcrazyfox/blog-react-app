@@ -3,7 +3,7 @@ import axios from "axios";
 import BookItem from "./BookItem";
 import Card from "./Card";
 import BooksFilter from "./BooksFilter";
-// import baseUrl from '../../../books.json'
+import baseUrl from '../../../books.json'
 
 const BooksList = () => {
     const [booksData, setBooksData] = React.useState([])

@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import BookItem from "./BookItem";
+import Card from "./Card";
+import BooksFilter from "./BooksFilter";
 // import baseUrl from '../../../books.json'
 
 const BooksList = () => {
@@ -30,24 +32,24 @@ const BooksList = () => {
         setBooksData(filteredData)
     }
 
-    // const sortBooks = () =>{
-    //     const copyData = booksData.slice()
-    //     if(!orderBy){
-    //         const sortedByAsc = copyData.sort((a,b) => a.price > b.price ? 1 : -1)
-    //         setBooksData(sortedByAsc)
-    //         setOrderBy(!orderBy)
-    //     }else{
-    //         const sortedByDesc = copyData.sort((a,b) => a.price > b.price ? -1 : 1)
-    //         setBooksData(sortedByDesc)
-    //         setOrderBy(!orderBy)
-    //     }
-    // }
+    const sortBooks = () =>{
+        const copyData = booksData.slice()
+        if(!orderBy){
+            const sortedByAsc = copyData.sort((a,b) => a.price > b.price ? 1 : -1)
+            setBooksData(sortedByAsc)
+            setOrderBy(!orderBy)
+        }else{
+            const sortedByDesc = copyData.sort((a,b) => a.price > b.price ? -1 : 1)
+            setBooksData(sortedByDesc)
+            setOrderBy(!orderBy)
+        }
+    }
 
-    // const totalPrice = (book) => {
-    //     totalOrders.push(book)
-    //     let ordersSum = totalOrders.reduce((sum, current) => sum + current.price, 0)
-    //     setOrdersPrice(ordersSum)
-    // }
+    const totalPrice = (book) => {
+        totalOrders.push(book)
+        let ordersSum = totalOrders.reduce((sum, current) => sum + current.price, 0)
+        setOrdersPrice(ordersSum)
+    }
     return (
         <div className="wrapper">
             <div className="app">

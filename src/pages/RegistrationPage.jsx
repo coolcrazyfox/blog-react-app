@@ -11,8 +11,6 @@ const RegistrationPage = () => {
     const handelClick = () => {
         // setActive(current => !current)
         setIsActive(!isActive)
-
-
     }
     return (
         <div className={s.main_container}>

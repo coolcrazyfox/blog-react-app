@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+  "name": "Snake",
+  "price": 245,
+  "category": "animals"
+  },
+  {
+    "id": 2,
+    "name": "Paris",
+    "price": 345,
+    "category": "travel"
+  },
+  {
+    "id": 3,
+    "name": "Chanel",
+    "price": 2775,
+    "category": "parfum"
+  },
+  {
+    "id": 4,
+    "name": "Linkin Park",
+    "price": 25,
+    "category": "music"
+  },
+  {
+    "id": 5,
+    "name": "Pizza",
+    "price": 245,
+    "category": "food"
+  }
+]

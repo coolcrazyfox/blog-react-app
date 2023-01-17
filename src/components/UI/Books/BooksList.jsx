@@ -1,26 +1,55 @@
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
-import baseUrl from '../../../books.json'
+// import baseUrl from '../../../books.json'
 
 const BooksList = () => {
-    const [booksData,setBooksData]=useState([])
-    useEffect(()=>{
-        getData()
+    const [booksData, setBooksData] = React.useState([])
+    const [orderBy, setOrderBy] = React.useState(false)
+    const [totalOrders, setTotalOrders] = React.useState([])
+    const [ordersPrice, setOrdersPrice] = React.useState(0)
 
+
+    React.useEffect(() =>{
+        getData()
     },[])
+
     async function getData(){
-        await axios.get(baseUrl)
-            .then(res=>{
-                setBooksData(res.data)
-            })
-            .catch(err=>{
-                console.log(err)
-            })
+        try{
+            let response = await axios.get('../../../books.json')
+            setBooksData(response.data)
+        }catch(err){
+            console.log(err)
+        }
     }
-    console.log('booksData', booksData)
+
+    const filterBooks = (value) =>{
+        const filteredData = booksData.filter(book =>{
+            return book.category.toLowerCase().includes(value.toLowerCase())
+        })
+        setBooksData(filteredData)
+    }
+
+    // const sortBooks = () =>{
+    //     const copyData = booksData.slice()
+    //     if(!orderBy){
+    //         const sortedByAsc = copyData.sort((a,b) => a.price > b.price ? 1 : -1)
+    //         setBooksData(sortedByAsc)
+    //         setOrderBy(!orderBy)
+    //     }else{
+    //         const sortedByDesc = copyData.sort((a,b) => a.price > b.price ? -1 : 1)
+    //         setBooksData(sortedByDesc)
+    //         setOrderBy(!orderBy)
+    //     }
+    // }
+
+    // const totalPrice = (book) => {
+    //     totalOrders.push(book)
+    //     let ordersSum = totalOrders.reduce((sum, current) => sum + current.price, 0)
+    //     setOrdersPrice(ordersSum)
+    // }
     return (
         <div>
-
+            book
         </div>
     );
 };

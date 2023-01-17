@@ -9,7 +9,7 @@ const DetailPostBlock = ({onClickListItem, details, sortDetails}) => {
     const statePosts = ['for public posts', 'for private posts']
     const sortName = statePosts[selected]
     const onClickListenItem = (index) => {
-        setSelected(index)
+        setSelected(index.target.value)
         setOpen(false)
     }
     console.log('set', setSelected)
@@ -34,25 +34,31 @@ const DetailPostBlock = ({onClickListItem, details, sortDetails}) => {
                         <span onClick={() => setOpen(!open)}>({sortName})</span>
                     </div>
                     {open && (
-                        // <Bounce top>
+                        <Bounce top>
                             <div className={s.select_box}>
+                                <select onChange={onClickListenItem}>
+                                    <option value="for public posts">for public posts</option>
+                                    <option value="for private posts">'for private posts'</option>
 
-                                <ul>
-                                    {statePosts.map((name, i) => (
-                                        <li
-                                            key={i}
-                                            onClick={() => onClickListenItem(i)}
-                                            className={rootClasses.join(' ')}
-                                            // className={selected === i ? s.lisActive : s.lis}
-                                        >
-                                            {name}
-                                        </li>)
-                                    )}
+                                </select>
 
-                                </ul>
+
+                                {/*<ul>*/}
+                                {/*    {statePosts.map((name, i) => (*/}
+                                {/*        <li*/}
+                                {/*            key={i}*/}
+                                {/*            onClick={() => onClickListenItem(i)}*/}
+                                {/*            className={rootClasses.join(' ')}*/}
+                                {/*            // className={selected === i ? s.lisActive : s.lis}*/}
+                                {/*        >*/}
+                                {/*            {name}*/}
+                                {/*        </li>)*/}
+                                {/*    )}*/}
+
+                                {/*</ul>*/}
 
                             </div>
-                        // </Bounce>
+                        </Bounce>
                     )
                     }
 

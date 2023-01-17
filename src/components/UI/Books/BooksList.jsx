@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
+import BookItem from "./BookItem";
 // import baseUrl from '../../../books.json'
 
 const BooksList = () => {
@@ -48,8 +49,22 @@ const BooksList = () => {
     //     setOrdersPrice(ordersSum)
     // }
     return (
-        <div>
-            book
+        <div className="wrapper">
+            <div className="app">
+                <div className="app__body">
+                    <h2>Books</h2>
+                    <div>
+                        <BooksFilter orderBy={orderBy} sortBooks={sortBooks} filterBooks={filterBooks} />
+                    </div>
+                    {booksData.map(book => (
+                        <BookItem totalPrice={totalPrice} key={book.id} book={book} />
+                    ))
+                    }
+                </div>
+                <div className="app__cart">
+                    <Card ordersPrice={ordersPrice} />
+                </div>
+            </div>
         </div>
     );
 };

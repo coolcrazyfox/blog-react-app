@@ -9,7 +9,7 @@ const DetailPostBlock = ({onClickListItem, details, sortDetails}) => {
     const statePosts = ['for public posts', 'for private posts']
     const sortName = statePosts[selected]
     const onClickListenItem = (index) => {
-        setSelected(index.target.value)
+        setSelected(index)
         setOpen(false)
     }
     console.log('set', setSelected)
@@ -18,6 +18,14 @@ const DetailPostBlock = ({onClickListItem, details, sortDetails}) => {
     if(open){
         rootClasses.push(s.active)
     }
+    const arOptions = ['for public posts', 'for private posts']
+    const [value, setValue] = useState('');
+    const options = arOptions.map((text, index) => {
+        return <option key={index}>{text}</option>;
+    });
+    const optionsValue = options.map((text, index) => {
+        return <option key={index}>{text.name}</option>;
+    });
 
     return (
         <div className={s.blogs}>

@@ -36,26 +36,19 @@ const DetailPostBlock = ({onClickListItem, details, sortDetails}) => {
                     {open && (
                         <Bounce top>
                             <div className={s.select_box}>
-                                <select onChange={onClickListenItem}>
-                                    <option value="for public posts">for public posts</option>
-                                    <option value="for private posts">'for private posts'</option>
+                                <ul>
+                                    {statePosts.map((name, i) => (
+                                        <li
+                                            key={i}
+                                            onClick={() => onClickListenItem(i)}
+                                            className={rootClasses.join(' ')}
+                                            // className={selected === i ? s.lisActive : s.lis}
+                                        >
+                                            {name}
+                                        </li>)
+                                    )}
 
-                                </select>
-
-
-                                {/*<ul>*/}
-                                {/*    {statePosts.map((name, i) => (*/}
-                                {/*        <li*/}
-                                {/*            key={i}*/}
-                                {/*            onClick={() => onClickListenItem(i)}*/}
-                                {/*            className={rootClasses.join(' ')}*/}
-                                {/*            // className={selected === i ? s.lisActive : s.lis}*/}
-                                {/*        >*/}
-                                {/*            {name}*/}
-                                {/*        </li>)*/}
-                                {/*    )}*/}
-
-                                {/*</ul>*/}
+                                </ul>
 
                             </div>
                         </Bounce>

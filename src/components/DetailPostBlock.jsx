@@ -9,7 +9,7 @@ const DetailPostBlock = ({onClickListItem, details, sortDetails}) => {
     const statePosts = ['for public posts', 'for private posts']
     const sortName = statePosts[selected]
     const onClickListenItem = (index) => {
-        setSelected(index)
+        setSelected(index.target.value)
         setOpen(false)
     }
     console.log('set', setSelected)
@@ -18,17 +18,6 @@ const DetailPostBlock = ({onClickListItem, details, sortDetails}) => {
     if(open){
         rootClasses.push(s.active)
     }
-    const arOptions = ['for public posts', 'for private posts']
-    const [value, setValue] = useState('');
-    const onChange=(e)=>{
-        setValue(e.target.value)
-    }
-    const options = arOptions.map((text, index) => {
-        return <li key={index}>{text}</li>;
-    });
-    const optionsValue = options.map((text, index) => {
-        return <option key={index}>{text.name}</option>;
-    });
 
     return (
         <div className={s.blogs}>
@@ -47,18 +36,18 @@ const DetailPostBlock = ({onClickListItem, details, sortDetails}) => {
                     {open && (
                         <Bounce top>
                             <div className={s.select_box}>
-                                <ul onChange={(e)=>onChange(e.target.value)}  value={value}>
-                                    {options}
-                                    {/*{statePosts.map((name, i) => (*/}
-                                    {/*    <li*/}
-                                    {/*        key={i}*/}
-                                    {/*        onClick={() => onClickListenItem(i)}*/}
-                                    {/*        className={rootClasses.join(' ')}*/}
-                                    {/*        // className={selected === i ? s.lisActive : s.lis}*/}
-                                    {/*    >*/}
-                                    {/*        {name}*/}
-                                    {/*    </li>)*/}
-                                    {/*)}*/}
+
+                                <ul>
+                                    {statePosts.map((name, i) => (
+                                        <li
+                                            key={i}
+                                            onClick={() => onClickListenItem(i)}
+                                            className={rootClasses.join(' ')}
+                                            // className={selected === i ? s.lisActive : s.lis}
+                                        >
+                                            {name}
+                                        </li>)
+                                    )}
 
                                 </ul>
 

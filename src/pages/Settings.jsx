@@ -90,11 +90,16 @@ const Settings = () => {
     const [query, setQuery]=useState('')
     useEffect(()=>{
         const delay = setTimeout(()=>{
-            const res =axios.get(`https://rickandmortyapi.com/api/character/${items}`)
-            setItems(res.data)
-        })
-
+            const res =axios.get(`https://rickandmortyapi.com/api/character/${query}`)
+                .then((res)=>{
+                    setItems(res.data)
+                })
+        }, 3000)
+        return ()=>{
+            clearTimeout(delay)
+        }
     },[query])
+    console.log('delay ', items)
     return (
         <div>
             <div>

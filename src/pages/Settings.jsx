@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import {usePosts} from "../hooks/usePosts";
 import TestForm from "../components/UI/Test/TestForm";
@@ -85,9 +85,26 @@ const Settings = () => {
     const add=()=>{
         setModal(true)
     }
+    //delay
+    const [items, setItems]= useState([])
+    const [query, setQuery]=useState('')
+    useEffect(()=>{
+        const delay = setTimeout(()=>{
+            const res =axios.get(`https://rickandmortyapi.com/api/character/${items}`)
+            setItems(res.data)
+        })
 
+    },[query])
     return (
         <div>
+            <div>
+                <div>
+                    <input type="text"
+                           placeholder={'enter id'}
+                           onChange={(e)=> setQuery(e.target.value)}
+                    />
+                </div>
+            </div>
 
             <SuperModal visible={modal} setVisible={setModal}>
                 <TestForm

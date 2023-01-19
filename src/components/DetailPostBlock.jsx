@@ -9,7 +9,7 @@ const DetailPostBlock = ({onClickListItem, details, sortDetails}) => {
     const statePosts = ['for public posts', 'for private posts']
     const sortName = statePosts[selected]
     const onClickListenItem = (index) => {
-        setSelected(index.target.value)
+        setSelected(index)
         setOpen(false)
     }
     console.log('set', setSelected)
@@ -42,7 +42,8 @@ const DetailPostBlock = ({onClickListItem, details, sortDetails}) => {
                                         <li
                                             key={i}
                                             onClick={() => onClickListenItem(i)}
-                                            className={rootClasses.join(' ')}
+                                            // onChange={(i)=>setSelected(i)}
+                                            className={!selected? rootClasses.join(' '):''}
                                             // className={selected === i ? s.lisActive : s.lis}
                                         >
                                             {name}

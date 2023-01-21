@@ -41,7 +41,7 @@ const Header = ({title}) => {
                     </Zoom>
                 </div>
             </div>
-            <Loader/>
+            {/*<Loader/>*/}
 
         </div>
     );

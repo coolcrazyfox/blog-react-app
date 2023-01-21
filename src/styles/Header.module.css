@@ -105,6 +105,16 @@
         /*background-position-x: 500%;*/
     }
 }
+.title h3{
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.4rem;
+    font-family: 'Inter';
+    margin: 1px 15px 1px;
+    padding-bottom: 12px;
+    letter-spacing: 5px;
+    color: #1f1b1b;
+}
 h4{
     font-weight: 700;
     text-align: center;

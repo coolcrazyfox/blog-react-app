@@ -1,9 +1,10 @@
-.header{
+.header {
     grid-area: h;
     background: rgba(12, 107, 107, 0.45);
     height: 33px;
 }
-.title{
+
+.title {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -18,7 +19,8 @@
     line-height: 30px;
     /*width: 100px;*/
 }
-.title .logo{
+
+.title .logo {
     position: fixed;
     top: 0;
     left: 0;
@@ -32,7 +34,7 @@
     box-shadow: rgba(0, 0, 0, 0.3) 0px 7px 8px, rgba(0, 0, 0, 0.22) 0px 5px 2px;
 }
 
-.music_box{
+.music_box {
     position: relative;
     top: -5px;
     display: flex;
@@ -41,6 +43,7 @@
     width: 60px;
     /*border: 1px solid #ff9900;*/
 }
+
 .play_icon {
     position: relative;
     height: 33px;
@@ -52,14 +55,17 @@
     /*background: #111010;*/
 
 }
-.span, .span_second{
+
+.span, .span_second {
     color: rgba(255, 255, 255, 0);
 
 }
-.play_icon:hover .span{
+
+.play_icon:hover .span {
     color: white;
 }
-.stop_icon{
+
+.stop_icon {
     position: relative;
     height: 33px;
     margin: 1px;
@@ -72,18 +78,21 @@
     transition: 3s;
 
 }
-.stop_icon.active{
+
+.stop_icon.active {
     color: #ebedf1;
 }
 
-.stop_icon:hover .span_second{
+.stop_icon:hover .span_second {
     color: white;
 }
-.music{
+
+.music {
     color: white;
     font-size: 1rem;
 }
-.music_active{
+
+.music_active {
     color: #ff9900;
     font-size: 1rem;
     animation: music 2s linear infinite;
@@ -95,7 +104,7 @@
         font-size: 1rem;
         /*background-position-x: -500%;*/
     }
-    50%{
+    50% {
         color: white;
         font-size: 1.2rem;
     }
@@ -105,17 +114,8 @@
         /*background-position-x: 500%;*/
     }
 }
-.title h3{
-    font-weight: 700;
-    text-align: center;
-    font-size: 1.4rem;
-    font-family: 'Inter';
-    margin: 1px 15px 1px;
-    padding-bottom: 12px;
-    letter-spacing: 5px;
-    color: #1f1b1b;
-}
-h4{
+
+h4 {
     font-weight: 700;
     text-align: center;
     font-size: 1.5rem;
@@ -130,6 +130,7 @@ h4{
     animation: shine 5s linear infinite;
     position: relative;
 }
+
 @keyframes shine {
     0% {
         background-position-x: -500%;

@@ -5,6 +5,7 @@ import {TbMusicOff} from "react-icons/tb";
 import useSound from "use-sound";
 import sound from '../assets/message-to-bears-mountains.mp3';
 import Zoom from 'react-reveal/Zoom';
+import Loader from "./Loader";
 
 const Header = ({title}) => {
     const headerTitle = 'Blogger Platform '
@@ -40,6 +41,7 @@ const Header = ({title}) => {
                     </Zoom>
                 </div>
             </div>
+            <Loader/>
 
         </div>
     );

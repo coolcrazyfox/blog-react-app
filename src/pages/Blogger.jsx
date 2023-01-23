@@ -19,7 +19,7 @@ export const initialTasks = [
         title: 'The best blog in our village',
         website: 'https://www.youtube.com/',
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ',
-        date: '2022-11-19'
+        date: '2022-11-20'
     },
     {
         id: 2,
@@ -35,7 +35,7 @@ export const initialTasks = [
         title: 'Audience Platform',
         website: 'https://www.youtube.com/',
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ',
-        date: '2022-11-19'
+        date: '2022-11-21'
     },
     {
         id: 4,
@@ -43,7 +43,7 @@ export const initialTasks = [
         title: 'Audience Platform',
         website: 'https://www.youtube.com/',
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ',
-        date: '2022-11-19'
+        date: '2022-11-20'
     },
 ]
 const Blogger = () => {
@@ -122,8 +122,8 @@ const Blogger = () => {
                 remove={removeBlog}
                 onClick={activeModal}
 
-                // setModal={setModal}
-                // modal={modal}
+                setModal={setModal}
+                modal={modal}
                 // blogs={sortedBlogs}
             />
             <SuperModal visible={modal} setVisible={setModal}>

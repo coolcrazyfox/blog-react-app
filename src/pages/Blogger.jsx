@@ -123,8 +123,8 @@ const Blogger = () => {
                 remove={removeBlog}
                 onClick={activeModal}
 
-                setModal={setModal}
-                modal={modal}
+                // setModal={setModal}
+                // modal={modal}
                 // blogs={sortedBlogs}
             />
             <SuperModal visible={modal} setVisible={setModal}>
@@ -133,6 +133,7 @@ const Blogger = () => {
             </SuperModal>
 
             <Footer
+
                 // onClick={fetchBlogs}
             />
         </div>

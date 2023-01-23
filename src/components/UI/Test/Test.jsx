@@ -1,6 +1,7 @@
 import React from 'react';
+import {MdAutoDelete} from "react-icons/md";
 
-const Test = ({post}) => {
+const Test = ({post, remove}) => {
     return (
         <div style={{display:'flex', flexDirection:'column' }}>
             <div style={{display:'flex', flexDirection:'row'}}>
@@ -10,6 +11,9 @@ const Test = ({post}) => {
                     <div>{post.text}</div>
                     <div>{post.date}</div>
                 </div>
+                <span onClick={()=>remove(post)}>
+                        <MdAutoDelete/>
+                    </span>
 
             </div>
 

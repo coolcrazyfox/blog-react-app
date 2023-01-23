@@ -118,8 +118,8 @@ const Blogger = () => {
             />
 
             <BlogsList
-                blogs={blogs}
-                // blogs={sortedAndSearchedBlogs}
+                // blogs={blogs}
+                blogs={sortedAndSearchedBlogs}
                 remove={removeBlog}
                 onClick={activeModal}
 

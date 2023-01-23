@@ -3,7 +3,7 @@ import Test from "./Test";
 import TestButton from "./TestButton";
 import {MdCreateNewFolder} from "react-icons/md";
 
-const TestsList = ({posts, onClick}) => {
+const TestsList = ({posts, onClick, remove}) => {
     return (
         <div style={{margin:'10px'}}>
             <TestButton onClick={onClick}>
@@ -11,7 +11,10 @@ const TestsList = ({posts, onClick}) => {
                 <br/><span>create</span>
             </TestButton>
             {posts.map(post=>(
-                <Test post={post} key={post.id}/>)
+                <Test post={post}
+                      key={post.id}
+                      remove={remove}
+                />)
             )}
 
         </div>

@@ -3,6 +3,7 @@ import SuperInput from "../SuperInput/SuperInput";
 import SuperButton from "../SuperButton/SuperButton";
 import s from "../../../styles/Search.module.css";
 import {AiOutlineClear} from "react-icons/ai";
+import TestInput from "../Test/TestInput";
 
 const BlogForm = ({create}) => {
     const [blog, setBlog] = useState({image: '', title: '', website: '', text: '', date: ''})
@@ -22,7 +23,7 @@ const BlogForm = ({create}) => {
     return (
 
         <form>
-            <SuperInput
+            <TestInput
                 // value={'im'}
                 value={blog.image}
                 onCnange={e => setBlog({...blog, image: e.target.value})}
@@ -30,62 +31,63 @@ const BlogForm = ({create}) => {
                 placeholder={"Image link"}
 
             />
+
             {blog.image && (
                 <div className={s.clear}>
                     <AiOutlineClear onClick={(e) => setBlog({...blog, image: ''})}/>
                 </div>
             )
             }
-            <SuperInput
+            <TestInput
                 value={blog.title}
                 onCnange={e => setBlog({...blog, title: e.target.value})}
                 type={'text'}
                 placeholder={"Title"}
 
             />
-            {blog.image && (
+            {blog.title && (
                 <div className={s.clear}>
-                    <AiOutlineClear onClick={(e) => setBlog({...blog, image: ''})}/>
+                    <AiOutlineClear onClick={(e) => setBlog({...blog, title: ''})}/>
                 </div>
             )
             }
-            <SuperInput
+            <TestInput
                 value={blog.website}
                 onCnange={e => setBlog({...blog, website: e.target.value})}
                 type={'text'}
                 placeholder={"Website"}
 
             />
-            {blog.image && (
+            {blog.website && (
                 <div className={s.clear}>
-                    <AiOutlineClear onClick={(e) => setBlog({...blog, image: ''})}/>
+                    <AiOutlineClear onClick={(e) => setBlog({...blog, website: ''})}/>
                 </div>
             )
             }
-            <SuperInput
+            <TestInput
                 value={blog.text}
                 onCnange={e => setBlog({...blog, text: e.target.value})}
                 type={'text'}
                 placeholder={"Text"}
 
             />
-            {blog.image && (
+            {blog.text && (
                 <div className={s.clear}>
-                    <AiOutlineClear onClick={(e) => setBlog({...blog, image: ''})}/>
+                    <AiOutlineClear onClick={(e) => setBlog({...blog, text: ''})}/>
                 </div>
             )
             }
 
-            <SuperInput
+            <TestInput
                 value={blog.date}
                 onCnange={e => setBlog({...blog, date: e.target.value})}
                 type={'text'}
                 placeholder={"yyyy-mm-dd"}
 
             />
-            {blog.image && (
+            {blog.date && (
                 <div className={s.clear}>
-                    <AiOutlineClear onClick={(e) => setBlog({...blog, image: ''})}/>
+                    <AiOutlineClear onClick={(e) => setBlog({...blog, date: ''})}/>
                 </div>
             )
             }

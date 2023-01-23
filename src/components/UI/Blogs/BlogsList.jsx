@@ -16,7 +16,7 @@ const BlogsList = ({blogs, onClick, remove}) => {
 
 
     return (
-        <div className={s.blogs}>
+        <div className={s.blogs_container}>
             <div className={s.box}>
                 <div>
                     <SuperButton onClick={onClick}>

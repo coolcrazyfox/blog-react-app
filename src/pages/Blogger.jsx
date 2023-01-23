@@ -88,6 +88,7 @@ const Blogger = () => {
         setBlogs([...blogs, newBlog])
         console.log('input', newBlog)
     }
+
     //remove blog
     const removeBlog = (blog) => {
         setBlogs(blogs.filter(b => b.id !== blog.id))

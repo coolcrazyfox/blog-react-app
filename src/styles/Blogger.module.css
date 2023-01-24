@@ -3,7 +3,7 @@
     grid-template-areas:
             "h h"
             "n s"
-            "n m"
+            /*"n m"*/
             "n b"
             "n f";
     /*'n b' 'n f' */

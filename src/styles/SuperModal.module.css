@@ -5,15 +5,12 @@
     left: 0;
     height: 100vh;
     width: 100vw;
-    display: flex;
     align-items: center;
     justify-content: center;
     /*bottom: 0;*/
     /*right: 0;*/
     display: none;
     background: rgba(20, 47, 59, 0.78);
-    /*opacity: 0;*/
-    /*transform: scale(0);*/
     transition: 1s;
     /*z-index: 999;*/
 }
@@ -21,8 +18,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /*opacity: 1;*/
-    /*transform: scale(1);*/
     /*z-index: 99;*/
 }
 .myModalContent{

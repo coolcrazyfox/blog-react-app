@@ -128,7 +128,7 @@ const Blogger = () => {
                 // blogs={sortedBlogs}
             >
                 <SuperModal visible={modal} setVisible={setModal}>
-                    <BlogForm create={createNewBlog} visible={modal} setVisible={setModal}/>
+                    <BlogForm create={createNewBlog}/>
 
                 </SuperModal>
             </BlogsList>

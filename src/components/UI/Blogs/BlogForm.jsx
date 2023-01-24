@@ -3,7 +3,7 @@ import SuperInput from "../SuperInput/SuperInput";
 import SuperButton from "../SuperButton/SuperButton";
 import s from "../../../styles/Search.module.css";
 import {AiOutlineClear} from "react-icons/ai";
-import TestInput from "../Test/TestInput";
+
 
 const BlogForm = ({create}) => {
     const [blog, setBlog] = useState({image: '', title: '', website: '', text: '', date: ''})
@@ -22,75 +22,89 @@ const BlogForm = ({create}) => {
     }
     return (
 
-        <form>
-            <TestInput
-                // value={'im'}
-                value={blog.image}
-                onCnange={e => setBlog({...blog, image: e.target.value})}
-                type={'text'}
-                placeholder={"Image link"}
+        <form >
+            <div style={{display:'flex', flexDirection: 'row'}}>
+                <SuperInput
+                    value={blog.image}
+                    onChange={e => setBlog({...blog, image: e.target.value})}
+                    type={'text'}
+                    placeholder={"Image link"}
 
-            />
+                />
 
-            {blog.image && (
-                <div className={s.clear}>
-                    <AiOutlineClear onClick={(e) => setBlog({...blog, image: ''})}/>
-                </div>
-            )
-            }
-            <TestInput
-                value={blog.title}
-                onCnange={e => setBlog({...blog, title: e.target.value})}
-                type={'text'}
-                placeholder={"Title"}
+                {blog.image && (
+                    <div className={s.clear}>
+                        <AiOutlineClear onClick={(e) => setBlog({...blog, image: ''})}/>
+                    </div>
+                )
+                }
 
-            />
-            {blog.title && (
-                <div className={s.clear}>
-                    <AiOutlineClear onClick={(e) => setBlog({...blog, title: ''})}/>
-                </div>
-            )
-            }
-            <TestInput
-                value={blog.website}
-                onCnange={e => setBlog({...blog, website: e.target.value})}
-                type={'text'}
-                placeholder={"Website"}
+            </div>
 
-            />
-            {blog.website && (
-                <div className={s.clear}>
-                    <AiOutlineClear onClick={(e) => setBlog({...blog, website: ''})}/>
-                </div>
-            )
-            }
-            <TestInput
-                value={blog.text}
-                onCnange={e => setBlog({...blog, text: e.target.value})}
-                type={'text'}
-                placeholder={"Text"}
+            <div style={{display:'flex', flexDirection: 'row'}}>
+                <SuperInput
+                    value={blog.title}
+                    onChange={e => setBlog({...blog, title: e.target.value})}
+                    type={'text'}
+                    placeholder={"Title"}
 
-            />
-            {blog.text && (
-                <div className={s.clear}>
-                    <AiOutlineClear onClick={(e) => setBlog({...blog, text: ''})}/>
-                </div>
-            )
-            }
+                />
+                {blog.title && (
+                    <div className={s.clear}>
+                        <AiOutlineClear onClick={(e) => setBlog({...blog, title: ''})}/>
+                    </div>
+                )
+                }
 
-            <TestInput
-                value={blog.date}
-                onCnange={e => setBlog({...blog, date: e.target.value})}
-                type={'text'}
-                placeholder={"yyyy-mm-dd"}
+            </div>
 
-            />
-            {blog.date && (
-                <div className={s.clear}>
-                    <AiOutlineClear onClick={(e) => setBlog({...blog, date: ''})}/>
-                </div>
-            )
-            }
+            <div style={{display:'flex', flexDirection: 'row'}}>
+                <SuperInput
+                    value={blog.website}
+                    onChange={e => setBlog({...blog, website: e.target.value})}
+                    type={'text'}
+                    placeholder={"Website"}
+
+                />
+                {blog.website && (
+                    <div className={s.clear}>
+                        <AiOutlineClear onClick={(e) => setBlog({...blog, website: ''})}/>
+                    </div>
+                )
+                }
+            </div>
+
+            <div style={{display:'flex', flexDirection: 'row'}}>
+                <SuperInput
+                    value={blog.text}
+                    onChange={e => setBlog({...blog, text: e.target.value})}
+                    type={'text'}
+                    placeholder={"Text"}
+
+                />
+                {blog.text && (
+                    <div className={s.clear}>
+                        <AiOutlineClear onClick={(e) => setBlog({...blog, text: ''})}/>
+                    </div>
+                )
+                }
+            </div>
+
+            <div style={{display:'flex', flexDirection: 'row'}}>
+                <SuperInput
+                    value={blog.date}
+                    onChange={e => setBlog({...blog, date: e.target.value})}
+                    type={'text'}
+                    placeholder={"yyyy-mm-dd"}
+
+                />
+                {blog.date && (
+                    <div className={s.clear}>
+                        <AiOutlineClear onClick={(e) => setBlog({...blog, date: ''})}/>
+                    </div>
+                )
+                }
+            </div>
             <SuperButton
                 onClick={addNewBlog}
             >

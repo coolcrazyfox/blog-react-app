@@ -121,7 +121,7 @@ const Blogger = () => {
                 // blogs={blogs}
                 blogs={sortedAndSearchedBlogs}
                 remove={removeBlog}
-                onClick={activeModal}
+                onClicked={activeModal}
 
                 // setModal={setModal}
                 // modal={modal}

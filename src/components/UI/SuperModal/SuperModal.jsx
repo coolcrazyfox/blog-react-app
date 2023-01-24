@@ -9,7 +9,9 @@ const SuperModal = ({children, visible, setVisible}) => {
         rootClasses.push(s.active)
     }
     return (
-        <div className={rootClasses.join(' ')} onClick={()=>setVisible(false)}>
+        <div
+            className={rootClasses.join(' ')}
+            onClick={()=>setVisible(false)}>
         {/*<div className={[s.myModal, s.active].join('')}>*/}
             <div className={s.myModalContent} onClick={event => event.stopPropagation()}>
                 {children}

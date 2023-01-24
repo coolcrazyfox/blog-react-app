@@ -4,7 +4,7 @@ import Blog from "./Blog";
 import SuperButton from "../SuperButton/SuperButton";
 import Empty from "./Empty";
 
-const BlogsList = ({blogs, onClicked, remove}) => {
+const BlogsList = ({children ,blogs, onClicked, remove}) => {
     // const [loading, setLoading]=useState(true)
     const skeletonImage = 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png'
     // const skeletonImage='http://pngimagesfree.com/frame/Polaroid/polaroid-photo-frame-transparent-png_pngimagesfree.png'
@@ -40,6 +40,8 @@ const BlogsList = ({blogs, onClicked, remove}) => {
                         {/*</>*/}
                         {/*:<Empty/>}*/}
                 </div>
+
+                {children}
 
             </div>
 

@@ -126,11 +126,13 @@ const Blogger = () => {
                 // setModal={setModal}
                 // modal={modal}
                 // blogs={sortedBlogs}
-            />
-            <SuperModal visible={modal} setVisible={setModal}>
-                <BlogForm create={createNewBlog} visible={modal} setVisible={setModal}/>
+            >
+                <SuperModal visible={modal} setVisible={setModal}>
+                    <BlogForm create={createNewBlog} visible={modal} setVisible={setModal}/>
 
-            </SuperModal>
+                </SuperModal>
+            </BlogsList>
+
 
             <Footer
 

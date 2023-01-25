@@ -20,7 +20,7 @@
 }
 .myModalContent{
     padding: 25px;
-    background: #403f50;
+    background: rgba(64, 63, 80, 0.89);
     box-shadow: 0 1px 4px rgba(0, 0, 0, 1),
     -23px 0 20px -23px rgba(0, 0, 0, .8),
     23px 0 20px -23px rgba(0, 0, 0, .8),

@@ -1,0 +1,17 @@
+
+.form_container{
+    display: flex;
+    flex-direction: row;
+}
+
+.form_container .clear{
+    position: relative;
+    display: flex;
+    max-width: 20px;
+    top: 4px;
+    right: 22px;
+    color: #0c6b6b ;
+}
+.form_container .clear:hover{
+    color: #ab0e32;
+}

@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import SuperInput from "../SuperInput/SuperInput";
 import SuperButton from "../SuperButton/SuperButton";
-import s from "../../../styles/Search.module.css";
+import s from "../../../styles/BlogForm.module.css";
 import {AiOutlineClear} from "react-icons/ai";
 
 
@@ -22,8 +22,8 @@ const BlogForm = ({create}) => {
     }
     return (
 
-        <form >
-            <div style={{display:'flex', flexDirection: 'row'}}>
+        <form  className={s.form}>
+            <div className={s.form_container} style={{display:'flex', flexDirection: 'row'}}>
                 <SuperInput
                     value={blog.image}
                     onChange={e => setBlog({...blog, image: e.target.value})}
@@ -33,7 +33,7 @@ const BlogForm = ({create}) => {
                 />
 
                 {blog.image && (
-                    <div className={s.clear}>
+                    <div className={s.clear} >
                         <AiOutlineClear onClick={(e) => setBlog({...blog, image: ''})}/>
                     </div>
                 )
@@ -51,7 +51,7 @@ const BlogForm = ({create}) => {
                 />
                 {blog.title && (
                     <div className={s.clear}>
-                        <AiOutlineClear onClick={(e) => setBlog({...blog, title: ''})}/>
+                        <AiOutlineClear  onClick={(e) => setBlog({...blog, title: ''})}/>
                     </div>
                 )
                 }

@@ -74,7 +74,7 @@ const BlogForm = ({create}) => {
                 }
             </div>
 
-            <div style={{display:'flex', flexDirection: 'row'}}>
+            <div className={s.form_container} >
                 <SuperInput
                     value={blog.text}
                     onChange={e => setBlog({...blog, text: e.target.value})}
@@ -90,7 +90,7 @@ const BlogForm = ({create}) => {
                 }
             </div>
 
-            <div style={{display:'flex', flexDirection: 'row'}}>
+            <div className={s.form_container} >
                 <SuperInput
                     value={blog.date}
                     onChange={e => setBlog({...blog, date: e.target.value})}

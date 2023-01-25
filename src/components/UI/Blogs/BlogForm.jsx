@@ -22,8 +22,8 @@ const BlogForm = ({create}) => {
     }
     return (
 
-        <form  className={s.form}>
-            <div className={s.form_container} style={{display:'flex', flexDirection: 'row'}}>
+        <form  >
+            <div className={s.form_container} >
                 <SuperInput
                     value={blog.image}
                     onChange={e => setBlog({...blog, image: e.target.value})}
@@ -41,7 +41,7 @@ const BlogForm = ({create}) => {
 
             </div>
 
-            <div style={{display:'flex', flexDirection: 'row'}}>
+            <div className={s.form_container} >
                 <SuperInput
                     value={blog.title}
                     onChange={e => setBlog({...blog, title: e.target.value})}
@@ -58,7 +58,7 @@ const BlogForm = ({create}) => {
 
             </div>
 
-            <div style={{display:'flex', flexDirection: 'row'}}>
+            <div className={s.form_container} >
                 <SuperInput
                     value={blog.website}
                     onChange={e => setBlog({...blog, website: e.target.value})}

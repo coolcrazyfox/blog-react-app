@@ -22,7 +22,7 @@ const BlogForm = ({create}) => {
     }
     return (
 
-        <form  >
+        <form  className={s.form}>
             <div className={s.form_container} >
                 <SuperInput
                     value={blog.image}

@@ -1,7 +1,17 @@
-
+.form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
 .form_container{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
+    align-items: center;
+    margin: 5px;
+    width: 100%;
 }
 
 .form_container .clear{

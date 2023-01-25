@@ -14,4 +14,5 @@
 }
 .form_container .clear:hover{
     color: #ab0e32;
+    cursor: pointer;
 }

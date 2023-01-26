@@ -10,7 +10,7 @@ import PostsList from "../components/UI/Posts/PostsList";
 
 
 
-const Posts = () => {
+const PostsPage = () => {
     return (
         <div className={s.main_container}>
             <Header/>
@@ -22,4 +22,4 @@ const Posts = () => {
     );
 };
 
-export default Posts;
+export default PostsPage;

@@ -4,7 +4,7 @@ import Hero from "../pages/Hero";
 import UsersPage from "../pages/UsersPage";
 import RegistrationPage from "../pages/RegistrationPage";
 import Blogger from "../pages/Blogger";
-import Posts from "../pages/Posts";
+import PostsPage from "../pages/PostsPage";
 import Settings from "../pages/Settings";
 import Error404 from "../pages/Error404";
 import DetailsBlog from "../pages/DetailsBlog";
@@ -30,7 +30,7 @@ const RouterRoot = () => {
                 <Route path={PATH.USERS} element={<UsersPage/>}/>
                 <Route path={PATH.REGISTRATION} element={<RegistrationPage/>}/>
                 <Route path={PATH.BLOGGER} element={<Blogger/>}/>
-                <Route path={PATH.POSTS} element={<Posts/>}/>
+                <Route path={PATH.POSTS} element={<PostsPage/>}/>
                 <Route path={PATH.DETAILS} element={<DetailsBlog/>}/>
                 <Route path={PATH.POST_DETAILS} element={<DetailsPost/>}/>
                 <Route path={PATH.POST_EDIT} element={<EditPost/>}/>

@@ -58,8 +58,14 @@ const PostsPage = () => {
     //initial tasks
     const [posts, setPosts] = useState(initialPosts)
     //select
-    const arOptions = ['New blogs first', 'Old blogs first', 'From A to Z', 'From Z to A'];
+    const arOptions = [ 'New posts first', 'Old posts first'];
     const defaultSelectValue = arOptions[0]
+    const selectValue = [
+        {value: 'title', name: 'New posts first'},
+        {value: 'text', name: 'Old posts first'},
+
+
+    ]
 
     //search
     const [filter, setFilter]=useState({sort: '', query: ''})
@@ -85,8 +91,11 @@ const PostsPage = () => {
         <div className={s.main_container}>
             <Header/>
             <NavBar/>
-            <PostsPanel/>
-            <PostsList/>
+            <PostsPanel
+                filter={filter}
+                setFilter={setFilter}
+                options={selectValue}/>
+            <PostsList />
             <Footer/>
         </div>
     );

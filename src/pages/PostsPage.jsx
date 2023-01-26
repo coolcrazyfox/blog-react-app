@@ -81,7 +81,7 @@ const PostsPage = () => {
     }
     //sort posts by select values
     const sortedAndSearchedPosts=usePosts(posts, filter.sort, filter.query)
-    const add=()=>{
+    const activeModal=()=>{
         setModal(true)
     }
     //delay
@@ -95,7 +95,13 @@ const PostsPage = () => {
                 filter={filter}
                 setFilter={setFilter}
                 options={selectValue}/>
-            <PostsList />
+            <PostsList
+                posts={posts}
+                // posts={sortedAndSearchedPosts}
+                remove={removePost}
+                onClick={activeModal}
+
+            />
             <Footer/>
         </div>
     );

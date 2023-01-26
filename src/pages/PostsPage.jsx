@@ -87,9 +87,6 @@ const PostsPage = () => {
     const activeModal=()=>{
         setModal(true)
     }
-    //delay
-    const [items, setItems]= useState([])
-    const [query, setQuery]=useState('')
     return (
         <div className={s.main_container}>
             <Header/>

@@ -72,7 +72,7 @@ const Settings = () => {
     }
 
     // add new post
-    const createNewPost = (newPost) => {
+    const createNewPos = (newPost) => {
         setPosts([...posts, newPost])
         console.log('input', newPost)
     }
@@ -113,7 +113,7 @@ const Settings = () => {
 
             <SuperModal visible={modal} setVisible={setModal}>
                 <TestForm
-                    create={createNewPost}
+                    create={createNewPos}
                 />
             </SuperModal>
 

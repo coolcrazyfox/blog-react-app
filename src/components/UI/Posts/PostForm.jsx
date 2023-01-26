@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import s from "../../../styles/Search.module.css";
 import {AiOutlineClear} from "react-icons/ai";
+import s from "../../../styles/BlogForm.module.css";
 import SuperInput from "../SuperInput/SuperInput";
 import SuperButton from "../SuperButton/SuperButton";
 
@@ -16,58 +16,74 @@ const PostForm = ({create}) => {
         setPost({image:'',title:'', text:'', date:''})
     }
     return (
-        <form>
-            <SuperInput
-                value={post.image}
-                onChange={e => setPost({...post, image: e.target.value})}
-                type={'text'}
-                placeholder={'image'}
-            />
-            {post.image && (
-                <div className={s.clear}>
-                    <AiOutlineClear onClick={(e) => setPost({...post, image: ''})}/>
-                </div>
-            )
-            }
+        <form className={s.form}>
+            <div className={s.form_container}>
+                <SuperInput
+                    value={post.image}
+                    onChange={e => setPost({...post, image: e.target.value})}
+                    type={'text'}
+                    placeholder={'image'}
+                />
+                {post.image && (
+                    <div className={s.clear}>
+                        <AiOutlineClear onClick={(e) => setPost({...post, image: ''})}/>
+                    </div>
+                )
+                }
 
-            <SuperInput
-                value={post.title}
-                onChange={e => setPost({...post, title: e.target.value})}
-                type={'text'}
-                placeholder={'title'}
-            />
-            {post.title && (
-                <div className={s.clear}>
-                    <AiOutlineClear onClick={(e) => setPost({...post, title: ''})}/>
-                </div>
-            )
-            }
+            </div>
 
-            <SuperInput
-                value={post.text}
-                onChange={e => setPost({...post, text: e.target.value})}
-                type={'text'}
-                placeholder={'text'}
-            />
-            {post.text && (
-                <div className={s.clear}>
-                    <AiOutlineClear onClick={(e) => setPost({...post, text: ''})}/>
-                </div>
-            )
-            }
+            <div className={s.form_container}>
+                <SuperInput
+                    value={post.title}
+                    onChange={e => setPost({...post, title: e.target.value})}
+                    type={'text'}
+                    placeholder={'title'}
+                />
+                {post.title && (
+                    <div className={s.clear}>
+                        <AiOutlineClear onClick={(e) => setPost({...post, title: ''})}/>
+                    </div>
+                )
+                }
 
-            <SuperInput
-                value={post.date}
-                onChange={e => setPost({...post, date: e.target.value})}
-                type={'text'}
-                placeholder={'date'}
-            />
-            {post.date && (
-                <div className={s.clear}>
-                    <AiOutlineClear onClick={(e) => setPost({...post, date: ''})}/>
-                </div>
-            )
-            }
+            </div>
+
+
+            <div className={s.form_container}>
+                <SuperInput
+                    value={post.text}
+                    onChange={e => setPost({...post, text: e.target.value})}
+                    type={'text'}
+                    placeholder={'text'}
+                />
+                {post.text && (
+                    <div className={s.clear}>
+                        <AiOutlineClear onClick={(e) => setPost({...post, text: ''})}/>
+                    </div>
+                )
+                }
+
+            </div>
+
+
+            <div className={s.form_container}>
+                <SuperInput
+                    value={post.date}
+                    onChange={e => setPost({...post, date: e.target.value})}
+                    type={'text'}
+                    placeholder={'date'}
+                />
+                {post.date && (
+                    <div className={s.clear}>
+                        <AiOutlineClear onClick={(e) => setPost({...post, date: ''})}/>
+                    </div>
+                )
+                }
+
+            </div>
+
+
 
             <SuperButton
                 onClick={addNewPost}

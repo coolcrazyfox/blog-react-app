@@ -6,6 +6,9 @@ import Footer from "../components/Footer";
 import PostsPanel from "../components/UI/Posts/PostsPanel";
 import PostsList from "../components/UI/Posts/PostsList";
 import {usePosts} from "../hooks/usePosts";
+import BlogForm from "../components/UI/Blogs/BlogForm";
+import SuperModal from "../components/UI/SuperModal/SuperModal";
+import PostForm from "../components/UI/Posts/PostForm";
 
 export const initialPosts = [
     {
@@ -101,7 +104,13 @@ const PostsPage = () => {
                 remove={removePost}
                 onClick={activeModal}
 
-            />
+            >
+                <SuperModal visible={modal} setVisible={setModal}>
+                    <PostForm create={createNewPost}/>
+
+                </SuperModal>
+            </PostsList>
+
             <Footer/>
         </div>
     );

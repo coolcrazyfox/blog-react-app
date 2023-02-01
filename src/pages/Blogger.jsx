@@ -47,6 +47,8 @@ export const initialTasks = [
     },
 ]
 const Blogger = () => {
+    //theme
+    const [theme, setTheme]= useState('dark')
     //modal
     const [modal, setModal] = useState(false)
     //initial tasks

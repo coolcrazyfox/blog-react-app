@@ -10,6 +10,7 @@ import SuperModal from "../components/UI/SuperModal/SuperModal";
 import BlogForm from "../components/UI/Blogs/BlogForm";
 import {useBlogs} from "../hooks/useBlogs";
 import axios from "axios";
+import { createContext } from 'react';
 
 
 export const initialTasks = [
@@ -46,6 +47,9 @@ export const initialTasks = [
         date: '2022-11-20'
     },
 ]
+
+export const ThemeContext= createContext(null)
+
 const Blogger = () => {
     //theme
     const [theme, setTheme]= useState('dark')

@@ -105,46 +105,50 @@ const Blogger = () => {
         setModal(true)
     }
     return (
-        <div className={s.main_container}>
+        <ThemeContext.Provider>
+              <div className={s.main_container}>
 
-            <Header/>
-            <NavBar/>
-            <Search
-                filter={filter}
-                setFilter={setFilter}
-                options={selectValue}
-                // onChangeSearch={handlerEnterSearch}
-                // searchQuery={searchQuery}
-                // onChange={sortBlogs}
-                // value={selectedSort}
-                // setSearchQuery={setSearchQuery}
-                // defaultValue={defaultSelectValue}
-
-
-            />
-
-            <BlogsList
-                // blogs={blogs}
-                blogs={sortedAndSearchedBlogs}
-                remove={removeBlog}
-                onClicked={activeModal}
-
-                // setModal={setModal}
-                // modal={modal}
-                // blogs={sortedBlogs}
-            >
-                <SuperModal visible={modal} setVisible={setModal}>
-                    <BlogForm create={createNewBlog}/>
-
-                </SuperModal>
-            </BlogsList>
+                <Header/>
+                <NavBar/>
+                <Search
+                    filter={filter}
+                    setFilter={setFilter}
+                    options={selectValue}
+                    // onChangeSearch={handlerEnterSearch}
+                    // searchQuery={searchQuery}
+                    // onChange={sortBlogs}
+                    // value={selectedSort}
+                    // setSearchQuery={setSearchQuery}
+                    // defaultValue={defaultSelectValue}
 
 
-            <Footer
+                />
 
-                // onClick={fetchBlogs}
-            />
-        </div>
+                <BlogsList
+                    // blogs={blogs}
+                    blogs={sortedAndSearchedBlogs}
+                    remove={removeBlog}
+                    onClicked={activeModal}
+
+                    // setModal={setModal}
+                    // modal={modal}
+                    // blogs={sortedBlogs}
+                >
+                    <SuperModal visible={modal} setVisible={setModal}>
+                        <BlogForm create={createNewBlog}/>
+
+                    </SuperModal>
+                </BlogsList>
+
+
+                <Footer
+
+                    // onClick={fetchBlogs}
+                />
+            </div>
+
+        </ThemeContext.Provider>
+      
     );
 };
 

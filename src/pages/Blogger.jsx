@@ -52,7 +52,10 @@ export const ThemeContext= createContext(null)
 
 const Blogger = () => {
     //theme
-    const [theme, setTheme]= useState('dark')
+    const [theme, setTheme]= useState('light')
+    const toggleTheme=()=>{
+        setTheme((curr)=>(curr ==='light' ? 'dark' : 'light'))
+    }
     //modal
     const [modal, setModal] = useState(false)
     //initial tasks
@@ -105,8 +108,8 @@ const Blogger = () => {
         setModal(true)
     }
     return (
-        <ThemeContext.Provider>
-              <div className={s.main_container}>
+        <ThemeContext.Provider value={{theme, toggleTheme}}>
+              <div className={s.main_container} id={theme}>
 
                 <Header/>
                 <NavBar/>

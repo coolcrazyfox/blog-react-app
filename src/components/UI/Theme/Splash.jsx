@@ -5,8 +5,8 @@ import styled from "styled-components";
 
 const Toggle = styled.button`
     cursor: pointer;
-    height: 50px;
-    width: 50px;   
+    height: 20px;
+    width: 20px;   
     border-radius: 50%;
     border: none;
     background-color: ${props => props.theme.titleColor};
@@ -26,7 +26,7 @@ const Splash = (props) => {
             }
 
     }
-    const icon = props.theme === 'light' ? <HiMoon size={20}/> : <CgSun size= {40}/>
+    const icon = props.theme === 'light' ? <HiMoon size={10}/> : <CgSun size= {10}/>
   return (
     <>
         <Toggle onClick={changeTheme}> 

@@ -13,6 +13,10 @@ const DarkTheme={
     titleColor: 'white',
     tagLineColor: 'lavender'
 }
+const themes={
+    light: LightTheme,
+    dark: DarkTheme
+}
 
 const Hero = () => {
     return (

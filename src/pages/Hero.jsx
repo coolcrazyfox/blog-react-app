@@ -19,6 +19,7 @@ const themes={
 }
 
 const Hero = () => {
+    const [theme, setTheme] = React.useState('light')
     return (
         <div className={s.main_container}>
             <Header/>

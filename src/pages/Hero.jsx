@@ -16,7 +16,7 @@ const DarkTheme={
 }
 const themes={
     light: LightTheme,
-    dark: DarkTheme
+    dark: DarkTheme,
 }
 
 const Hero = () => {

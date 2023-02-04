@@ -7,6 +7,10 @@ const Toggle = styled.button`
     cursor: pointer;
     height: 20px;
     width: 20px;   
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 5px 10px;
     border-radius: 50%;
     border: none;
     background-color: ${props => props.theme.titleColor};

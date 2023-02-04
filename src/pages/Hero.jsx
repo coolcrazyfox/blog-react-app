@@ -22,7 +22,9 @@ const Hero = () => {
     const [theme, setTheme] = React.useState('light')
     return (
         <div className={s.main_container}>
-            <Header/>
+            <ThemeProvider theme={themes[theme]}>
+                <Header theme={theme} setTheme={setTheme}/>
+            </ThemeProvider>            
             <NavBar/>
         </div>
     );

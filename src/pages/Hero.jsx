@@ -2,6 +2,7 @@ import React from 'react';
 import s from '../styles/Hero.module.css'
 import NavBar from "../components/NavBar";
 import Header from "../components/Header";
+import { ThemeProvider } from 'styled-components';
 
 const LightTheme={
     pageBackGround: 'white',

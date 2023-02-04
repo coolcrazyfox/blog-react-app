@@ -3,6 +3,11 @@ import s from '../styles/Hero.module.css'
 import NavBar from "../components/NavBar";
 import Header from "../components/Header";
 
+const LightTheme={
+    pageBackGround:'white',
+    titleColor: '#dc658b',
+    tagLineColor: 'black'
+}
 
 const Hero = () => {
     return (

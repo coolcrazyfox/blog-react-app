@@ -6,11 +6,11 @@ import { ThemeProvider } from 'styled-components';
 
 const LightTheme={
     pageBackGround: 'white',
-    titleColor: '#dc658b',
+    titleColor: 'black',
     tagLineColor: 'black'
 }
 const DarkTheme={
-    pageBackGround: '#282c36',
+    pageBackGround: 'yellow-grey',
     titleColor: 'white',
     tagLineColor: 'lavender'
 }

@@ -6,8 +6,9 @@ import useSound from "use-sound";
 import sound from '../assets/message-to-bears-mountains.mp3';
 import Zoom from 'react-reveal/Zoom';
 import Loader from "./Loader";
+import Splash from './UI/Theme/Splash';
 
-const Header = ({title}) => {
+const Header = ({title, theme, setTheme}) => {
     const headerTitle = 'Blogger Platform '
     const [modalActive, setModalActive] = useState(true)
     const [isActive, setIsActive] = useState(false)
@@ -26,7 +27,8 @@ const Header = ({title}) => {
         <div className={s.header}>
             <div className={s.title}>
                 <h4>{headerTitle}</h4>
-                <div className={s.logo}></div>
+                <Splash theme= {theme} setTheme= {setTheme}/>
+                {/* <div className={s.logo}></div> */}
                 <div className={s.music_box}>
                     <Zoom>
                         <div className={s.play_icon}>

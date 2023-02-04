@@ -4,9 +4,14 @@ import NavBar from "../components/NavBar";
 import Header from "../components/Header";
 
 const LightTheme={
-    pageBackGround:'white',
+    pageBackGround: 'white',
     titleColor: '#dc658b',
     tagLineColor: 'black'
+}
+const DarkTheme={
+    pageBackGround: '#282c36',
+    titleColor: 'white',
+    tagLineColor: 'lavender'
 }
 
 const Hero = () => {

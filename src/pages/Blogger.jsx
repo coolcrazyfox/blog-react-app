@@ -49,8 +49,7 @@ export const initialTasks = [
 ]
 
 
-const Blogger = () => {
-    
+const Blogger = () => {    
     //modal
     const [modal, setModal] = useState(false)
     //initial tasks
@@ -104,8 +103,7 @@ const Blogger = () => {
     }
     return (
         
-        <div className={s.main_container} id={theme}>
-
+        <div className={s.main_container} >
             <Header/>
             <NavBar/>
             <Search

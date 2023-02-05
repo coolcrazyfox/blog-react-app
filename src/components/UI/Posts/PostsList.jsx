@@ -6,16 +6,19 @@ const PostsList = ({children ,posts, onClick, remove}) => {
     return (
         <div className={s.posts}>
             <div className={s.box}>
-                <div>
-                    <SuperButton onClick={onClick}>
-                        <span >
-                            Create a new post
-                        </span>
-                    </SuperButton>
-                </div>
-                <div className={s.container_items}>
-                    <Post/>
-                </div>
+                <div className= {s.posts_form}>
+                    <div className= {s.btn_container}>
+                        <SuperButton onClick={onClick}>
+                            <span >
+                                Create a new post
+                            </span>
+                        </SuperButton>
+                    </div>
+                    <div className={s.container_items}>
+                        <Post/>
+                    </div>
+                </div>  
+                
             </div>
         </div>
     );

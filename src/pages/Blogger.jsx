@@ -102,6 +102,7 @@ const Blogger = () => {
     }
     //sort blogs by select values
     const sortedAndSearchedBlogs=useBlogs(blogs, filter.sort, filter.query)
+    //active modal function
     const activeModal=()=>{
         setModal(true)
     }

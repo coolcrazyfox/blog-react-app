@@ -48,27 +48,23 @@ const Blog = ({blog, remove}) => {
                     <span onClick={()=>remove(blog)}>
                         <MdAutoDelete/>
                     </span>
-                    <div className={s.image_blog}
-                         style={{backgroundImage: `url(${blog.image})`}}
-                        // style={{backgroundImage:`url(${skeletonImage})`}}
+                    
+                    {blog.image ? <div className={s.image_blog}
+                         style={{backgroundImage: `url(${blog.image})`}}                       
                     >
-                        {/*<img*/}
-                        {/*    // src={b.image}*/}
-                        {/*    alt={skeletonImage}*/}
-                        {/*/>*/}
-                    </div>
+                        
+                    </div> : <div className={s.image_blog}></div>}
                     <div className={s.text_container} >
+
                         <Link to={'/detblog'}>
-                            <h2 className={s.title}> {blog.title}</h2>
-                            {/*<span>{props.blog.id}</span>*/}
-                            {/*<span>{props.blog.date}</span>*/}
+                            <h2 className={s.title}> {blog.title}</h2>                            
                         </Link>
 
                         <h5>Website:
                             <a href={`${blog.website}`}>{blog.website}</a>
                         </h5>
-                        <p>{blog.text}</p>
-                        {/*<p>{props.blog.date}</p>*/}
+
+                        <p>{blog.text}</p>                        
                     </div>
 
                 </div>

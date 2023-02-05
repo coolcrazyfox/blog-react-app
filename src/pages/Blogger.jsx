@@ -10,6 +10,8 @@ import SuperModal from "../components/UI/SuperModal/SuperModal";
 import BlogForm from "../components/UI/Blogs/BlogForm";
 import {useBlogs} from "../hooks/useBlogs";
 import axios from "axios";
+import { themes } from './Hero';
+import { ThemeProvider } from 'styled-components';
 
 
 
@@ -47,7 +49,7 @@ export const initialTasks = [
         date: '2022-11-20'
     },
 ]
-
+const themesB = themes
 
 const Blogger = () => {  
     //theme
@@ -105,8 +107,10 @@ const Blogger = () => {
     }
     return (
         
-        <div className={s.main_container} >
-            <Header/>
+        <div className={theme==='light'? s.main_container: s.main_container_dark} >
+            <ThemeProvider theme={themesB[theme]}>
+                <Header theme={theme} setTheme={setTheme}/>
+            </ThemeProvider>    
             <NavBar/>
             <Search
                 filter={filter}

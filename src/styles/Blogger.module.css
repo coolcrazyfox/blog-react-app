@@ -2,17 +2,12 @@
     display: grid;
     grid-template-areas:
             "h h"
-            "n s"
-            /*"n m"*/
+            "n s"            
             "n b"
-            "n f";
-    /*'n b' 'n f' */
+            "n f";    
 
     grid-template-rows: 60px 1fr;
-    grid-template-columns:2fr 10fr ;
-    /*grid-gap: 5px;*/
-    /*justify-content: center;*/
-    /*align-items: center;*/
+    grid-template-columns:2fr 10fr ;    
     height: 100vh;
     max-width: 1920px;
     min-width: 1600px;     
@@ -22,4 +17,23 @@
     /*background: url("https://million-wallpapers.ru/wallpapers/1/13/403941726888229/tolko-besstrashnym-pokaryayutsya-vershiny.jpg") center center  no-repeat fixed;*/
     background-size: cover;   
 
+}
+.main_container_dark{
+    display: grid;
+    grid-template-areas:
+            "h h"
+            "n s"            
+            "n b"
+            "n f";    
+
+    grid-template-rows: 60px 1fr;
+    grid-template-columns:2fr 10fr ;    
+    height: 100vh;
+    max-width: 1920px;
+    min-width: 1600px;     
+    background: url("https://cortina360.it/wp-content/uploads/2022/03/young-man-climbing-overhanging-cliff-at-sunset-2021-08-26-22-40-15-utc-scaled.jpg") center center  no-repeat fixed;
+    /* background: url("https://www.rock-climbing.ru/images/general/back_1_light.jpg") center center  no-repeat fixed; */
+    /*background: url("http://rockclimber.ru/wp-content/uploads/2014/08/what_climbing_header.jpg")   no-repeat fixed;*/
+    /*background: url("https://million-wallpapers.ru/wallpapers/1/13/403941726888229/tolko-besstrashnym-pokaryayutsya-vershiny.jpg") center center  no-repeat fixed;*/
+    background-size: cover;  
 }

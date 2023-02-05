@@ -86,17 +86,17 @@ const Blogger = () => {
     const [filter, setFilter]=useState({sort: '', query: ''})
 
     //get blogs
-    useEffect(()=>{
-        fetchBlogs()
-    },[])
-    
-    async function fetchBlogs(){
-        // const response= await axios.get('https://nest-blog-platform.vercel.app/blogs')
-        const blogs = await PostService.getAll()
-        setBlogs(blogs)
-        console.log(blogs.data)
+    // useEffect(()=>{
+    //     fetchBlogs()
+    // },[])
 
-    }
+    // async function fetchBlogs(){
+    //     // const response= await axios.get('https://nest-blog-platform.vercel.app/blogs')
+    //     const blogs = await PostService.getAll()
+    //     setBlogs(blogs)
+    //     console.log(blogs.data)
+
+    // }
 
 
     // add new blog

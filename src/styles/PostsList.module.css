@@ -23,9 +23,10 @@
     margin-left: 20px;
 }
 .posts_form .btn_container{
-    display: flex;
+    display: flex;    
     height: 50px;
     /* border: 1px solid red; */
+    
 }
 .posts_form .container_items{
     display: flex;

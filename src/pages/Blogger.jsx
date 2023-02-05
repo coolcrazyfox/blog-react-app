@@ -12,6 +12,7 @@ import {useBlogs} from "../hooks/useBlogs";
 import axios from "axios";
 import { themes } from './Hero';
 import { ThemeProvider } from 'styled-components';
+import PostService from './../API/PostService';
 
 
 
@@ -58,6 +59,7 @@ const Blogger = () => {
     const [modal, setModal] = useState(false)
     //initial tasks
     const [blogs, setBlogs] = useState(initialTasks)
+
     //select
     const selectValue = [
         {value: 'title', name: 'New blogs first'},
@@ -82,10 +84,17 @@ const Blogger = () => {
 
     //search
     const [filter, setFilter]=useState({sort: '', query: ''})
+
     //get blogs
+    useEffect(()=>{
+        fetchBlogs()
+    },[])
+    
     async function fetchBlogs(){
-        const response= await axios.get('https://nest-blog-platform.vercel.app/blogs')
-        console.log(response.data)
+        // const response= await axios.get('https://nest-blog-platform.vercel.app/blogs')
+        const blogs = await PostService.getAll()
+        setBlogs(blogs)
+        console.log(blogs.data)
 
     }
 

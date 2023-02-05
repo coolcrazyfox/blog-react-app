@@ -24,7 +24,7 @@ const Header = ({title, theme, setTheme}) => {
         setModalActive(false)
     }
     return (
-        <div className={theme ==='light' ? s.header_dark: s.header}>
+        <div className={theme ==='light' ? s.header: s.header_dark}>
             <div className={s.title}>
                 <h4>{headerTitle}</h4>
                 <Splash theme= {theme} setTheme= {setTheme}/>

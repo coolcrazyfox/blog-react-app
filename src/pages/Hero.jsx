@@ -5,12 +5,12 @@ import Header from "../components/Header";
 import { ThemeProvider } from 'styled-components';
 
 const LightTheme={
-    pageBackGround: 'white',
-    titleColor: 'black',
+    pageBackGround: 'black',
+    titleColor: '#ff9900',
     tagLineColor: 'black'
 }
 const DarkTheme={
-    pageBackGround: 'yellow-grey',
+    pageBackGround: 'black',
     titleColor: 'white',
     tagLineColor: 'lavender'
 }

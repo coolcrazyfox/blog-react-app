@@ -10,7 +10,7 @@ import SuperModal from "../components/UI/SuperModal/SuperModal";
 import BlogForm from "../components/UI/Blogs/BlogForm";
 import {useBlogs} from "../hooks/useBlogs";
 import axios from "axios";
-import { createContext } from 'react';
+
 
 
 export const initialTasks = [
@@ -48,14 +48,9 @@ export const initialTasks = [
     },
 ]
 
-export const ThemeContext= createContext(null)
 
 const Blogger = () => {
-    //theme
-    const [theme, setTheme]= useState('dark')
-    const toggleTheme=()=>{
-        setTheme((curr)=>(curr ==='light' ? 'dark' : 'light'))
-    }
+    
     //modal
     const [modal, setModal] = useState(false)
     //initial tasks
@@ -108,49 +103,50 @@ const Blogger = () => {
         setModal(true)
     }
     return (
-        <ThemeContext.Provider value={{theme, toggleTheme}}>
-              <div className={s.main_container} id={theme}>
+        
+        <div className={s.main_container} id={theme}>
 
-                <Header/>
-                <NavBar/>
-                <Search
-                    filter={filter}
-                    setFilter={setFilter}
-                    options={selectValue}
-                    // onChangeSearch={handlerEnterSearch}
-                    // searchQuery={searchQuery}
-                    // onChange={sortBlogs}
-                    // value={selectedSort}
-                    // setSearchQuery={setSearchQuery}
-                    // defaultValue={defaultSelectValue}
-
-
-                />
-
-                <BlogsList
-                    // blogs={blogs}
-                    blogs={sortedAndSearchedBlogs}
-                    remove={removeBlog}
-                    onClicked={activeModal}
-
-                    // setModal={setModal}
-                    // modal={modal}
-                    // blogs={sortedBlogs}
-                >
-                    <SuperModal visible={modal} setVisible={setModal}>
-                        <BlogForm create={createNewBlog}/>
-
-                    </SuperModal>
-                </BlogsList>
+            <Header/>
+            <NavBar/>
+            <Search
+                filter={filter}
+                setFilter={setFilter}
+                options={selectValue}
+                // onChangeSearch={handlerEnterSearch}
+                // searchQuery={searchQuery}
+                // onChange={sortBlogs}
+                // value={selectedSort}
+                // setSearchQuery={setSearchQuery}
+                // defaultValue={defaultSelectValue}
 
 
-                <Footer
+            />
 
-                    // onClick={fetchBlogs}
-                />
-            </div>
+            <BlogsList
+                // blogs={blogs}
+                blogs={sortedAndSearchedBlogs}
+                remove={removeBlog}
+                onClicked={activeModal}
 
-        </ThemeContext.Provider>
+                // setModal={setModal}
+                // modal={modal}
+                // blogs={sortedBlogs}
+            >
+                <SuperModal visible={modal} setVisible={setModal}>
+                    <BlogForm create={createNewBlog}/>
+
+                </SuperModal>
+            </BlogsList>
+
+
+            <Footer
+
+                // onClick={fetchBlogs}
+            />
+    </div>
+        
+
+        
       
     );
 };

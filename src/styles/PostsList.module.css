@@ -20,16 +20,17 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    margin-left: 20px;
 }
 .posts_form .btn_container{
     display: flex;
     height: 50px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 .posts_form .container_items{
     display: flex;
     flex-direction: column;
-    border: 1px solid rgb(21, 255, 0);
+    /* border: 1px solid rgb(21, 255, 0); */
 }
 .posts_list {
     display: flex;
@@ -46,7 +47,7 @@
     /*align-items: flex-start;*/
     width: 31.5% ;
     height: 300px;
-    margin: 14px 5px 0 15px;
+    margin: 14px 5px 20px 15px;
     /*height: 48px;*/
     /*top: 283px;*/
     /*left:  444px;*/
@@ -58,16 +59,19 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    /*border: 1px solid #19b27b;*/
-    margin-bottom: 5px;
-    margin-top: 5px;
+    /* border: 1px solid #19b27b; */
+    margin-bottom: 15px; 
+    margin-top: 5px;   
 }
 .main_img_box .main_img{
-    height: 230px;
-    width: 295px;
-    /*border: 1px solid #ebedf1;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 275px;
+    /* border: 1px solid #ebedf1; */
     border-radius: 5px;
-    background: rgba(235, 235, 241, 0);
+    background: rgba(235, 235, 241, 0)center;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     background-size: cover;
 }

@@ -6,7 +6,6 @@ import Footer from "../components/Footer";
 import PostsPanel from "../components/UI/Posts/PostsPanel";
 import PostsList from "../components/UI/Posts/PostsList";
 import {usePosts} from "../hooks/usePosts";
-import BlogForm from "../components/UI/Blogs/BlogForm";
 import SuperModal from "../components/UI/SuperModal/SuperModal";
 import PostForm from "../components/UI/Posts/PostForm";
 

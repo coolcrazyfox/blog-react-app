@@ -1,11 +1,10 @@
 import React from 'react';
 import s  from '../../../styles/PostsList.module.css'
-import Blog from "../Blogs/Blog";
 import Post from "./Post";
 import SuperButton from "../SuperButton/SuperButton";
 const PostsList = ({children ,posts, onClick, remove}) => {
     return (
-        <div className={s.blogs}>
+        <div className={s.posts}>
             <div className={s.box}>
                 <div>
                     <SuperButton onClick={onClick}>

@@ -3,17 +3,13 @@
     grid-template-areas:
             "h h"
             "n i"
-            "n b"
-            "n f";
-    /*'n b' 'n f' */
+            "n p"
+            "n f";    
 
     grid-template-rows: 60px 1fr;
-    grid-template-columns:2fr 10fr ;
-    /*grid-gap: 5px;*/
-    /*justify-content: center;*/
-    /*align-items: center;*/
+    grid-template-columns:2fr 10fr ;    
     height: 100vh;
-    max-width: 1900px;
+    max-width: 1920px;
     min-width: 1600px;
     /*background: url("https://bigtimeaventura.com/wp-content/uploads/2015/12/IMG_6592-1.jpg") center center  no-repeat fixed;*/
     /*background: url("https://www.rock-climbing.ru/images/general/back_1_light.jpg") center center  no-repeat fixed;*/
@@ -26,7 +22,5 @@
     /*background: url("http://blog.tremeterra.com.br/wp-content/uploads/2018/05/5-tipos-de-escalada-incriveis-que-voce-precisa-conhecer.jpeg") center center  no-repeat fixed;*/
     /*background: url("https://cdn.fishki.net/upload/post/201505/05/1523046/pictures_originals_2013_sport__photo_of_climber_054651_.jpg") center center  no-repeat fixed;*/
     /*background: url("https://www.verticalsailingtour.com/img/vertical-sailing-tour-destinations/climb-sail-majorca-spain-vertical-sailing-tour/big/deep-water-solo-majorca-vertical-sailing-tour-2.jpg") center center  no-repeat fixed;*/
-    background-size: cover;
-    /*    background-position: center center;*/
-    /*    background-attachment: fixed;*/
+    background-size: cover;    
 }

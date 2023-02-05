@@ -22,7 +22,7 @@ const themes={
 const Hero = () => {
     const [theme, setTheme] = React.useState('light')
     return (
-        <div className={s.main_container}>
+        <div className={theme==='light'? s.main_container: s.main_container_dark}>
             <ThemeProvider theme={themes[theme]}>
                 <Header theme={theme} setTheme={setTheme}/>
             </ThemeProvider>            

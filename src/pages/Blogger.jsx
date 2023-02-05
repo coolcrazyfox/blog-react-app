@@ -126,10 +126,7 @@ const Blogger = () => {
                 // blogs={blogs}
                 blogs={sortedAndSearchedBlogs}
                 remove={removeBlog}
-                onClicked={activeModal}
-
-                // setModal={setModal}
-                // modal={modal}
+                onClicked={activeModal}                
                 // blogs={sortedBlogs}
             >
                 <SuperModal visible={modal} setVisible={setModal}>

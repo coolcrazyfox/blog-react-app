@@ -49,7 +49,9 @@ export const initialTasks = [
 ]
 
 
-const Blogger = () => {    
+const Blogger = () => {  
+    //theme
+    const [theme, setTheme] = React.useState('light')  
     //modal
     const [modal, setModal] = useState(false)
     //initial tasks

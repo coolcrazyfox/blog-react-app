@@ -4,17 +4,17 @@ import NavBar from "../components/NavBar";
 import Header from "../components/Header";
 import { ThemeProvider } from 'styled-components';
 
-const LightTheme={
+export const LightTheme={
     pageBackGround: 'black',
     titleColor: '#ff9900',
     tagLineColor: 'black'
 }
-const DarkTheme={
+export const DarkTheme={
     pageBackGround: 'black',
     titleColor: 'white',
     tagLineColor: 'lavender'
 }
-const themes={
+ export const themes={
     light: LightTheme,
     dark: DarkTheme,
 }

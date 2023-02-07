@@ -35,10 +35,18 @@ const DragAndDrop = () => {
             return c
         }))
         e.target.style.background = 'white'
-    }            
+    }
+    
+    const sortCards =(a, b)=> {
+        if(a.order> b.order){
+            return 1
+        }else{
+            return -1
+        }
+    }
   return (
     <div className = {s.cards_container}>
-        {cardList.map(card => (
+        {cardList.sort(sortCards).map(card => (
             <div className = {s.card_item}                
                 onDragStart = {(e) => dragStartHandler(e, card)}
                 onDragLeave = {(e) => dragLeaveHandler(e)}

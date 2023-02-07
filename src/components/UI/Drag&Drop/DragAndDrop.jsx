@@ -7,6 +7,19 @@ const DragAndDrop = () => {
         {id: 3, order: 4, text: 'card #4'},
         {id: 4, order: 3, text: 'card #3'}
         )
+    const [currentCard, setCurrentCard] = React.useState(null)
+        
+    const dragStartHandler =(e, card)=>{
+
+    }
+    const dragLeaveHandler =(e)=>{}
+    const dragEndHandler =(e)=>{}    
+    const dragOverHandler =(e)=>{
+        e.preventDefault()
+    }    
+    const dropHandler =(e, card)=>{
+        e.preventDefault()
+    }            
   return (
     <div className = {s.cards_container}>
         {cardList.map(card => (

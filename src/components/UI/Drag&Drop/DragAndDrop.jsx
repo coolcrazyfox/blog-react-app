@@ -8,9 +8,15 @@ const DragAndDrop = () => {
         {id: 4, order: 3, text: 'card #3'}
         )
   return (
-    <div className= {s.cards_container}>
+    <div className = {s.cards_container}>
         {cardList.map(card => (
-            <div className= {s.card_item}> 
+            <div className = {s.card_item}
+                draggable = {true}
+                onDragStart = {}
+                onDragLeave = {}
+                onDragEnd = {}
+                onDragOver = {}
+                onDrop = {}> 
                 {card.text}
             </div>
         ))}

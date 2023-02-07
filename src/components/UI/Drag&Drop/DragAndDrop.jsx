@@ -8,8 +8,12 @@ const DragAndDrop = () => {
         {id: 4, order: 3, text: 'card #3'}
         )
   return (
-    <div>
-      
+    <div className= {s.cards_container}>
+        {cardList.map(card => (
+            <div className= {s.card_item}> 
+                {card.text}
+            </div>
+        ))}
     </div>
   )
 }

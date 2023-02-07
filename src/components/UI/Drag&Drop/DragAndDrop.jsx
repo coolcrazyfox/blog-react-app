@@ -25,6 +25,16 @@ const DragAndDrop = () => {
     }    
     const dropHandler =(e, card)=>{
         e.preventDefault()
+        setCardList(cardList.map( c => {
+            if( c.id === card.id){
+                return {...c, order: currentCard.order}
+            }
+            if( c.id === currentCard.id){
+                return {...c, order: card.order}
+            }
+            return c
+        }))
+        e.target.style.background = 'white'
     }            
   return (
     <div className = {s.cards_container}>

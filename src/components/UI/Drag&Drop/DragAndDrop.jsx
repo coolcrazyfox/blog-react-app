@@ -10,12 +10,18 @@ const DragAndDrop = () => {
     const [currentCard, setCurrentCard] = React.useState(null)
         
     const dragStartHandler =(e, card)=>{
+        setCurrentCard(card)
+    }
+
+    const dragLeaveHandler =(e)=>{
 
     }
-    const dragLeaveHandler =(e)=>{}
-    const dragEndHandler =(e)=>{}    
+    const dragEndHandler =(e)=>{
+        e.target.style.background = 'white'
+    }    
     const dragOverHandler =(e)=>{
         e.preventDefault()
+        e.target.style.background = 'grey'
     }    
     const dropHandler =(e, card)=>{
         e.preventDefault()

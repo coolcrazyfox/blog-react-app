@@ -10,13 +10,13 @@ const DragAndDrop = () => {
   return (
     <div className = {s.cards_container}>
         {cardList.map(card => (
-            <div className = {s.card_item}
-                draggable = {true}
-                onDragStart = {}
-                onDragLeave = {}
-                onDragEnd = {}
-                onDragOver = {}
-                onDrop = {}> 
+            <div className = {s.card_item}                
+                onDragStart = {(e) => dragStartHandler(e, card)}
+                onDragLeave = {(e) => dragLeaveHandler(e)}
+                onDragEnd = {(e) => dragEndHandler(e)}
+                onDragOver = {(e) => dragOverHandler(e)}
+                onDrop = {(e) => dropHandler(e, card)}
+                draggable = {true}> 
                 {card.text}
             </div>
         ))}

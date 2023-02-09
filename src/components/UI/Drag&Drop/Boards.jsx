@@ -11,7 +11,10 @@ const Boards = () => {
     <div className='board_form'>
     {boards.map(board =>(
         <div className='board'>
-            <div> {board.title}</div> 
+            <div className='board_title'> {board.title}</div> 
+            {board.items.map(item =>(
+                <div className='item'>{items.title}</div>
+            ))}
 
         </div>
     ))}

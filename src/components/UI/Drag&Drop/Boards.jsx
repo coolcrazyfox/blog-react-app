@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 const Boards = () => {
     const [boards, setBoards]= useState([
         {id: 1, title: 'To do', items: [{id: 1, title: 'Go to shop'}, {id: 2, title: 'Buy a SSD'}] },
@@ -7,7 +8,13 @@ const Boards = () => {
         {id: 3, title: 'Made', items: [{id: 5, title: 'Go to shop'}, {id: 6, title: 'Buy a SSD'}]}
     ])
   return (
-    <div>
+    <div className='board_form'>
+    {boards.map(board =>(
+        <div className='board'>
+            <div> {board.title}</div> 
+
+        </div>
+    ))}
       
     </div>
   )

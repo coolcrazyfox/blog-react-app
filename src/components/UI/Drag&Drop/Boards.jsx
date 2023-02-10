@@ -47,10 +47,20 @@ const Boards = () => {
             return b
         }))
     }
+
+    const dropCardHandler=(e, board)=>{
+
+    }
+    
   return (
     <div className='board_form'>
     {boards.map(board =>(
-        <div className='board'>
+        <div
+             className='board'
+             onDragOver = {(e) => dragOverHandler(e)}
+             onDrop = {(e) => dropCardHandler(e, board, item)}
+
+        >
             <div className='board_title'> {board.title}</div> 
             {board.items.map(item =>(
                 <div 

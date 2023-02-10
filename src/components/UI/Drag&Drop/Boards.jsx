@@ -7,6 +7,10 @@ const Boards = () => {
         {id: 2, title: 'Check on', items: [{id: 3, title: 'Go to shop'}, {id: 4, title: 'Buy a SSD'}]},
         {id: 3, title: 'Made', items: [{id: 5, title: 'Go to shop'}, {id: 6, title: 'Buy a SSD'}]}
     ])
+
+    const dragOverHandler=(e, board, item)=>{
+
+    }
   return (
     <div className='board_form'>
     {boards.map(board =>(

@@ -1,4 +1,4 @@
-import React from 'react'
+import React ,{useState} from 'react'
 
 
 const Boards = () => {
@@ -7,9 +7,13 @@ const Boards = () => {
         {id: 2, title: 'Check on', items: [{id: 3, title: 'Go to shop'}, {id: 4, title: 'Buy a SSD'}]},
         {id: 3, title: 'Made', items: [{id: 5, title: 'Go to shop'}, {id: 6, title: 'Buy a SSD'}]}
     ])
-
+    const [currentBoard, setCurrentBoard]= useState(null)
+    const [currentCard, setCurrentCard]= useState(null)
     const dragOverHandler=(e, board, item)=>{
         e.preventDefault()
+        if(e.target.className == 'item'){
+            e.target.style.boxShadow = '0 4px 3px red'
+        }
 
     }
 
@@ -18,11 +22,11 @@ const Boards = () => {
     }
 
     const dragLeaveHandler=()=> {
-
+        e.target.style.boxShadow = 'none'
     }
-    
-    const dragEndHandler=()=> {
 
+    const dragEndHandler=()=> {
+        e.target.style.boxShadow = 'none'
     }
     
 

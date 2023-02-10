@@ -22,11 +22,11 @@ const Boards = () => {
                     onDragStart = {(e) => dragStartHandler(e, board)}
                     onDragLeave = {(e) => dragLeaveHandler(e)}
                     onDragEnd = {(e) => dragEndHandler(e)}                    
-                    onDrop = {(e) => dropHandler(e, board)}
+                    onDrop = {(e) => dropHandler(e, board, item)}
                     draggable = {true}
                     className='item'
                 >
-                    {items.title}
+                    {item.title}
                 </div>
             ))}
 

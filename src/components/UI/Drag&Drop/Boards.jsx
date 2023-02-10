@@ -49,9 +49,20 @@ const Boards = () => {
     }
 
     const dropCardHandler=(e, board)=>{
-
+        board.items.push(currentItem)
+        const currentIndex= currentBoard.items.indexOf(currentItem)
+        currentBoard.items.splice(currentIndex, 1)
+        setBoards(boards.map(b=>{
+            if(b.id===board.id){
+                return board
+            }
+            if(b.id===currentBoard.id){
+                return currentBoard
+            }
+            return b
+        }))
     }
-    
+
   return (
     <div className='board_form'>
     {boards.map(board =>(

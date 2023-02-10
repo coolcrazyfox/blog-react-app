@@ -8,8 +8,8 @@ const Boards = () => {
         {id: 3, title: 'Made', items: [{id: 5, title: 'Go to shop'}, {id: 6, title: 'Buy a SSD'}]}
     ])
     const [currentBoard, setCurrentBoard]= useState(null)
-    const [currentCard, setCurrentCard]= useState(null)
-    const dragOverHandler=(e, board, item)=>{
+    const [currentItem, setCurrentItem]= useState(null)
+    const dragOverHandler=(e)=>{
         e.preventDefault()
         if(e.target.className == 'item'){
             e.target.style.boxShadow = '0 4px 3px red'
@@ -17,15 +17,15 @@ const Boards = () => {
 
     }
 
-    const dragStartHandler=()=>{
-
+    const dragStartHandler=(e, board, item)=>{
+        setCurrentBoard(board)
     }
 
-    const dragLeaveHandler=()=> {
+    const dragLeaveHandler=(e)=> {
         e.target.style.boxShadow = 'none'
     }
 
-    const dragEndHandler=()=> {
+    const dragEndHandler=(e)=> {
         e.target.style.boxShadow = 'none'
     }
     
@@ -40,8 +40,8 @@ const Boards = () => {
             <div className='board_title'> {board.title}</div> 
             {board.items.map(item =>(
                 <div 
-                    onDragOver = {(e) => dragOverHandler(e, board, item)}
-                    onDragStart = {(e) => dragStartHandler(e, board)}
+                    onDragOver = {(e) => dragOverHandler(e)}
+                    onDragStart = {(e) => dragStartHandler(e, board, item)}
                     onDragLeave = {(e) => dragLeaveHandler(e)}
                     onDragEnd = {(e) => dragEndHandler(e)}                    
                     onDrop = {(e) => dropHandler(e, board, item)}

@@ -69,7 +69,7 @@ const Boards = () => {
         <div
              className='board'
              onDragOver = {(e) => dragOverHandler(e)}
-             onDrop = {(e) => dropCardHandler(e, board, item)}
+             onDrop = {(e) => dropCardHandler(e, board)}
 
         >
             <div className='board_title'> {board.title}</div> 

@@ -15,10 +15,10 @@ const Boards = () => {
             {board.items.map(item =>(
                 <div 
                     onDragOver = {(e) => dragOverHandler(e, board, item)}
-                    onDragStart = {(e) => dragStartHandler(e, card)}
+                    onDragStart = {(e) => dragStartHandler(e, board)}
                     onDragLeave = {(e) => dragLeaveHandler(e)}
                     onDragEnd = {(e) => dragEndHandler(e)}                    
-                    onDrop = {(e) => dropHandler(e, card)}
+                    onDrop = {(e) => dropHandler(e, board)}
                     draggable = {true}
                     className='item'
                 >

@@ -13,7 +13,17 @@ const Boards = () => {
         <div className='board'>
             <div className='board_title'> {board.title}</div> 
             {board.items.map(item =>(
-                <div className='item'>{items.title}</div>
+                <div 
+                    onDragOver = {(e) => dragOverHandler(e, board, item)}
+                    onDragStart = {(e) => dragStartHandler(e, card)}
+                    onDragLeave = {(e) => dragLeaveHandler(e)}
+                    onDragEnd = {(e) => dragEndHandler(e)}                    
+                    onDrop = {(e) => dropHandler(e, card)}
+                    draggable = {true}
+                    className='item'
+                >
+                    {items.title}
+                </div>
             ))}
 
         </div>

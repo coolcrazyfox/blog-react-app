@@ -9,7 +9,25 @@ const Boards = () => {
     ])
 
     const dragOverHandler=(e, board, item)=>{
+        e.preventDefault()
 
+    }
+
+    const dragStartHandler=()=>{
+
+    }
+
+    const dragLeaveHandler=()=> {
+
+    }
+    
+    const dragEndHandler=()=> {
+
+    }
+    
+
+    const dropHandler=(e, board, item)=>{
+        e.preventDefault()
     }
   return (
     <div className='board_form'>

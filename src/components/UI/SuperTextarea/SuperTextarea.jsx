@@ -2,8 +2,8 @@ import React from 'react'
 
 const SuperTextarea = ({...props}) => {
   return (
-    <div>
-        <textarea {...props}></textarea>
+    <div className={s.form_textarea}>
+        <textarea className={s.textarea} {...props}></textarea>
       
     </div>
   )

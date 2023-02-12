@@ -1,4 +1,6 @@
 import React from 'react'
+import s from '../../../styles/SuperTextarea.module.css'
+
 
 const SuperTextarea = ({...props}) => {
   return (

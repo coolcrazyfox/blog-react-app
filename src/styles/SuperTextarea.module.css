@@ -2,10 +2,10 @@
     margin: 0;
     padding: 0;
 }
-.textarea{
-    /* width: 500px;
-    height: 27px; */
-    margin-left: 4px;
+.form_textarea .textarea{
+     max-width: 500px;
+    min-height: 27px; 
+    margin-left: 20px;
     margin-top: 2px;
     margin-bottom: 2px;
     padding-left: 30px;

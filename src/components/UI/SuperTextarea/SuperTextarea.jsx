@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SuperTextarea = () => {
+const SuperTextarea = ({...props}) => {
   return (
     <div>
       

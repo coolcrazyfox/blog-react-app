@@ -3,6 +3,7 @@ import SuperInput from "../SuperInput/SuperInput";
 import SuperButton from "../SuperButton/SuperButton";
 import s from "../../../styles/BlogForm.module.css";
 import {AiOutlineClear} from "react-icons/ai";
+import SuperTextarea from '../SuperTextarea/SuperTextarea';
 
 
 const BlogForm = ({create}) => {
@@ -75,13 +76,12 @@ const BlogForm = ({create}) => {
             </div>
 
             <div className={s.form_container} >
-                <SuperInput
-                    value={blog.text}
+                <SuperTextarea 
+                     value={blog.text}
                     onChange={e => setBlog({...blog, text: e.target.value})}
                     type={'text'}
                     placeholder={"Text"}
-
-                />
+                />               
                 {blog.text && (
                     <div className={s.clear}>
                         <AiOutlineClear onClick={(e) => setBlog({...blog, text: ''})}/>

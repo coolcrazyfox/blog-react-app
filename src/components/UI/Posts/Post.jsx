@@ -51,7 +51,7 @@ export const initialPostsTasks = [
     },
 ]
 
-const Post = () => {
+const Post = ({post, remove}) => {
     // const [loading, setLoading]=useState(true)
     const [selected, setSelected] = useState(0)
     const details = initialPostsTasks
@@ -71,9 +71,11 @@ const Post = () => {
     return (
         <>
             <section className={s.posts_list}>
-                {details.map( (b, i) => {
-                        return (
-                            <article key={b.id} className={s.post_item}>
+                {/* {details.map( (b, i) => { */}
+                        {/* return ( */}
+                            <article 
+                                // key={b.id}
+                                 className={s.post_item}>
                                 <article className={s.main_img_box}>
                                     <Flip left>
                                         <div className={s.main_img}
@@ -115,10 +117,10 @@ const Post = () => {
 
 
                             </article>
-                        )
-                    }
+                        {/* ) */}
+                    {/* }
                 )
-                }
+                } */}
             </section>
 
         </>

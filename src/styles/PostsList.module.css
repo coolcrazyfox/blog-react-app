@@ -82,7 +82,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     border-radius: 5px;
-    /*border: 1px solid #0033ff;*/
+    border: 1px solid #ff00b3;
 }
 .card_box:hover{
     border-radius: 5px;

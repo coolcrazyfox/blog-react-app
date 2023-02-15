@@ -5,12 +5,12 @@ import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import DetailPostBlock from "../components/DetailPostBlock";
 import InfoPostsPanel from "../components/InfoPostsPanel";
-import {initialPostsTasks} from "../components/UI/Posts/Post";
+import {initialPosts} from "../pages/PostsPage";
 
 
 const DetailsPost = () => {
     const [selected, setSelected]=useState(0)
-    const details = initialPostsTasks
+    const details = initialPosts
     const sortDetails=details[selected]
     const onClickListItem=(i)=>{
         setSelected(i)

@@ -79,7 +79,7 @@ const Post = ({post, remove}) => {
                                 <article className={s.main_img_box}>
                                     <Flip left>
                                         <div className={s.main_img}
-                                             style={{backgroundImage:`url(${b.image})`}}>
+                                             style={{backgroundImage:`url(${post.image})`}}>
                                         </div>
                                     </Flip>
                                 </article>
@@ -87,26 +87,26 @@ const Post = ({post, remove}) => {
                                     <Flip left>
                                         <div className={s.card_box }>
                                             <div className={s.image_post}
-                                                 style={{backgroundImage:`url(${b.image})`}}
+                                                 style={{backgroundImage:`url(${post.image})`}}
                                             ></div>
                                             <div className={s.text_container}>
                                                 <div className={s.text_container_header}>
                                                     <Link to={'/postdetails'} >
-                                                        <h2 className={s.title}> {b.title}</h2>
+                                                        <h2 className={s.title}> {post.title}</h2>
                                                     </Link>
 
                                                 </div>
-                                                <p>{b.text}</p>
-                                                <p>{b.date}</p>
+                                                <p>{post.text}</p>
+                                                <p>{post.date}</p>
                                             </div>
                                             <div className={s.btns_box}>
                                                 <Link to={'/postedit'} >
-                                                    <span onClick={()=>onClickListItem(i)}>
+                                                    <span onClick={()=>onClickListItem(post.id)}>
                                                         <AiTwotoneEdit/>
                                                     </span>
                                                 </Link>
 
-                                                <span onClick={handleOnClickDeleteButton}>
+                                                <span onClick={remove}>
                                                     <AiTwotoneDelete/>
                                                 </span>
                                             </div>

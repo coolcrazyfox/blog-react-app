@@ -2,6 +2,9 @@ import React from 'react';
 import s  from '../../../styles/PostsList.module.css'
 import Post from "./Post";
 import SuperButton from "../SuperButton/SuperButton";
+import Empty from "./Empty";
+
+
 const PostsList = ({children ,posts, onClicked, remove}) => {
     return (
         <div className={s.posts}>
@@ -30,7 +33,7 @@ const PostsList = ({children ,posts, onClicked, remove}) => {
                     </div>
 
                     {children}
-                    
+
                 </div>  
                 
             </div>

@@ -3,6 +3,7 @@ import {AiOutlineClear} from "react-icons/ai";
 import s from "../../../styles/BlogForm.module.css";
 import SuperInput from "../SuperInput/SuperInput";
 import SuperButton from "../SuperButton/SuperButton";
+import SuperTextarea from './../SuperTextarea/SuperTextarea';
 
 const PostForm = ({create}) => {
     const [post, setPost] = useState({image:'',title:'', text:'', date:''})
@@ -51,7 +52,7 @@ const PostForm = ({create}) => {
 
 
             <div className={s.form_container}>
-                <SuperInput
+                <SuperTextarea
                     value={post.text}
                     onChange={e => setPost({...post, text: e.target.value})}
                     type={'text'}

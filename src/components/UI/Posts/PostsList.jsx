@@ -15,9 +15,22 @@ const PostsList = ({children ,posts, onClicked, remove}) => {
                         </SuperButton>
                     </div>
                     <div className={s.container_items}>
-                        <Post/>
+                        {posts.length 
+                            ? <>
+                                {posts.map(post =>(
+                                    <Post key={post.id}
+                                        post= {post}
+                                        remove= {remove}
+                                    />
+                                ))}
+                            </>
+                            : <Empty/>                            
+                        }
+                        
                     </div>
+
                     {children}
+                    
                 </div>  
                 
             </div>

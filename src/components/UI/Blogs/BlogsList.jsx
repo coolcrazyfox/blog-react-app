@@ -38,7 +38,9 @@ const BlogsList = ({children ,blogs, onClicked, remove}) => {
                                 />)
                             )}
                         </>
-                            :<Empty/>}
+                            :<Empty/>
+                    }
+                    
                 </div>
 
                 {children}

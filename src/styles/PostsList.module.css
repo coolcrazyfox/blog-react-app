@@ -25,12 +25,12 @@
 .posts_form .btn_container{
     display: flex;    
     height: 50px;
-    /* border: 1px solid red; */
+    border: 1px solid red;
     
 }
 .posts_form .container_items{
-    display: flex;
-    flex-direction: column;
+    /* display: flex; */
+    /* flex-direction: column; */
     /* border: 1px solid rgb(21, 255, 0); */
 }
 .posts_list {

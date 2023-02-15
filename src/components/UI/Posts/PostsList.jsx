@@ -17,6 +17,7 @@ const PostsList = ({children ,posts, onClicked, remove}) => {
                     <div className={s.container_items}>
                         <Post/>
                     </div>
+                    {children}
                 </div>  
                 
             </div>

@@ -13,7 +13,7 @@
     border-left: 1px solid #ebedf1;
     border-radius: 5px;
     margin: 5px 25px 4px 5px;
-    border: 1px solid rgb(157, 255, 0);
+    /* border: 1px solid rgb(157, 255, 0); */
 }
 .box .posts_form{
     display: flex;
@@ -25,13 +25,13 @@
     display: flex;    
     height: 50px;
     width: 75vw;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     
 }
 .posts_form .container_items{
     display: flex;
     flex-direction: column;
-    border: 1px solid rgb(21, 255, 0);
+    /* border: 1px solid rgb(21, 255, 0); */
 }
 .posts_list {
     display: flex;

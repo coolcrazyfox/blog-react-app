@@ -6,10 +6,10 @@ import Flip from 'react-reveal/Flip';
 import {AiTwotoneEdit, AiTwotoneDelete} from "react-icons/ai";
 
 
-const Post = ({post}) => {
+const Post = ({posts, remove}) => {
     // const [loading, setLoading]=useState(true)
     const [selected, setSelected] = useState(0)
-    const details = post
+    const details = posts
     const sortDetails = details[selected]
     const onClickListItem = (i) => {
         setSelected(i)
@@ -59,7 +59,7 @@ const Post = ({post}) => {
                                                     </span>
                                                 </Link>
 
-                                                <span onClick={handleOnClickDeleteButton}>
+                                                <span onClick={remove}>
                                                     <AiTwotoneDelete/>
                                                 </span>
                                             </div>

@@ -19,14 +19,12 @@ const PostsList = ({children ,posts, onClicked, remove}) => {
                     </div>
                     <div className={s.container_items}>
                         {posts.length 
-                            ? <>
-                                {posts.map(post =>(
-                                    <Post key={post.id}
-                                        post= {post}
+                            ? 
+                                    <Post 
+                                        posts= {posts}
                                         remove= {remove}
-                                    />
-                                ))}
-                            </>
+                                    />                                
+                           
                             : <Empty/>                            
                         }
                         

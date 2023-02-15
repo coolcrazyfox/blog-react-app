@@ -39,7 +39,7 @@
     flex-wrap: wrap;
     width: 1340px;
     min-height: 180px;
-    /*border: 1px solid #0033ff;*/
+    border: 1px solid #0033ff;
 }
 .post_item{
     display: flex;
@@ -52,7 +52,7 @@
     /*height: 48px;*/
     /*top: 283px;*/
     /*left:  444px;*/
-    /*border: 1px solid #ebedf1;*/
+    border: 1px solid #ebedf1;
     padding: 5px 5px 10px 15px;
 
 }
@@ -60,7 +60,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    /* border: 1px solid #19b27b; */
+    border: 1px solid #19b27b;
     margin-bottom: 15px; 
     margin-top: 5px;   
 }

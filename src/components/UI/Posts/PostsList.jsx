@@ -2,13 +2,13 @@ import React from 'react';
 import s  from '../../../styles/PostsList.module.css'
 import Post from "./Post";
 import SuperButton from "../SuperButton/SuperButton";
-const PostsList = ({children ,posts, onClick, remove}) => {
+const PostsList = ({children ,posts, onClicked, remove}) => {
     return (
         <div className={s.posts}>
             <div className={s.box}>
                 <div className= {s.posts_form}>
                     <div className= {s.btn_container}>
-                        <SuperButton onClick={onClick}>
+                        <SuperButton onClick={onClicked}>
                             <span >
                                 Create a new post
                             </span>

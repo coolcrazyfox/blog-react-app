@@ -98,7 +98,7 @@ const PostsPage = () => {
                 posts={posts}
                 // posts={sortedAndSearchedPosts}
                 remove={removePost}
-                onClick={activeModal}
+                onClicked={activeModal}
 
             >
                 <SuperModal visible={modal} setVisible={setModal}>

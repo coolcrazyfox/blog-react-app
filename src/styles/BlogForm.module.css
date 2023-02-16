@@ -11,17 +11,16 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding:  5px 0;
+    padding-top:  15px;    
     width: 100%;
 }
 
 .form_container .clear{
     position: relative;
     display: flex;
-    max-width: 20px;
-    top: 4px;
+    max-width: 20px;    
     right: 22px;
-    color: #0c6b6b ;
+    color: #0c6b6b ;    
 }
 .form_container .clear:hover{
     color: #ab0e32;

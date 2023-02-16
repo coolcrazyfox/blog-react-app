@@ -6,9 +6,9 @@ const SuperInput = ({...props}) => {
     // const [valueTerm, setValueTerm]= useState('')
     return (
         <div className={s.input_form}>
-            <span className={s.loop}>
+            {/* <span className={s.loop}>
                         <ImSearch/>
-           </span>
+           </span> */}
             <input className={s.input} {...props} />
 
             {/*{valueTerm &&(*/}

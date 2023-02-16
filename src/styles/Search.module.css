@@ -76,6 +76,14 @@
     flex-wrap: wrap;
     flex-direction: row;
 }
+.search_input_form .loop{
+    position: relative;
+    top: 3px;
+    left: 25px;
+    color: #0c6b6b ;
+    /*border: 1px solid darkred;*/
+
+}
 .search_input_form .clear{
     position: relative;
     display: flex;

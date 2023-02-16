@@ -4,6 +4,7 @@ import SuperSelect from "./UI/SuperSelect/SuperSelect";
 import {AiOutlineClear} from "react-icons/ai";
 import {initialState} from "./NavBar";
 import SuperInput from "./UI/SuperInput/SuperInput";
+import {ImSearch} from "react-icons/im";
 
 const Search = ({options, filter, setFilter}) => {
     const [inform, setInform] = useState(initialState)
@@ -27,25 +28,16 @@ const Search = ({options, filter, setFilter}) => {
             {/*<div className={s.title}> {title}</div>*/}
             <div className={s.search_box}>
                 <div className={s.search_input_form}>
+                    <span className={s.loop}>
+                            <ImSearch/>
+                    </span>
                     <SuperInput
                         value={filter.query}
                         onChange={e => setFilter({...filter, query: e.target.value})}
                         type="text"
                         placeholder={"Search"}
                         // setSearchQuery={setSearchQuery}
-                    />
-                    {/*<span className={s.loop}>*/}
-                    {/*    <ImSearch/>*/}
-                    {/*</span>*/}
-                    {/*<input className={s.input}*/}
-                    {/*       autoFocus*/}
-                    {/*       // autoComplete={'off'}*/}
-                    {/*       type="text"*/}
-                    {/*       value={searchTerm}*/}
-                    {/*       placeholder={"Search"}*/}
-                    {/*       onChange={handlerEnterSearch}*/}
-                    {/*       // onChange={(e) =>setSearchTerm(e.target.value)}*/}
-                    {/*/>*/}
+                    />                    
                     {filter.query && (
                         <div className={s.clear}>
                             <AiOutlineClear onClick={(e) => setFilter({...filter, query: ''})}/>

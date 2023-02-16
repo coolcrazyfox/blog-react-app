@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/blog-react-app/static/css/main.4ebbf6c4.css",
-    "main.js": "/blog-react-app/static/js/main.a1d04b4f.js",
+    "main.css": "/blog-react-app/static/css/main.2b954d76.css",
+    "main.js": "/blog-react-app/static/js/main.ea343de2.js",
     "static/js/845.0e3c3707.chunk.js": "/blog-react-app/static/js/845.0e3c3707.chunk.js",
     "static/media/message-to-bears-mountains.mp3": "/blog-react-app/static/media/message-to-bears-mountains.f84b67b3485e063573b4.mp3",
     "static/media/Cube.gif": "/blog-react-app/static/media/Cube.cb537fba7f43f92dccee.gif",
     "index.html": "/blog-react-app/index.html",
-    "main.4ebbf6c4.css.map": "/blog-react-app/static/css/main.4ebbf6c4.css.map",
-    "main.a1d04b4f.js.map": "/blog-react-app/static/js/main.a1d04b4f.js.map",
+    "main.2b954d76.css.map": "/blog-react-app/static/css/main.2b954d76.css.map",
+    "main.ea343de2.js.map": "/blog-react-app/static/js/main.ea343de2.js.map",
     "845.0e3c3707.chunk.js.map": "/blog-react-app/static/js/845.0e3c3707.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4ebbf6c4.css",
-    "static/js/main.a1d04b4f.js"
+    "static/css/main.2b954d76.css",
+    "static/js/main.ea343de2.js"
   ]
 }

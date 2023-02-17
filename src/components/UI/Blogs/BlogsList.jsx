@@ -17,7 +17,7 @@ const BlogsList = ({children ,blogs, onClicked, remove}) => {
 
     return (
         <div className={s.blogs_container}>
-            <div className={s.box}>
+            <div className={s.form_blog}>
                 <div>
                     <SuperButton onClick={onClicked}>
                         <span >

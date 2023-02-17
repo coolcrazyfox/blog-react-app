@@ -3,19 +3,19 @@
     /*background: #576cc0;*/
 
 }
-.box{
+.form_blog{
     display: flex;
     flex-direction: column;
     /*justify-content: center;*/
     /*align-items: center;*/
     height: 78vh;
-    min-width: 800px;
+    width: 83vw;
     background: rgba(12, 107, 107, 0.63);
     box-shadow: rgb(17, 16, 16) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     /*border-top: 1px solid #ebedf1;*/
     border-left: 1px solid #ebedf1;
     border-radius: 5px;
-    margin: 5px 25px 4px 5px;
+    margin: 18px 23px 8px 5px;
 }
 .container_items{
     display: flex;

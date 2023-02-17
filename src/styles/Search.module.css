@@ -55,7 +55,7 @@
     justify-content: space-between;
     align-items: center;
     border-color: #ebedf1;
-    border: 1px solid darkred;
+    /* border: 1px solid darkred; */
 
 }
 .search_input_form{

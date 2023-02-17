@@ -3,6 +3,7 @@
     position: fixed;
     inset: 40px 0 40px 20px;
     background: rgba(12, 107, 107, 0.62);
+    margin-top: 6px;
     width: 82px;
     display: flex;
     justify-content: center;
@@ -65,6 +66,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 6px;
     /*box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;*/
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     /*box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;*/

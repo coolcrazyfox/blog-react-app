@@ -32,19 +32,6 @@
     animation: reveal 3000ms ease-in-out forwards 200ms,
     glow 2500ms linear infinite 2000ms;
 }
-/*.frText{*/
-/*    background: 50% 100% / 50% 50% no-repeat*/
-/*    radial-gradient(ellipse at bottom, blanchedalmond, transparent, transparent);*/
-/*    -webkit-background-clip: text;*/
-/*    !*background-clip: text;*!*/
-/*    color: transparent;*/
-/*    font-size: 14px;*/
-/*    line-height: 110px;*/
-/*    font-weight: 700;*/
-/*    padding-left: 13px;*/
-/*    animation: reveal 3000ms ease-in-out forwards 200ms,*/
-/*    glow 2500ms linear infinite 2000ms;*/
-/*}*/
 @keyframes reveal {
     80%{
         letter-spacing: 8px;
@@ -61,14 +48,14 @@
 .search_box{
     position: relative;
     height: 30px;
-    min-width: 1000px;
+    width: 85vw;
     display: flex;
     margin-left: 20px;
     margin-right: 40px;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     border-color: #ebedf1;
-    /*border: 1px solid darkred;*/
+    border: 1px solid darkred;
 
 }
 .search_input_form{

@@ -24,8 +24,7 @@ const Search = ({options, filter, setFilter}) => {
 
     return (
         <div className={s.search}>
-            <div className={s.title}> {info.title}</div>
-            {/*<div className={s.title}> {title}</div>*/}
+            <div className={s.title}> {info.title}</div>            
             <div className={s.search_box}>
                 <div className={s.search_input_form}>
                     <span className={s.loop}>

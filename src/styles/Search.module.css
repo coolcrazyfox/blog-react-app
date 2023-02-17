@@ -48,14 +48,14 @@
 .search_box{
     position: relative;
     height: 30px;
-    width: 83vw;
+    width: 80vw;
     display: flex;
     margin-left: 20px;
     margin-right: 40px;
     justify-content: space-between;
     align-items: center;
     border-color: #ebedf1;
-    /* border: 1px solid darkred; */
+    border: 1px solid darkred;
 
 }
 .search_input_form{

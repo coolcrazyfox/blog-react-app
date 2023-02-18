@@ -8,6 +8,7 @@ import PostsList from "../components/UI/Posts/PostsList";
 import {usePosts} from "../hooks/usePosts";
 import SuperModal from "../components/UI/SuperModal/SuperModal";
 import PostForm from "../components/UI/Posts/PostForm";
+import { themes } from './Hero';
 
 export const initialPosts = [
     {
@@ -53,6 +54,7 @@ export const initialPosts = [
         date: '2022-11-23'
     },
 ]
+const themesP = themes
 
 const PostsPage = () => {
     //modal

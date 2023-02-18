@@ -18,7 +18,7 @@ export const initialState = [
     {id: 6, link: '/settings', title: "Settings", color: "#A61111FF", icon: <MdSettingsSuggest/>}
 ]
 
-const NavBar = () => {
+const NavBar = ({theme}) => {
     const [isActive, setIsActive] = useState(false)
     const [check, setCheck] = useState(false)
     const [activeIndex, setActiveIndex] = useState(0)
@@ -44,7 +44,7 @@ const NavBar = () => {
             <Fade left>
                 <div className={isActive ? s.main_active : s.main}>
                     <div className={isActive ? s.navigation_active : s.navigation}>
-                        <div className={s.menuToggle} onClick={handleOnClick}></div>
+                        <div className={theme ==='light'? s.menuToggle: s.menuToggle_dark} onClick={handleOnClick}></div>
                         <ul>
                             {initialState.map((t, i) => {
                                     return (

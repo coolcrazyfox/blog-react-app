@@ -120,8 +120,9 @@ const Blogger = () => {
         <div className={theme==='light'? s.main_container: s.main_container_dark} >
             <ThemeProvider theme={themesB[theme]}>
                 <Header theme={theme} setTheme={setTheme}/>
+                <NavBar theme={theme} />
             </ThemeProvider>    
-            <NavBar/>
+            
             <Search
                 filter={filter}
                 setFilter={setFilter}

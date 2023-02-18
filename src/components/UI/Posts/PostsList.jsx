@@ -5,10 +5,10 @@ import SuperButton from "../SuperButton/SuperButton";
 import Empty from "./Empty";
 
 
-const PostsList = ({children ,posts, onClicked, remove}) => {
+const PostsList = ({children ,posts, onClicked, remove, theme}) => {
     return (
         <div className={s.posts}>
-            <div className={s.box}>
+            <div className={theme ==='light' ? s.box: s.box_dark}>
                 <div className= {s.posts_form}>
                     <div className= {s.btn_container}>
                         <SuperButton onClick={onClicked}>

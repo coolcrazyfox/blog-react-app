@@ -56,7 +56,8 @@ const Blog = ({blog, remove}) => {
                     </div> : <div className={s.image_blog}></div>}
                     <div className={s.text_container} >
 
-                        <Link to={'/detblog'}>
+                        <Link to={'/detblog'} blog= {blog}>
+                            {/* DetailsBlog */}
                             <h2 className={s.title}> {blog.title}</h2>                            
                         </Link>
 

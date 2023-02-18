@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import s from "../styles/DetailBlock.module.css";
-import {initialTasks} from "./UI/Blogs/Blog";
 import Zoom from 'react-reveal/Zoom';
 import {AiTwotoneEdit} from "react-icons/ai";
 

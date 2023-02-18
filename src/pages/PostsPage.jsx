@@ -104,8 +104,8 @@ const PostsPage = () => {
                 <NavBar theme={theme} />
             
                 <PostsList
-                    posts={posts}
-                    // posts={sortedAndSearchedPosts}
+                    // posts={posts}
+                    posts={sortedAndSearchedPosts}
                     remove={removePost}
                     onClicked={activeModal}
                     theme={theme}    

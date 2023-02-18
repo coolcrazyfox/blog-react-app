@@ -26,13 +26,13 @@ const Post = ({posts, remove}) => {
     return (
         <>
             <section className={s.posts_list}>
-                {details.map( (b, i) => {
+                {details.map( (post, i) => {
                         return (
-                            <article key={b.id} className={s.post_item}>
+                            <article key={post.id} className={s.post_item}>
                                 <article className={s.main_img_box}>
                                     <Flip left>
                                         <div className={s.main_img}
-                                             style={{backgroundImage:`url(${b.image})`}}>
+                                             style={{backgroundImage:`url(${post.image})`}}>
                                         </div>
                                     </Flip>
                                 </article>
@@ -40,17 +40,17 @@ const Post = ({posts, remove}) => {
                                     <Flip left>
                                         <div className={s.card_box }>
                                             <div className={s.image_post}
-                                                 style={{backgroundImage:`url(${b.image})`}}
+                                                 style={{backgroundImage:`url(${post.image})`}}
                                             ></div>
                                             <div className={s.text_container}>
                                                 <div className={s.text_container_header}>
                                                     <Link to={'/postdetails'} >
-                                                        <h2 className={s.title}> {b.title}</h2>
+                                                        <h2 className={s.title}> {post.title}</h2>
                                                     </Link>
 
                                                 </div>
-                                                <p>{b.text}</p>
-                                                <p>{b.date}</p>
+                                                <p>{post.text}</p>
+                                                <p>{post.date}</p>
                                             </div>
                                             <div className={s.btns_box}>
                                                 <Link to={'/postedit'} >
@@ -59,7 +59,7 @@ const Post = ({posts, remove}) => {
                                                     </span>
                                                 </Link>
 
-                                                <span onClick={remove}>
+                                                <span onClick={()=>remove(post)}>
                                                     <AiTwotoneDelete/>
                                                 </span>
                                             </div>

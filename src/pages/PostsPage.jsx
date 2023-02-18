@@ -57,6 +57,8 @@ export const initialPosts = [
 const themesP = themes
 
 const PostsPage = () => {
+    //theme
+    const [theme, setTheme] = React.useState('light')  
     //modal
     const [modal, setModal] = useState(false)
     //initial tasks

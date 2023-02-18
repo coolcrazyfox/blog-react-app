@@ -9,6 +9,7 @@ import {usePosts} from "../hooks/usePosts";
 import SuperModal from "../components/UI/SuperModal/SuperModal";
 import PostForm from "../components/UI/Posts/PostForm";
 import { themes } from './Hero';
+import { ThemeProvider } from 'styled-components';
 
 export const initialPosts = [
     {
@@ -91,8 +92,10 @@ const PostsPage = () => {
         setModal(true)
     }
     return (
-        <div className={s.main_container}>
-            <Header/>
+        <div className={theme==='light'? s.main_container : s.main_container_dark}>
+            <ThemeProvider theme={themesP[theme]}>
+                <Header theme={theme} setTheme={setTheme}/>
+            </ThemeProvider>   
             <NavBar/>
             <PostsPanel
                 filter={filter}

@@ -95,12 +95,16 @@ const PostsPage = () => {
         <div className={theme==='light'? s.main_container : s.main_container_dark}>
             <ThemeProvider theme={themesP[theme]}>
                 <Header theme={theme} setTheme={setTheme}/>
-            </ThemeProvider>   
-            <NavBar/>
-            <PostsPanel
+                <PostsPanel
                 filter={filter}
                 setFilter={setFilter}
-                options={selectValue}/>
+                options={selectValue}
+                theme={theme}
+                setTheme={setTheme}
+                />
+            </ThemeProvider>   
+            <NavBar/>
+            
             <PostsList
                 posts={posts}
                 // posts={sortedAndSearchedPosts}

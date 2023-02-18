@@ -3,9 +3,9 @@ import s from '../styles/Footer.module.css'
 import Flip from 'react-reveal/Flip';
 import SuperButton from "./UI/SuperButton/SuperButton";
 
-const Footer = ({onClick}) => {
+const Footer = ({onClick, theme}) => {
     return (
-        <div className={s.footer}>
+        <div className={theme === 'light'? s.footer: s.footer_dark}>
                 <div className={s.footer_container}>
 
                     {/*<button onClick={onClick}>get</button>*/}

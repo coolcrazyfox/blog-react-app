@@ -103,19 +103,19 @@ const PostsPage = () => {
                 />
                 <NavBar theme={theme} />
             
-            <PostsList
-                posts={posts}
-                // posts={sortedAndSearchedPosts}
-                remove={removePost}
-                onClicked={activeModal}
-                theme={theme}    
-            >
-                <SuperModal visible={modal} setVisible={setModal}>
-                    <PostForm create={createNewPost}/>
+                <PostsList
+                    posts={posts}
+                    // posts={sortedAndSearchedPosts}
+                    remove={removePost}
+                    onClicked={activeModal}
+                    theme={theme}    
+                >
+                    <SuperModal visible={modal} setVisible={setModal}>
+                        <PostForm create={createNewPost}/>
 
-                </SuperModal>
-            </PostsList>
-            <Footer theme={theme} />
+                    </SuperModal>
+                </PostsList>
+                <Footer theme={theme} />
             </ThemeProvider>             
         </div>
     );

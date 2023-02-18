@@ -14,6 +14,21 @@
     /*border-top: 1px solid #ebedf1;*/
 
 }
+.footer_dark{
+    grid-area: f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    min-width: 600px;
+    color: #ebedf1;
+    background: rgba(30, 14, 44, 0.79);
+    border-left: 1px solid white;
+    border-radius: 5px;
+    margin: 0 25px 20px 5px;
+    box-shadow: rgb(17, 16, 16) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    /*border-top: 1px solid #ebedf1;*/
+}
 .footer_container{
     display: flex;
     justify-content: center;

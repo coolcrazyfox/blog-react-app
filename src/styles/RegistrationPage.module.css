@@ -93,19 +93,21 @@
     list-style: none;
     position: relative;
     width: 100%;
-    height: 76px;
+    height: 80px;
     border-radius: 12px;
-    border: 8px solid transparent;
+    border: 6px solid transparent;
     transition: .5s;
     /*border: 1px solid #ff9900;*/
 }
+/* border */
 .navigationn ul .lists_active{
     transform: translateX(30px);
-    background: rgba(12, 107, 107);
+    background: rgba(12, 107, 107, 1);
     list-style: none;
-    height: 76px;
+    height: 55px;
     border-radius: 12px;
-    border: 8px solid transparent;
+    border: 5px solid transparent;
+    transition: .5s;
 }
 .navigationn ul .lists::before{
     content: '';
@@ -113,8 +115,7 @@
     top: -10px;
     right: -10px;
     width: 20px;
-    height: 20px;
-    background: red;
+    height: 20px;   
     border-bottom-right-radius: 20px;
     /*box-shadow: 6px 5px 0 5px var(--bg);*/
     box-shadow: 6px 3px 0 3px rgba(12, 107, 107);
@@ -133,14 +134,13 @@
     bottom: -28px;
     right: -10px;
     width: 20px;
-    height: 20px;
-    background: red;
+    height: 20px;    
     border-top-right-radius: 20px;
     /*box-shadow: 6px 5px 0 5px var(--bg);*/
     box-shadow: 6px -3px 0 3px rgba(12, 107, 107);
     transform: scale(0);
     transform-origin: bottom right;
-    transition: 0.5s;
+    transition: 0.3s;
 }
 .navigationn ul .lists_active::after{
     right: 22px;
@@ -159,34 +159,35 @@
 }
 .navigationn ul .lists .a .icons{
     position: relative;
-    /*margin-top: 3px;*/
-    /*margin-left: 4px;*/
-    display: block;
-    min-width: 2.5rem;
-    height: 2.5rem;
+    margin-top: 5px;
+    margin-left: 10px;   
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 2.5rem;
+    height: 5rem;
     border-radius: 10px;
-    font-size: 1.75rem;
-    background: #ebedf1;
+    font-size: 2rem;
     line-height: 60px;
     border: 6px solid transparent;
     /*box-shadow: rgb(17, 16, 16) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;*/
-    transition: 0.5s;
+    transition: 0.4s;
 }
 .navigationn ul .lists_active .a .icons{
     position: relative;
-    margin-top: 5px;
-    margin-left: 2px;    
+    margin-top: 3px;
+    margin-left: 7px;    
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: 4rem;
-    height: 2.8rem;
+    width: 3rem;
+    height: 2.5rem;
     border-radius: 10px;
-    font-size: 2.3rem;
-    background: #e7e4e3;
+    font-size: 1.4rem;
+    color: #ebedf1;    
     line-height: 60px;
-    border: 4px solid transparent;
+    border: 4px solid transparent;   
     
 }
 .navigationn ul .lists .a .icons::before{
@@ -199,10 +200,10 @@
     background: rgba(138, 43, 226, 0.32);
     filter: blur(8px);
     opacity: 0;
-    transition: 0.5s;
+    transition: 0.4s;
 }
 .navigationn ul .lists_active .a .icons::before{
-    opacity: .5;
+    opacity: .4;
 }
 .navigationn ul .lists .a .icons::after{
     content: '';
@@ -212,18 +213,18 @@
     width: 10px;
     height: 10px;
     background: #0095ff;
-    border: 6px solid #0c6b6b;
+    border: 4px solid #0c6b6b;
     border-radius: 50%;
 }
 .navigationn ul .lists_active .a .icons::after{
     content: '';
     position: absolute;
-    top: 14px;
-    left: -54px;
-    width: 10px;
-    height: 10px;
+    top: 9px;
+    left: -57px;
+    width: 12px;
+    height: 12px;
     background: #0095ff;
-    border: 6px solid #0c6b6b;
+    border: 5px solid #0c6b6b;
     border-radius: 50%;
 }
 .navigationn ul .lists .a .title{

@@ -22,8 +22,8 @@ const RegistrationPage = () => {
                     {tasks.map((t) => {
                             return (
                                 <li key={t.id} className={ activeId===t.id? s.lists_active : s.lists} style={{color:`${t.color}`}} onClick={()=>setActiveId(t.id)}>
-                                    <Link to={'/registration'} className={s.a}>
-                                        <span className={s.icons}>{t.icon}</span>
+                                    <Link to={'/registration'} className={s.a} style= {{backGround:`${t.color}`}}>
+                                        <span className={s.icons} style= {{color:`${t.color}`}}>{t.icon}</span>
                                         <span className={s.title}>{t.title}</span>
                                     </Link>
 

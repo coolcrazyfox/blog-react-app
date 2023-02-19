@@ -174,17 +174,17 @@
 }
 .navigationn ul .lists_active .a .icons{
     position: relative;
-    /*margin-top: 3px;*/
-    /*margin-left: 4px;*/
+    margin-top: 5px;
+    margin-left: 2px;
     display: block;
     min-width: 2.5rem;
     height: 3rem;
     border-radius: 10px;
-    font-size: 1.75rem;
+    font-size: 2rem;
     background: #988785;
     line-height: 60px;
     border: 6px solid transparent;
-    color: #ebedf1;
+    
 }
 .navigationn ul .lists .a .icons::before{
     content: '';

@@ -48,7 +48,7 @@ const NavBar = ({theme}) => {
                         <ul>
                             {initialState.map((t, i) => {
                                     return (
-                                        <li key={t.id} className={activeIndex === i ? `${s.list}${s.active}` : s.list}
+                                        <li key={t.id} className={activeIndex === i ? s.list_active : s.list}
                                             onClick={() => handleClick(i)}
                                             // onChange={()=>handleOnChange(t.title)}
                                         >
@@ -58,7 +58,7 @@ const NavBar = ({theme}) => {
 
                                                 {t.id === i + 1 && (
                                                     <span className={s.icon}
-                                                          style={activeIndex === i ? {background: '#0c6b6b'} : {background: `${t.color}`}}
+                                                          style={activeIndex === i ? {background: `${t.color}`} : {color: `${t.color}`, background:'white'}}
                                                     >
                                                         {t.icon}
                                                 </span>

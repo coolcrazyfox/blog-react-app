@@ -175,15 +175,18 @@
 .navigationn ul .lists_active .a .icons{
     position: relative;
     margin-top: 5px;
-    margin-left: 2px;
-    display: block;
-    min-width: 2.5rem;
-    height: 3rem;
+    margin-left: 2px;    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 2.8rem;
     border-radius: 10px;
-    font-size: 2rem;
-    background: #988785;
+    font-size: 2.3rem;
+    background: #e7e4e3;
     line-height: 60px;
-    border: 6px solid transparent;
+    border: 4px solid transparent;
     
 }
 .navigationn ul .lists .a .icons::before{

@@ -52,7 +52,9 @@ export const initialTasks = [
 ]
 const themesB = themes
 
-const Blogger = () => {  
+const Blogger = () => {
+    //navBar
+    const [isActive, setIsActive] = useState(false)  
     //theme
     const [theme, setTheme] = React.useState('light')  
     //modal
@@ -120,7 +122,7 @@ const Blogger = () => {
         <div className={theme==='light'? s.main_container: s.main_container_dark} >
             <ThemeProvider theme={themesB[theme]}>
                 <Header theme={theme} setTheme={setTheme}/>
-                <NavBar theme={theme} />
+                <NavBar theme={theme}  isActive={isActive} setIsActive= {setIsActive}/>
                 <Search
                     filter={filter}
                     setFilter={setFilter}

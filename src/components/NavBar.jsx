@@ -18,8 +18,8 @@ export const initialState = [
     {id: 6, link: '/settings', title: "Settings", color: "#A61111FF", icon: <MdSettingsSuggest/>}
 ]
 
-const NavBar = ({theme}) => {
-    const [isActive, setIsActive] = useState(false)
+const NavBar = ({theme, isActive,  setIsActive}) => {
+    // const [isActive, setIsActive] = useState(false)
     const [check, setCheck] = useState(false)
     const [activeIndex, setActiveIndex] = useState(0)
     // const handleOnChange=(event)=>{

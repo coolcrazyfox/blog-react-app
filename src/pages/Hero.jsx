@@ -26,7 +26,7 @@ const Hero = () => {
             <ThemeProvider theme={themes[theme]}>
                 <Header theme={theme} setTheme={setTheme}/>
             </ThemeProvider>            
-            <NavBar/>
+            <NavBar theme={theme}  isActive={isActive} setIsActive= {setIsActive}/>
         </div>
     );
 };

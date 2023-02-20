@@ -103,7 +103,7 @@ const PostsPage = () => {
                 options={selectValue}
                 theme={theme}                
                 />
-                <NavBar theme={theme} />
+                <NavBar theme={theme}  isActive={isActive} setIsActive= {setIsActive}/>
             
                 <PostsList
                     // posts={posts}

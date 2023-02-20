@@ -58,6 +58,8 @@ export const initialPosts = [
 const themesP = themes
 
 const PostsPage = () => {
+    //navBar
+    const [isActive, setIsActive] = useState(false)  
     //theme
     const [theme, setTheme] = React.useState('light')  
     //modal

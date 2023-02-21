@@ -21,7 +21,7 @@ export const DarkTheme={
 
 const Hero = () => {
     //navBar
-    const [isActive, setIsActive] = useState(false)  
+    const [isActive, setIsActive] = React.useState(false)  
     //theme
     const [theme, setTheme] = React.useState('light')
     return (

@@ -15,7 +15,7 @@ export const initialState = [
     {id: 3, link: '/posts', title: "Posts", color: "#6a99ff", icon: <SiApostrophe/>},
     {id: 4, link: '/users', title: "Users", color: "#8BB92CFF", icon: <HiUserGroup/>},
     {id: 5, link: '/registration', title: "Log In", color: "#ec8434", icon: <RiLoginCircleFill/>},
-    {id: 6, link: '/settings', title: "Settings", color: "#A61111FF", icon: <MdSettingsSuggest/>}
+    {id: 6, link: '/settings', title: "Settings", color: "#793b92", icon: <MdSettingsSuggest/>}
 ]
 
 const NavBar = ({theme, isActive,  setIsActive}) => {

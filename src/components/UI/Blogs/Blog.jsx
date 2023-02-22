@@ -58,14 +58,14 @@ const Blog = ({blog, remove}) => {
 
                         <Link to={'/detblog'} blog= {blog}>
                             {/* DetailsBlog */}
-                            <h2 className={s.title}> {blog.title}</h2>                            
+                            <h2 className={s.title}> {blog.name}</h2>                            
                         </Link>
 
                         <h5>Website:
-                            <a href={`${blog.website}`}>{blog.website}</a>
+                            <a href={`${blog.websiteUrl}`}>{blog.websiteUrl}</a>
                         </h5>
 
-                        <p>{blog.text}</p>                        
+                        <p>{blog.description}</p>                        
                     </div>
 
                 </div>

@@ -20,7 +20,7 @@ export const initialTasks = [
     {
         id: 1,
         image: 'https://st2.depositphotos.com/2001755/8564/i/450/depositphotos_85647140-stock-photo-beautiful-landscape-with-birds.jpg',
-        title: 'The best blog in our village',
+        name: 'The best blog in our village',
         websiteUrl: 'https://www.youtube.com/',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ',
         createdAt: '2022-11-20'
@@ -28,7 +28,7 @@ export const initialTasks = [
     {
         id: 2,
         image: 'https://st2.depositphotos.com/2001755/5443/i/600/depositphotos_54431143-stock-photo-beautiful-landscape.jpg',
-        title: 'Warriors',
+        name: 'Warriors',
         websiteUrl: 'https://www.youtube.com/',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ',
         createdAt: '2022-11-19'
@@ -36,7 +36,7 @@ export const initialTasks = [
     {
         id: 3,
         image: 'https://static8.depositphotos.com/1017908/938/i/450/depositphotos_9385411-stock-photo-dramatic-clouds-with-mountain-and.jpg',
-        title: 'Audience Platform',
+        name: 'Audience Platform',
         websiteUrl: 'https://www.youtube.com/',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ',
         createdAt: '2022-11-21'

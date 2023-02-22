@@ -65,10 +65,10 @@ const Blogger = () => {
 
     //select
     const selectValue = [
-        {value: 'name', name: 'New blogs first'},
-        {value: 'text', name: 'Old blogs first'},
+        {value: 'createdAt', name: 'New blogs first'},
+        {value: 'createdAt', name: 'Old blogs first'},
         {value: 'name', name: 'From A to Z'},
-        {value: 'text', name: 'From Z to A'},
+        {value: 'name', name: 'From Z to A'},
 
     ]
     const arOptions = ['New blogs first', 'Old blogs first', 'From A to Z', 'From Z to A'];

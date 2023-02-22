@@ -60,7 +60,8 @@ const Blogger = () => {
     //modal
     const [modal, setModal] = useState(false)
     //initial tasks
-    const [blogs, setBlogs] = useState(initialTasks)
+    // const [blogs, setBlogs] = useState(initialTasks)
+    const [blogs, setBlogs] = useState([])
 
     //select
     const selectValue = [

@@ -7,7 +7,7 @@ import SuperTextarea from '../SuperTextarea/SuperTextarea';
 
 
 const BlogForm = ({create}) => {
-    const [blog, setBlog] = useState({image: '', title: '', website: '', text: '', date: ''})
+    const [blog, setBlog] = useState({image: '', name: '', websiteUrl: '', description: '', createAt: ''})
     // useEffect(() => {
     //     const timer = setTimeout(() => console.log('test'), 4000)
     //     return () => clearTimeout(timer)
@@ -18,7 +18,7 @@ const BlogForm = ({create}) => {
             ...blog, id: Date.now()
         }
         create(newBlog)
-        setBlog({image: '', title: '', website: '', text: '', date: ''})
+        setBlog({image: '', name: '', websiteUrl: '', description: '', createAt: ''})
 
     }
     return (
@@ -44,15 +44,15 @@ const BlogForm = ({create}) => {
 
             <div className={s.form_container} >
                 <SuperInput
-                    value={blog.title}
-                    onChange={e => setBlog({...blog, title: e.target.value})}
+                    value={blog.name}
+                    onChange={e => setBlog({...blog, name: e.target.value})}
                     type={'text'}
                     placeholder={"Title"}
 
                 />
                 {blog.title && (
                     <div className={s.clear}>
-                        <AiOutlineClear  onClick={(e) => setBlog({...blog, title: ''})}/>
+                        <AiOutlineClear  onClick={(e) => setBlog({...blog, name: ''})}/>
                     </div>
                 )
                 }
@@ -61,15 +61,15 @@ const BlogForm = ({create}) => {
 
             <div className={s.form_container} >
                 <SuperInput
-                    value={blog.website}
-                    onChange={e => setBlog({...blog, website: e.target.value})}
+                    value={blog.websiteUrl}
+                    onChange={e => setBlog({...blog, websiteUrl: e.target.value})}
                     type={'text'}
                     placeholder={"Website"}
 
                 />
                 {blog.website && (
                     <div className={s.clear}>
-                        <AiOutlineClear onClick={(e) => setBlog({...blog, website: ''})}/>
+                        <AiOutlineClear onClick={(e) => setBlog({...blog, websiteUrl: ''})}/>
                     </div>
                 )
                 }
@@ -77,14 +77,14 @@ const BlogForm = ({create}) => {
 
             <div className={s.form_container} >
                 <SuperTextarea 
-                     value={blog.text}
-                    onChange={e => setBlog({...blog, text: e.target.value})}
+                     value={blog.description}
+                    onChange={e => setBlog({...blog, description: e.target.value})}
                     type={'text'}
-                    placeholder={"Text"}
+                    placeholder={"Description"}
                 />               
                 {blog.text && (
                     <div className={s.clear}>
-                        <AiOutlineClear onClick={(e) => setBlog({...blog, text: ''})}/>
+                        <AiOutlineClear onClick={(e) => setBlog({...blog, description: ''})}/>
                     </div>
                 )
                 }
@@ -92,15 +92,15 @@ const BlogForm = ({create}) => {
 
             <div className={s.form_container} >
                 <SuperInput
-                    value={blog.date}
-                    onChange={e => setBlog({...blog, date: e.target.value})}
+                    value={blog.createAt}
+                    onChange={e => setBlog({...blog, createAt: e.target.value})}
                     type={'text'}
                     placeholder={"yyyy-mm-dd"}
 
                 />
                 {blog.date && (
                     <div className={s.clear}>
-                        <AiOutlineClear onClick={(e) => setBlog({...blog, date: ''})}/>
+                        <AiOutlineClear onClick={(e) => setBlog({...blog, createAt: ''})}/>
                     </div>
                 )
                 }

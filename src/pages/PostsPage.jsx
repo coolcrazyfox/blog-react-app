@@ -57,6 +57,165 @@ export const initialPosts = [
 ]
 const themesP = themes
 
+const postTestRes={
+    "pagesCount": 3,
+    "page": 1,
+    "pageSize": 10,
+    "totalCount": 22,
+    "items": [
+        {
+            "id": "63d9025664b0d9055c9e2784",
+            "title": "post-2",
+            "shortDescription": "shortDescription-2",
+            "content": "content-2",
+            "blogId": "63d9025164b0d9055c9e26c6",
+            "blogName": "63d9025164b0d9055c9e26c6",
+            "createdAt": "2023-01-31T11:58:14.131Z",
+            "extendedLikesInfo": {
+                "dislikesCount": 0,
+                "likesCount": 0,
+                "myStatus": "None",
+                "newestLikes": []
+            }
+        },
+        {
+            "id": "63d9025564b0d9055c9e277f",
+            "title": "post-1",
+            "shortDescription": "shortDescription-1",
+            "content": "content-1",
+            "blogId": "63d9025164b0d9055c9e26c6",
+            "blogName": "63d9025164b0d9055c9e26c6",
+            "createdAt": "2023-01-31T11:58:13.984Z",
+            "extendedLikesInfo": {
+                "dislikesCount": 0,
+                "likesCount": 0,
+                "myStatus": "None",
+                "newestLikes": []
+            }
+        },
+        {
+            "id": "63d9025564b0d9055c9e277a",
+            "title": "post-1",
+            "shortDescription": "shortDescription-1",
+            "content": "content-1",
+            "blogId": "63d9025164b0d9055c9e26c6",
+            "blogName": "63d9025164b0d9055c9e26c6",
+            "createdAt": "2023-01-31T11:58:13.832Z",
+            "extendedLikesInfo": {
+                "dislikesCount": 0,
+                "likesCount": 0,
+                "myStatus": "None",
+                "newestLikes": []
+            }
+        },
+        {
+            "id": "63d9025564b0d9055c9e2775",
+            "title": "post-1",
+            "shortDescription": "shortDescription-1",
+            "content": "content-1",
+            "blogId": "63d9025164b0d9055c9e26c6",
+            "blogName": "63d9025164b0d9055c9e26c6",
+            "createdAt": "2023-01-31T11:58:13.700Z",
+            "extendedLikesInfo": {
+                "dislikesCount": 0,
+                "likesCount": 0,
+                "myStatus": "None",
+                "newestLikes": []
+            }
+        },
+        {
+            "id": "63d9025564b0d9055c9e2770",
+            "title": "post-1",
+            "shortDescription": "shortDescription-1",
+            "content": "content-1",
+            "blogId": "63d9025164b0d9055c9e26c6",
+            "blogName": "63d9025164b0d9055c9e26c6",
+            "createdAt": "2023-01-31T11:58:13.568Z",
+            "extendedLikesInfo": {
+                "dislikesCount": 0,
+                "likesCount": 0,
+                "myStatus": "None",
+                "newestLikes": []
+            }
+        },
+        {
+            "id": "63d9025564b0d9055c9e276b",
+            "title": "post-1",
+            "shortDescription": "shortDescription-1",
+            "content": "content-1",
+            "blogId": "63d9025164b0d9055c9e26c6",
+            "blogName": "63d9025164b0d9055c9e26c6",
+            "createdAt": "2023-01-31T11:58:13.424Z",
+            "extendedLikesInfo": {
+                "dislikesCount": 0,
+                "likesCount": 0,
+                "myStatus": "None",
+                "newestLikes": []
+            }
+        },
+        {
+            "id": "63d9025564b0d9055c9e2766",
+            "title": "post-1",
+            "shortDescription": "shortDescription-1",
+            "content": "content-1",
+            "blogId": "63d9025164b0d9055c9e26c6",
+            "blogName": "63d9025164b0d9055c9e26c6",
+            "createdAt": "2023-01-31T11:58:13.286Z",
+            "extendedLikesInfo": {
+                "dislikesCount": 0,
+                "likesCount": 0,
+                "myStatus": "None",
+                "newestLikes": []
+            }
+        },
+        {
+            "id": "63d9025564b0d9055c9e2761",
+            "title": "post-1",
+            "shortDescription": "shortDescription-1",
+            "content": "content-1",
+            "blogId": "63d9025164b0d9055c9e26c6",
+            "blogName": "63d9025164b0d9055c9e26c6",
+            "createdAt": "2023-01-31T11:58:13.138Z",
+            "extendedLikesInfo": {
+                "dislikesCount": 0,
+                "likesCount": 0,
+                "myStatus": "None",
+                "newestLikes": []
+            }
+        },
+        {
+            "id": "63d9025564b0d9055c9e275c",
+            "title": "post-1",
+            "shortDescription": "shortDescription-1",
+            "content": "content-1",
+            "blogId": "63d9025164b0d9055c9e26c6",
+            "blogName": "63d9025164b0d9055c9e26c6",
+            "createdAt": "2023-01-31T11:58:13.011Z",
+            "extendedLikesInfo": {
+                "dislikesCount": 0,
+                "likesCount": 0,
+                "myStatus": "None",
+                "newestLikes": []
+            }
+        },
+        {
+            "id": "63d9025464b0d9055c9e2757",
+            "title": "post-1",
+            "shortDescription": "shortDescription-1",
+            "content": "content-1",
+            "blogId": "63d9025164b0d9055c9e26c6",
+            "blogName": "63d9025164b0d9055c9e26c6",
+            "createdAt": "2023-01-31T11:58:12.872Z",
+            "extendedLikesInfo": {
+                "dislikesCount": 0,
+                "likesCount": 0,
+                "myStatus": "None",
+                "newestLikes": []
+            }
+        }
+    ]
+}
+
 const PostsPage = () => {
     //navBar
     const [isActive, setIsActive] = useState(false)  

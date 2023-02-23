@@ -151,7 +151,7 @@ const Blogger = () => {
                     </SuperModal>
                 </BlogsList>
                 <Footer theme={theme}
-                    // onClick={fetchBlogs} 
+                    onClick={fetchBlogs} 
 
                     />
                

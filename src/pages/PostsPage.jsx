@@ -225,6 +225,18 @@ const PostsPage = () => {
     const [modal, setModal] = useState(false)
     //initial tasks
     const [posts, setPosts] = useState(initialPosts)
+     // get blogs
+     useEffect(()=>{
+        fetchPosts()
+    },[])
+
+    async function fetchPosts(){
+        const response= await axios.get('https://blog-platform-for-guild.vercel.app/posts')
+        const posts = await PostService.getAll()
+        setBlogs(posts)
+        console.log(posts.data)
+
+    }
     //select
     const arOptions = [ 'New posts first', 'Old posts first'];
     const defaultSelectValue = arOptions[0]
@@ -252,6 +264,8 @@ const PostsPage = () => {
     const activeModal=()=>{
         setModal(true)
     }
+
+
     return (
         <div className={theme==='light'? s.main_container : s.main_container_dark}>
             <ThemeProvider theme={themesP[theme]}>

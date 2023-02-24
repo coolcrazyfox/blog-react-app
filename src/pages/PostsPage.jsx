@@ -226,17 +226,17 @@ const PostsPage = () => {
     //initial tasks
     const [posts, setPosts] = useState(initialPosts)
      // get blogs
-     useEffect(()=>{
-        fetchPosts()
-    },[])
+    //  useEffect(()=>{
+    //     fetchPosts()
+    // },[])
 
-    async function fetchPosts(){
-        const response= await axios.get('https://blog-platform-for-guild.vercel.app/posts')
-        const posts = await PostService.getAll()
-        setBlogs(posts)
-        console.log(posts.data)
+    // async function fetchPosts(){
+    //     const response= await axios.get('https://blog-platform-for-guild.vercel.app/posts')
+    //     const posts = await PostService.getAll()
+    //     setBlogs(posts)
+    //     console.log(posts.data)
 
-    }
+    // }
     //select
     const arOptions = [ 'New posts first', 'Old posts first'];
     const defaultSelectValue = arOptions[0]

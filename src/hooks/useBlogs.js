@@ -14,7 +14,7 @@ export const useSortedBlogs=(blogs,sort)=>{
 export  const useBlogs=(blogs, sort, query)=>{
     const sortedBlogs= useSortedBlogs(blogs, sort)
     const  sortedAndSearchedBlogs= useMemo(()=>{
-        return sortedBlogs.filter(blog=> blog.title.toLowerCase().includes(query) )
+        return sortedBlogs.filter(blog=> blog.name.toLowerCase().includes(query) )
     }, [query, sortedBlogs])
     return sortedAndSearchedBlogs
 }

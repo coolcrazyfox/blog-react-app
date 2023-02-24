@@ -60,8 +60,8 @@ const Blogger = () => {
     //modal
     const [modal, setModal] = useState(false)
     //initial tasks
-    // const [blogs, setBlogs] = useState(initialTasks)
-    const [blogs, setBlogs] = useState([])
+    const [blogs, setBlogs] = useState(initialTasks)
+    // const [blogs, setBlogs] = useState([])
 
     //select
     const selectValue = [
@@ -89,15 +89,16 @@ const Blogger = () => {
     const [filter, setFilter]=useState({sort: '', query: ''})
 
     // get blogs
-    useEffect(()=>{
-        fetchBlogs()
-    },[])
+    // useEffect(()=>{
+    //     fetchBlogs()
+    // },[])
 
     async function fetchBlogs(){
         const response= await axios.get('https://blog-platform-for-guild.vercel.app/blogs')
-        const blogs = await PostService.getAll()
-        setBlogs(blogs)
-        console.log(blogs.data)
+        // const blogs = await PostService.getAll()
+        // setBlogs(blogs)
+        console.log(response.data)
+        // console.log(blogs.data)
 
     }
 

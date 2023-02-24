@@ -7,7 +7,7 @@ import SuperTextarea from '../SuperTextarea/SuperTextarea';
 
 
 const BlogForm = ({create}) => {
-    const [blog, setBlog] = useState({image: '', name: '', websiteUrl: '', description: '', createAt: ''})
+    const [blog, setBlog] = useState({image: '', name: '', websiteUrl: '', description: '', createdAt: ''})
     // useEffect(() => {
     //     const timer = setTimeout(() => console.log('test'), 4000)
     //     return () => clearTimeout(timer)
@@ -18,7 +18,7 @@ const BlogForm = ({create}) => {
             ...blog, id: Date.now()
         }
         create(newBlog)
-        setBlog({image: '', name: '', websiteUrl: '', description: '', createAt: ''})
+        setBlog({image: '', name: '', websiteUrl: '', description: '', createdAt: ''})
 
     }
     return (
@@ -50,7 +50,7 @@ const BlogForm = ({create}) => {
                     placeholder={"Title"}
 
                 />
-                {blog.title && (
+                {blog.name && (
                     <div className={s.clear}>
                         <AiOutlineClear  onClick={(e) => setBlog({...blog, name: ''})}/>
                     </div>
@@ -67,7 +67,7 @@ const BlogForm = ({create}) => {
                     placeholder={"Website"}
 
                 />
-                {blog.website && (
+                {blog.websiteUrl && (
                     <div className={s.clear}>
                         <AiOutlineClear onClick={(e) => setBlog({...blog, websiteUrl: ''})}/>
                     </div>
@@ -82,7 +82,7 @@ const BlogForm = ({create}) => {
                     type={'text'}
                     placeholder={"Description"}
                 />               
-                {blog.text && (
+                {blog.description && (
                     <div className={s.clear}>
                         <AiOutlineClear onClick={(e) => setBlog({...blog, description: ''})}/>
                     </div>
@@ -92,15 +92,15 @@ const BlogForm = ({create}) => {
 
             <div className={s.form_container} >
                 <SuperInput
-                    value={blog.createAt}
-                    onChange={e => setBlog({...blog, createAt: e.target.value})}
+                    value={blog.createdAt}
+                    onChange={e => setBlog({...blog, createdAt: e.target.value})}
                     type={'text'}
                     placeholder={"yyyy-mm-dd"}
 
                 />
-                {blog.date && (
+                {blog.createdAt && (
                     <div className={s.clear}>
-                        <AiOutlineClear onClick={(e) => setBlog({...blog, createAt: ''})}/>
+                        <AiOutlineClear onClick={(e) => setBlog({...blog, createdAt: ''})}/>
                     </div>
                 )
                 }

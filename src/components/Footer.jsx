@@ -8,7 +8,7 @@ const Footer = ({onClick, theme}) => {
         <div className={theme === 'light'? s.footer: s.footer_dark}>
                 <div className={s.footer_container}>
 
-                    {/*<button onClick={onClick}>get</button>*/}
+                    <button onClick={onClick}>get</button>
                     <Flip>
                         <SuperButton link={'/'}>
                             Show more

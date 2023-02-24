@@ -1,4 +1,4 @@
-import React, {useMemo, useState} from 'react';
+import React, {useMemo, useState, useEffect} from 'react';
 // import { uuid } from 'uuidv4';
 import s from "../styles/Blogger.module.css";
 import Header from "../components/Header";
@@ -12,7 +12,7 @@ import {useBlogs} from "../hooks/useBlogs";
 import axios from "axios";
 import { themes } from './Hero';
 import { ThemeProvider } from 'styled-components';
-// import PostService from './../API/PostService';
+import PostService from './../API/PostService';
 
 
 

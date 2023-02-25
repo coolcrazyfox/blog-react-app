@@ -7,7 +7,7 @@
 /.idea
 /.yarn
 /.pnp.cjs
-/.ppnp.loader.mjs
+/.pnp.loader.mjs
 /yarn.lock
 
 # testing

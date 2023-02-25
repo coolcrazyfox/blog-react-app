@@ -4037,8 +4037,8 @@ __metadata:
     react: ^18.2.0
     react-countdown-circle-timer: ^3.1.0
     react-dom: ^18.2.0
-    react-form: ^4.0.1
     react-icons: ^4.6.0
+    react-is: ^18.2.0
     react-reveal: ^1.2.2
     react-router-dom: ^6.4.3
     react-scripts: 5.0.1
@@ -10808,16 +10808,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-form@npm:^4.0.1":
-  version: 4.0.1
-  resolution: "react-form@npm:4.0.1"
-  peerDependencies:
-    prop-types: ^15.5.4
-    react: ^16.8.3
-  checksum: 7adf023b13514cdd35022c59be8b256f5d201b37bb3636e9f2f6d2c41052aeea8bce16b1fdeb804bf4f156926c968b70e52b585b8ab73b1d82870a57422857f2
-  languageName: node
-  linkType: hard
-
 "react-icons@npm:^4.6.0":
   version: 4.7.1
   resolution: "react-icons@npm:4.7.1"
@@ -10841,7 +10831,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-is@npm:^18.0.0":
+"react-is@npm:^18.0.0, react-is@npm:^18.2.0":
   version: 18.2.0
   resolution: "react-is@npm:18.2.0"
   checksum: e72d0ba81b5922759e4aff17e0252bd29988f9642ed817f56b25a3e217e13eea8a7f2322af99a06edb779da12d5d636e9fda473d620df9a3da0df2a74141d53e

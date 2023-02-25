@@ -11,8 +11,7 @@
     "gh-pages": "^4.0.0",
     "react": "^18.2.0",
     "react-countdown-circle-timer": "^3.1.0",
-    "react-dom": "^18.2.0",
-    "react-form": "^4.0.1",
+    "react-dom": "^18.2.0",    
     "react-icons": "^4.6.0",
     "react-is": "^18.2.0",
     "react-reveal": "^1.2.2",
@@ -32,7 +31,8 @@
   },
   "eslintConfig": {
     "extends": [
-      "react-app"
+      "react-app",
+      "react-app/jest"
     ]
   },
   "browserslist": {

@@ -6,6 +6,8 @@
 .pnp.js
 .idea/
 .yarn
+.pnp.cjs
+.ppnp.loader.mjs
 
 # testing
 /coverage

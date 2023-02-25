@@ -32,6 +32,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@testing-library/react", "virtual:d2e80aaceee624f5c4db4ef293e8728fa5e312f47ec814018f2af31ec286d81208a73b80670bb63bf4d3134d2a59e72efbfac7f1a80cf425985ff76778e7fc3a#npm:13.4.0"],\
             ["@testing-library/user-event", "virtual:d2e80aaceee624f5c4db4ef293e8728fa5e312f47ec814018f2af31ec286d81208a73b80670bb63bf4d3134d2a59e72efbfac7f1a80cf425985ff76778e7fc3a#npm:13.5.0"],\
             ["axios", "npm:1.3.4"],\
+            ["eslint-config-react", "npm:1.1.7"],\
             ["gh-pages", "npm:4.0.0"],\
             ["react", "npm:18.2.0"],\
             ["react-countdown-circle-timer", "virtual:d2e80aaceee624f5c4db4ef293e8728fa5e312f47ec814018f2af31ec286d81208a73b80670bb63bf4d3134d2a59e72efbfac7f1a80cf425985ff76778e7fc3a#npm:3.1.0"],\
@@ -6174,6 +6175,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@testing-library/react", "virtual:d2e80aaceee624f5c4db4ef293e8728fa5e312f47ec814018f2af31ec286d81208a73b80670bb63bf4d3134d2a59e72efbfac7f1a80cf425985ff76778e7fc3a#npm:13.4.0"],\
             ["@testing-library/user-event", "virtual:d2e80aaceee624f5c4db4ef293e8728fa5e312f47ec814018f2af31ec286d81208a73b80670bb63bf4d3134d2a59e72efbfac7f1a80cf425985ff76778e7fc3a#npm:13.5.0"],\
             ["axios", "npm:1.3.4"],\
+            ["eslint-config-react", "npm:1.1.7"],\
             ["gh-pages", "npm:4.0.0"],\
             ["react", "npm:18.2.0"],\
             ["react-countdown-circle-timer", "virtual:d2e80aaceee624f5c4db4ef293e8728fa5e312f47ec814018f2af31ec286d81208a73b80670bb63bf4d3134d2a59e72efbfac7f1a80cf425985ff76778e7fc3a#npm:3.1.0"],\
@@ -8220,6 +8222,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["strip-ansi", "npm:6.0.1"],\
             ["strip-json-comments", "npm:3.1.1"],\
             ["text-table", "npm:0.2.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["eslint-config-react", [\
+        ["npm:1.1.7", {\
+          "packageLocation": "./.yarn/cache/eslint-config-react-npm-1.1.7-6e3860b2e1-15d3d7f78e.zip/node_modules/eslint-config-react/",\
+          "packageDependencies": [\
+            ["eslint-config-react", "npm:1.1.7"]\
           ],\
           "linkType": "HARD"\
         }]\

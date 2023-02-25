@@ -4031,7 +4031,6 @@ __metadata:
     react: ^18.2.0
     react-countdown-circle-timer: ^3.1.0
     react-dom: ^18.2.0
-    react-form: ^4.0.1
     react-icons: ^4.6.0
     react-is: ^18.2.0
     react-reveal: ^1.2.2
@@ -10797,16 +10796,6 @@ __metadata:
   version: 6.0.11
   resolution: "react-error-overlay@npm:6.0.11"
   checksum: ce7b44c38fadba9cedd7c095cf39192e632daeccf1d0747292ed524f17dcb056d16bc197ddee5723f9dd888f0b9b19c3b486c430319e30504289b9296f2d2c42
-  languageName: node
-  linkType: hard
-
-"react-form@npm:^4.0.1":
-  version: 4.0.1
-  resolution: "react-form@npm:4.0.1"
-  peerDependencies:
-    prop-types: ^15.5.4
-    react: ^16.8.3
-  checksum: 7adf023b13514cdd35022c59be8b256f5d201b37bb3636e9f2f6d2c41052aeea8bce16b1fdeb804bf4f156926c968b70e52b585b8ab73b1d82870a57422857f2
   languageName: node
   linkType: hard
 
